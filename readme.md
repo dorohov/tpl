@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>readme</title>
-</head>
-<body style="max-width: 920px; margin: 10px auto;">
-	<div style="margin-bottom:2vw" >
-		<p>Все переменные находятся в src/css/site/var.less</p>
-	</div>
-	<div style="margin-bottom:2vw" >
-		<h1>Шрифты</h1>
+# Репозиторий для верстки
+Все переменные находятся в [Здесь](blob/master/src/css/site/var.less)
+
+###Шрифты
+
 		<p>Формат используемых шрифтов: .woff и .woff2.</p>
 		<p>Для каждого начертания шрифта заводится своя переменная в var.less<br> (н-р: @geometria, @geometria-400i).</p>
 		<p>Шрифт подключается в src/css/site/font.less через миксин include-custom-font()<br> (н-р: @family: @geometria, @src-name: @geometria-400i, @weight: 400, @style: italic).</p>
@@ -23,9 +16,8 @@
 		<p>Ананлагичный миксин для line-height</p>
 		<h4>.calcLineHeight(@f-min, @f-max, @v-min, @v-max)</h4>
 		<p>Пример .calcLineHeight(30, 56, 320, 1680);</p>
-	</div> 
-	<div style="margin-bottom:2vw" >
-		<h1>Сетка в 12 колонок</h1>
+
+###Сетка в 12 колонок
 		<p>Стили для сетки находятся в src/css/bootstrap/grid.less</p>
 		<p>Сетка сделана на flex. Grid пока не используем (когда решим вопрос с поддержкой ie, тогда будет смысл). Если хочеться поизголятся с grid - ок, но пишим флексовый fallback для ie10+.</p>
 		<p>Для правильного выравнивания и заполнения используется .container в него помещается .row внутри которого .cols</p>
@@ -34,16 +26,13 @@
 		<p>Миксин для создания ширины колонки:</p>
 		<h3>.makeCols(@columns, @grid-columns);</h3>
 		<p>@columns - сколько колонок будет занимать элемент, @grid-columns - общее количество колонок<br> (н-р .makeCols(6, 12);)</p>
-	</div>
-	<div style="margin-bottom:2vw" >
-		<h1>SVG графика</h1>
+###SVG графика
 		<p>Простые иконки помещаем в папку src/svg/</p>
 		<p>с помощью шаблона [[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="" ]] вставляем иконку на страницу. В icon-name пишем название файла <br>(Н-р [[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="vk" ]]).</p>
 		<p>Изменения цвета иконки через color у родительского тега.</p>
-	</div>
-	<div style="margin-bottom:2vw" >
-		<h1>Переменные для медиа запросов</h1>
-		<h2>Последняя версия</h2>
+
+###Переменные для медиа запросов
+####Последняя версия
 		<p>В новых проектах использовать их.</p>	
 		<h4>Общие:</h4>
 		<ul>
@@ -78,7 +67,7 @@
 			<li><b>@media-point-smart</b> (x <= 767px)</li>
 			<li><b>@media-point-notsmart</b> (768px >= x)</li>	
 		</ul>
-		<h2>Предыдущая версия</h2>
+####Предыдущая версия</h2>
 		<ul>
 			<li>
 				<b>@media-size-xs</b> (x <= 767px)
@@ -108,7 +97,4 @@
 			<li><b>@media-screen-lg</b> (1200px >= x)</li>	
 			<li><b>@media-device-lg</b> (x <= 1199px)</li>
 			<li><b>@media-notsmart</b> (768px >= x)</li>	
-		</ul>		
-	</div>
-</body>
-</html>
+		</ul>
