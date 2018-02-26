@@ -1,5 +1,5 @@
 # Репозиторий для верстки
-Все переменные находятся в [Здесь](/src/css/site/var.less)
+Все переменные находятся в [var.less](/src/css/site/var.less)
 
 ### Шрифты
 
@@ -7,7 +7,7 @@
 Для каждого начертания шрифта заводится своя переменная в [var.less](/src/css/site/var.less):
 ```
 //===== fonts =====//
-@geometria: 			geometria-400;
+@geometria: 				geometria-400;
 @geometria-400i: 			geometria-400i;
 @geometria-300: 			geometria-300;
 @geometria-500: 			geometria-500;
@@ -71,14 +71,38 @@ line-height: @b-lh - 2;
 ```
 
 ### Сетка в 12 колонок
-		<p>Стили для сетки находятся в src/css/bootstrap/grid.less</p>
-		<p>Сетка сделана на flex. Grid пока не используем (когда решим вопрос с поддержкой ie, тогда будет смысл). Если хочеться поизголятся с grid - ок, но пишим флексовый fallback для ie10+.</p>
-		<p>Для правильного выравнивания и заполнения используется .container в него помещается .row внутри которого .cols</p>
-		<p>Для .row есть модификаторы. Подробнее в src/css/bootstrap/grid.less</p>
-		<p>Для .cols есть модификаторы .is--cols-*, .is--cols-screen-*,  .is--cols-md-* и так далее. Подробнее в src/css/bootstrap/grid.less</p>
-		<p>Миксин для создания ширины колонки:</p>
-		<h3>.makeCols(@columns, @grid-columns);</h3>
-		<p>@columns - сколько колонок будет занимать элемент, @grid-columns - общее количество колонок<br> (н-р .makeCols(6, 12);)</p>
+Стили для сетки находятся в [var.less](/src/css/bootstrap/grid.less)</p>
+Сетка сделана на flex. Grid пока не используем (когда решим вопрос с поддержкой ie, тогда будет смысл). Если хочеться поизголятся с grid - ок, но пишим флексовый fallback для ie10+.
+Для правильного выравнивания и заполнения используется .container в него помещается .row внутри которого .cols
+Модификаторы .row : 
+* .is--wrap (flex-wrap: wrap)
+* .is--jcfs (justify-content: flex-start)
+* .is--jcfe (justify-content: flex-end)
+* .is--jcsb (justify-content: space-between)
+* .is--jcsa (justify-content: space-around)
+* .is--jcc  (justify-content: center)
+* .is--aic (align-items: center)
+* .is--gutter (30px)
+* .is--gutter15 (15px)
+* .is--gutter10 (10px)
+Подробнее в [grid.less](/src/css/bootstrap/grid.less)
+Модификаторы .cols :
+* .is--cols-* (от 1 до 12)
+* .is--cols-screen-* (от 1 до 12)
+* .is--cols-md-* (от 1 до 12)
+Подробнее в [grid.less](/src/css/bootstrap/grid.less)
+
+#### Миксин для создания ширины колонки:
+```
+.makeCols(@columns, @grid-columns);
+```
+где: 
+* @columns - сколько колонок будет занимать элемент
+* @grid-columns - общее количество колонок
+```
+Пример: 
+.makeCols(6, 12);
+```
 ### SVG графика
 		<p>Простые иконки помещаем в папку src/svg/</p>
 		<p>с помощью шаблона [[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="" ]] вставляем иконку на страницу. В icon-name пишем название файла <br>(Н-р [[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="vk" ]]).</p>
