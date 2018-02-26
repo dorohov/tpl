@@ -1,10 +1,19 @@
 # Репозиторий для верстки
-Все переменные находятся в [Здесь](blob/master/src/css/site/var.less)
+Все переменные находятся в [Здесь](/src/css/site/var.less)
 
-###Шрифты
+### Шрифты
 
-		<p>Формат используемых шрифтов: .woff и .woff2.</p>
-		<p>Для каждого начертания шрифта заводится своя переменная в var.less<br> (н-р: @geometria, @geometria-400i).</p>
+Формат используемых шрифтов: .woff и .woff2.
+Для каждого начертания шрифта заводится своя переменная в [var.less](/src/css/site/var.less):
+```
+//===== fonts =====//
+@geometria:						geometria-400;
+@geometria-400i:				geometria-400i;
+@geometria-300:					geometria-300;
+@geometria-500:					geometria-500;
+@geometria-700:					geometria-700;
+```
+
 		<p>Шрифт подключается в src/css/site/font.less через миксин include-custom-font()<br> (н-р: @family: @geometria, @src-name: @geometria-400i, @weight: 400, @style: italic).</p>
 		<p>У шрифтов одной группы переменная @family должна быть одинаковой <br>(н-р: @family: @geometria).</p>
 		<h3>Миксин для "адаптивного" размера шрифта</h3>
@@ -17,7 +26,7 @@
 		<h4>.calcLineHeight(@f-min, @f-max, @v-min, @v-max)</h4>
 		<p>Пример .calcLineHeight(30, 56, 320, 1680);</p>
 
-###Сетка в 12 колонок
+### Сетка в 12 колонок
 		<p>Стили для сетки находятся в src/css/bootstrap/grid.less</p>
 		<p>Сетка сделана на flex. Grid пока не используем (когда решим вопрос с поддержкой ie, тогда будет смысл). Если хочеться поизголятся с grid - ок, но пишим флексовый fallback для ie10+.</p>
 		<p>Для правильного выравнивания и заполнения используется .container в него помещается .row внутри которого .cols</p>
@@ -26,13 +35,13 @@
 		<p>Миксин для создания ширины колонки:</p>
 		<h3>.makeCols(@columns, @grid-columns);</h3>
 		<p>@columns - сколько колонок будет занимать элемент, @grid-columns - общее количество колонок<br> (н-р .makeCols(6, 12);)</p>
-###SVG графика
+### SVG графика
 		<p>Простые иконки помещаем в папку src/svg/</p>
 		<p>с помощью шаблона [[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="" ]] вставляем иконку на страницу. В icon-name пишем название файла <br>(Н-р [[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="vk" ]]).</p>
 		<p>Изменения цвета иконки через color у родительского тега.</p>
 
-###Переменные для медиа запросов
-####Последняя версия
+### Переменные для медиа запросов
+#### Последняя версия
 		<p>В новых проектах использовать их.</p>	
 		<h4>Общие:</h4>
 		<ul>
