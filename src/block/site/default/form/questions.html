@@ -1,0 +1,113 @@
+<form action="#" class="{{form_prefix}}block  {{form_mod}}"  >
+	<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
+	<input type="hidden" name="f[Форма: {{form_heading}}]">
+	<div class="{{form_prefix}}inner  {{form_mod}}"  >
+		<div class="row {{form_prefix}}row  is--wrap  {{form_mod}}">
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--name">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-input-custom.html"
+					form_id="{{form_id}}"
+					block_id="name"
+					block_prefix="{{form_prefix}}"
+					block_mod="{{form_mod}}"
+					block_mod_elem="is--name"
+					block_color="{{form_color}}"
+					block_type="text"
+					block_attr="  "
+					block_required="required"
+					block_required_custom="onlyLetterSp"
+					block_label="Имя"
+					block_placeholder="Ваше имя"
+				]]
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--name">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-input-custom.html"
+					form_id="{{form_id}}"
+					block_id="email"
+					block_prefix="{{form_prefix}}"
+					block_mod="{{form_mod}}"
+					block_mod_elem="is--email"
+					block_color="{{form_color}}"
+					block_type="email"
+					block_attr="  "
+					block_required="required"
+					block_required_custom="email"
+					block_label="E-mail"
+					block_placeholder="Ваш E-mail"
+				]]
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--tel">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-input-custom.html"
+					form_id="{{form_id}}"
+					block_id="tel"
+					block_prefix="{{form_prefix}}"
+					block_mod="{{form_mod}}"
+					block_mod_elem="is--tel"
+					block_color="{{form_color}}"
+					block_type="tel"
+					block_attr="  "
+					block_required="required"
+					block_required_custom="phone"
+					block_label="Телефон"
+					block_placeholder="Ваш телефон"
+				]]
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--country">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-select.html"
+					form_id="{{form_id}}"
+					block_id="country"
+					block_prefix="{{form_prefix}}"
+					block_mod="{{form_mod}}"
+					block_mod_elem="is--country"
+					block_color="{{form_color}}"
+					block_attr="  "
+					block_required="required"
+					block_label="Страна"
+					block_option="<option disabled selected>Страна</option><option>Австралия</option><option>Австрия</option><option>Аргентина</option><option>Великобритания</option><option>Германия</option><option>Ирландия</option><option>Испания</option><option>Италия</option><option>Канада</option><option>Кипр</option><option>Китай</option><option>Малайзия</option><option>Мальта</option><option>Мексика</option><option>Новая Зеландия</option><option>Португалия</option><option>Сингапур</option><option>США</option><option>Тайланд</option><option>Филиппины</option><option>Франция</option><option>Чехия</option><option>Швейцария</option><option>ЮАР</option>"
+				]]
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--country">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-select.html"
+					form_id="{{form_id}}"
+					block_id="programm"
+					block_prefix="{{form_prefix}}"
+					block_mod="{{form_mod}}"
+					block_mod_elem="is--programm"
+					block_color="{{form_color}}"
+					block_attr="  "
+					block_required="required"
+					block_label="Программа"
+					block_option="<option disabled selected>Программа</option><option>Летние лагеря для детей и подростков</option><option>Круглогодичные программы для детей и подростков</option><option>Языковые курсы для взрослых</option><option>Среднее образование</option><option>Подготовка к поступлению в университеты</option><option>Высшее образование</option><option>Профессиональное образование</option><option>Бизнес школы</option>"
+				]]
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--agreement  is--questions">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-switch.html"
+					form_id="{{form_id}}"
+					block_id="agreement"
+					block_prefix="{{form_prefix}}"
+					block_mod="{{form_mod}}"
+					block_mod_elem="  "
+					block_color="{{form_color}}"
+					block_attr="checked"
+					block_required="required"
+					block_label="Согласие на обработку персональных данных"
+					block_text="Я согласен на обработку <a href='{{page.agreement}}'>персональных данных</a>"
+				]]	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--btn  is--questions">
+				[[azbntple 
+					tpl="/src/block/site/default/button/button.html"
+					button_prefix="btn__" 
+					button_mod="{{form_btn_mod}}"
+					button_type="submit"
+					button_name="{{form_btn_name}}"
+				]]				
+			</div>
+		</div>	
+	</div> 
+</form> 

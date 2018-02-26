@@ -1,0 +1,356 @@
+<!--<div class="grid">
+	<div class="grid-item">1</div>
+	<div class="grid-item">2</div>
+	<div class="grid-item">3</div>
+	<div class="grid-item">4</div>
+	<div class="grid-item">5</div>
+	<div class="grid-item">6</div>
+	<div class="grid-item">1</div>
+	<div class="grid-item">2</div>
+	<div class="grid-item">3</div>
+	<div class="grid-item">4</div>
+	<div class="grid-item">5</div>
+	<div class="grid-item">6</div>
+	<div class="grid-item">1</div>
+	<div class="grid-item">2</div>
+	<div class="grid-item">3</div>
+	<div class="grid-item">4</div>
+	<div class="grid-item">5</div>
+	<div class="grid-item">6</div>
+	<div class="grid-item">1</div>
+	<div class="grid-item">2</div>
+	<div class="grid-item">3</div>
+	<div class="grid-item">4</div>
+	<div class="grid-item">5</div>
+	<div class="grid-item">6</div>
+</div>-->
+<div role="main"> 
+	[[azbntple 
+		tpl="8
+		/src/block/site/default/page-header/include.html" 
+		block_heading="Блок заголовок"
+	]]
+	[[azbntple 
+		tpl="/src/block/site/default/header/panel.html"
+		block_prefix="header-block__"
+		block_slider_id="header-slider"
+		block_heading="Учитесь и живите без границ"
+		block_heading_small="Обучение за рубежом"
+	]]	
+	[[azbntple  
+		tpl="/src/block/site/default/content/panel-about-header.html"
+		content_prefix="content-block__"       
+		content_mod="is--about-header"      
+		block_heading_mod="is--page-heading  is--line  is--line-blue-light"
+		block_heading="О нас"    
+		block_bg="{{url-path-img}}/temp/bg-about-header.jpg" 
+	]]
+	[[azbntple  
+		tpl="/src/block/site/default/content/panel-reviews-index.html"
+		content_prefix="content-block__"
+		content_mod="is--reviews-index"
+		block_heading_mod="is--page-heading  is--line"
+		block_heading="Отзывы наших клиентов"
+	]]
+	[[azbntple  
+		tpl="/src/block/site/page/programm/page.html"
+		content_prefix="content-block__"      
+		content_mod="is--full"      
+		block_heading_mod="is--page-heading  is--line"
+		block_heading="Категории программ"     
+	]]
+	<div class="content-block__panel  colorbg--white3">
+		<div class="container content-block__container">
+			<div class="content-block__elem">			
+				[[azbntple  
+					tpl="/src/block/site/default/content/panel-reviews-page.html"
+					block_prefix="content-block__"
+					block_mod="is--reviews-page"
+				]]
+			</div>
+			<div class="content-block__elem">			
+				[[azbntple  
+					tpl="/src/block/site/default/content/panel-school.html"
+					block_prefix="content-block__"
+					block_mod="is--school"
+				]]
+			</div>
+			<div class="content-block__elem">
+				[[azbntple  
+					tpl="/src/block/site/default/content/panel-country-index.html"
+					content_prefix="content-block__"       
+					content_mod="is--country-index"      
+					block_heading_mod="is--page-heading  is--line"
+					block_heading="Страны"
+				]]
+			</div>
+			<div class="content-block__elem">
+				[[azbntple  
+					tpl="/src/block/site/default/content/panel-news-index.html"
+					content_prefix="content-block__"
+					content_mod="is--news-index"
+					block_heading_mod="is--page-heading  is--line"
+					block_heading="Новости"
+				]]
+			</div>
+		</div>
+	</div>
+	<div class="content-block__panel">
+		<div class="container content-block__container">
+			[[azbntple 
+				tpl="/src/block/site/default/page-header/panel.html"
+				block_prefix="page-header__" 
+				block_mod="is--page-heading  is--line"
+				block_heading_level="h1"
+				block_heading="Программы"
+				block_bread_mod="  "
+			]]
+		</div>
+	</div>
+	<div class="content-block__panel">
+		<div class="container content-block__container">
+			[[azbntple 
+				tpl="/src/block/site/default/page-header/heading.html"
+				header_prefix="page-header__" 
+				header_mod="is--page-heading-sm"
+				header_level="h1"
+				header="Наша команда"
+			]]
+			<div class="content-block__elem">			
+				[[azbntple  
+					tpl="/src/block/site/default/content/panel-team.html"
+					block_prefix="content-block__"
+					block_mod="is--team"
+				]]
+			</div>
+		</div>
+	</div>
+	<div class="content-block__panel">
+		<div class="container content-block__container">
+
+			[[azbntple 
+				tpl="/src/block/site/default/breadcrumb/level1.html" 
+				bread_prefix="breadcrumb__"
+				bread_mod="is--center"
+				level_1="Страница стилей"
+			]]	                 
+			[[azbntple 
+				tpl="/src/block/site/default/page-header/heading.html" 
+				header_prefix="page-header__" 
+				header_mod="is--heading  is--center"
+				header_level="h1"
+				header="Страница стилей"
+			]]	
+			<div style="margin-bottom: 6vw;">
+				[[azbntple 
+					tpl="/src/block/site/default/page-header/heading.html" 
+					header_prefix="page-header__" 
+					header_mod="is--heading  is--center"
+					header_level="h1"
+					header="** Стиль заголовков **"
+				]]	
+				<h1>Заголовок H1</h1>
+				<h2>Заголовок H2</h2>
+				<h3>Заголовок H3</h3>
+				<h4>Заголовок H4</h4>
+				<h5>Заголовок H5</h5>
+				<h6>Заголовок H6</h6>
+			</div> 
+			<div style="margin-bottom: 6vw;">
+			[[azbntple 
+				tpl="/src/block/site/default/color/include.html" 
+				block_heading="** Палитра **"
+			]]
+			</div> 
+			<div style="margin-bottom: 6vw;">
+			[[azbntple 
+				tpl="/src/block/site/default/button/include.html" 
+				block_heading="** Стили кнопок **"
+			]]
+			</div> 	
+			<div style="margin-bottom: 6vw;">
+				[[azbntple 
+					tpl="8/src/block/site/default/form/include.html" 
+					block_heading="** Форма **"
+				]]
+			</div>
+		</div>
+	</div>
+	[[azbntple 
+		tpl="/src/block/site/default/form/panel-questions.html"
+		form_prefix="form-panel__"
+		form_mod="is--questions" 
+		form_bg="{{url-path-img}}/temp/bg-form-questions.jpg"
+		form_bg_after="{{url-path-img}}/temp/bg-form-questions-plans.png"
+		
+		header_mod="is--form-panel  is--center  color--blue-light"
+
+		form_id="fpr"
+		form_heading="Остались вопросы?" 
+		form_heading_small="Получите консультацию, отправив данные менеджеру" 
+		form_mod_form="is--inline"
+		form_color="is--white"
+		form_btn_mod="is--xl"
+		form_btn_name="Оптравить"
+	]]	
+	[[azbntple 
+		tpl="/src/block/site/default/form/panel-reviews.html"
+		form_prefix="form-panel__"
+		form_mod="is--reviews"
+
+		header_mod="is--form-panel  is--center"
+
+		form_id="fpr"
+		form_heading="Оставьте свой отзыв" 
+		form_heading_small="  " 
+		form_mod_form="is--inline"
+		form_color="  "
+		form_btn_mod="is--xl"
+		form_btn_name="Оставить отзыв"
+	]]	
+	<div class="container content-block__container">
+		[[azbntple 
+			tpl="/src/block/site/default/content/card-partners.html"
+			block_prefix="content-block__" 
+			block_mod="is--partners"
+			block_preview="{{url-path-img}}/temp/partners-item1-232x96.jpg"
+			block_link="http://www.altagenetics.ru/"
+		]]  
+		[[azbntple 
+			tpl="/src/block/site/default/products/include.html" 
+			block_heading="** Меню: карточки разделов **"
+		]]			
+		[[azbntple 
+			tpl="/src/block/site/default/breadcrumb/level2.html" 
+			bread_prefix="breadcrumb__"
+			bread_mod="is--center"
+			level_1="Оплата счетов"
+			level_1_link="Страница стилей"
+			level_2="Клиентские офисы"
+		]] 
+		<div style="margin-bottom: 6vw;">
+			[[azbntple 
+				tpl="/src/block/site/default/page-header/heading.html" 
+				header_prefix="page-header__" 
+				header_mod="is--heading  is--center"
+				header_level="h1"
+				header="** Тест шрифта **"
+			]]	
+			<div>qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM</div>
+			<div>!@#$%^&*()</div>
+			<div>йцукёенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ</div>
+			<div>!"№;%:?*()</div>
+			<div>1234567890</div> 
+		</div>
+	</div>
+
+	<div class="content-block__panel  is--darken  is--hidden">
+		[[azbntple 
+			tpl="8/src/block/site/default/products/panel-index.html" 
+			content_prefix="content-block__" 
+			content_mod="is--darken  is--hidden"
+			block_heading="Хиты продаж"
+			block_heading_mod="is--heading-panel  color--brown-light  is--center"
+		]] 
+		[[azbntple 
+			tpl="8/src/block/site/default/text/panel.html" 
+			content_prefix="content-block__" 
+			content_mod="is--darken  is--hidden"
+			block_prefix="text__" 
+			block_mod="is--darken"
+			block_heading="** Текстовая страница на темном **"
+			block_heading_mod="is--heading  color--white"
+		]] 
+		[[azbntple 
+			tpl="/src/block/site/default/reviews/panel.html" 
+			content_prefix="content-block__" 
+			content_mod="is--darken  is--hidden"
+			block_prefix="reviews-panel__" 
+			block_mod="is--darken"
+			block_heading="** Отзывы **"
+			block_heading_mod="is--heading  color--white"
+		]] 
+	</div>
+
+	[[azbntple 
+		tpl="/src/block/site/default/text/include.html" 
+		block_heading="** Текстовая страница **"
+	]]
+
+	[[azbntple 
+		tpl="8/src/block/site/default/bg/card-plane.html" 
+		block_prefix="bg-plane__"
+		block_mod="is--services-bottom  is--speed-150"  
+		block_bg="bg-plane-services-bottom.png"
+	]]
+	[[azbntple 
+		tpl="8/src/block/site/default/form/panel-print.html" 
+		form_prefix="form-panel__"
+		form_bg="bg-form-panel.jpg"
+		form_mod="is--lg"
+		form_mod_form="is--inline  is--cols-2-5" 
+		form_color="is--white"
+		form_heading="Узнайте стоимость разработки под ваш проект"
+		form_heading_small="  "
+		form_id="fcab" 
+		form_btn_name="Хочу фирменный стиль"
+		form_btn_mod="is--form-inline  is--white"
+	]] 
+	[[azbntple 
+		tpl="8/src/block/site/default/blog/include.html" 
+		block_heading="** Карточка блога **"
+	]]
+	<div class="container content-block__container">
+		[[azbntple 
+			tpl="/src/block/site/default/filter/include.html" 
+			block_heading="** Фильтры **"
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/table/include.html" 
+			block_heading="** Тарифы **"
+		]]
+		[[azbntple 
+			tpl="8/src/block/site/default/navbar/include.html" 
+			block_heading="** Боковое меню **"
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/category/include.html" 
+			block_heading="** Карточка раздела **"
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/breadcrumb/include.html" 
+			block_heading="** Хлебные крошки **"
+		]]	
+		[[azbntple 
+			tpl="/src/block/site/default/page-header/include.html" 
+			block_heading="** Хлебные крошки + Заголовок **"
+		]]	
+		[[azbntple 
+			tpl="/src/block/site/default/pagination/include.html" 
+			block_heading="** Постраничная навигация **"
+		]]	
+
+		[[azbntple 
+			tpl="/src/block/site/default/services/include.html" 
+			block_heading="** Услуги: карточка **"
+		]]	
+		[[azbntple 
+			tpl="/src/block/site/default/team/include.html" 
+			block_heading="** Специалисты: карточка **"
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/before-after/include.html" 
+			block_heading="** До/после: карточка **"
+		]]		
+	</div>
+	[[azbntple 
+		tpl="/src/block/site/default/text/include.html" 
+		block_heading="** Текстовая страница **"
+	]]
+</div>		
+[[azbntple 
+	tpl="/src/block/site/default/modals/enter.html"
+	modals_prefix="modal-base__" 
+	modals_id="modal-enter"
+	modals_mod="is--enter"
+]]

@@ -1,0 +1,29 @@
+<main class="{{content_prefix}}panel  {{content_mod}}">
+	[[azbntple 
+		tpl="/src/block/site/default/bg/card.html" 
+		block_prefix="bg-block__"
+		block_mod="is--plane-1865x1950"  
+		block_bg="bg-plane-1865x1950.png"
+	]]
+	<div class="{{content_prefix}}container container  {{content_mod}}">
+		[[azbntple 
+			tpl="/src/block/site/default/page-header/panel-level2.html" 
+			block_prefix="page-header__" 
+			block_mod="{{block_heading_mod}}"
+			block_heading_level="h1"
+			header="{{block_heading}}"
+			block_bread_mod="{{block_heading_mod}}"
+			block_bread_level1="{{block_bread_level1}}"
+			block_bread_level1_link="{{block_bread_level1_link}}"
+		]]
+		<div class="{{content_prefix}}elem">			
+			[[azbntple 
+				tpl="/src/block/site/default/content/panel-news-card.html"
+				block_prefix="content-block__" 
+				block_mod="is--news-card"
+				block_heading="{{block_heading}}"
+				block_heading_mod="{{block_heading_mod}}"
+			]] 
+		</div> 
+	</div>
+</main>

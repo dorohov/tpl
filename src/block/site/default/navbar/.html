@@ -1,0 +1,127 @@
+<nav class="{{class}} navbar {{navbar_mod}}">
+	<div class="{{navbar_prefix}}inner">
+		<div class="container {{navbar_prefix}}container">
+			<div class="{{navbar_prefix}}header">
+				<div class="row {{navbar_prefix}}row-header ">
+					<div class="cols {{navbar_prefix}}cols-header  is--hamburger">
+						<div class="{{navbar_prefix}}hamburger">
+							<button class="{{navbar_prefix}}hamburger-btn hamburger__item" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
+								<span class="hamburger__line  is--left"></span>
+								<span class="hamburger__line  is--center"></span>
+								<span class="hamburger__line  is--right"></span>
+							</button>
+						</div>
+					</div>
+					<div class="cols {{navbar_prefix}}cols-header  is--brand">
+						<a class="{{navbar_prefix}}brand" href="{{page.index}}"><img src="{{url-path-img}}/svg/logotip.svg" alt=""></a> 
+					</div>
+					<div class="cols {{navbar_prefix}}cols-header  is--tel">
+						<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}tel  is--icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="contacts-tel" ]]</a>
+					</div>
+				</div>
+			</div>
+				
+			<div class="{{navbar_prefix}}collapse" >
+				<div class="{{navbar_prefix}}collapse-inner">	
+					<div class="row {{navbar_prefix}}collapse-row">
+						<div class="cols {{navbar_prefix}}collapse-cols cols  is--left">
+							<a class="{{navbar_prefix}}brand" href="{{page.index}}"><img src="{{url-path-img}}/svg/logotip.svg" alt=""></a> 
+						</div>
+						<div class="cols {{navbar_prefix}}collapse-cols cols  is--right">
+							<div class="{{navbar_prefix}}collapse-panel">
+								<div class="row {{navbar_prefix}}collapse-row  is--inner">
+									<div class="cols {{navbar_prefix}}collapse-cols cols  is--inner-left">	
+										<a href="{{page.search}}" class="{{navbar_prefix}}search">	
+											<div class="{{navbar_prefix}}search-icon">
+												[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-search" ]]
+											</div>
+											Поиск
+										</a>
+									</div>
+									<div class="cols {{navbar_prefix}}collapse-cols cols  is--inner-center">
+										<ul class="{{navbar_prefix}}nav">
+											[[azbntple 
+												tpl="/src/block/site/default/navbar/item.html" 
+												navbar_prefix="navbar__" 
+												navbar_name="Главная" 
+												navbar_link="{{page.index}}"
+												navbar_mod="is--index" 
+											]]
+											[[azbntple 
+												tpl="/src/block/site/default/navbar/item-drop-about.html" 
+												navbar_prefix="navbar__" 
+												navbar_name="О нас" 
+												navbar_link="{{page.about}}"
+												navbar_mod="  " 
+											]]         
+											[[azbntple 
+												tpl="/src/block/site/default/navbar/item.html" 
+												navbar_prefix="navbar__" 
+												navbar_name="Программы" 
+												navbar_link="{{page.programm}}"
+												navbar_mod="  " 
+											]]
+											[[azbntple 
+												tpl="/src/block/site/default/navbar/item.html" 
+												navbar_prefix="navbar__" 
+												navbar_name="Страны" 
+												navbar_link="{{page.country}}"
+												navbar_mod="  " 
+											]]	
+											[[azbntple 
+												tpl="/src/block/site/default/navbar/item.html" 
+												navbar_prefix="navbar__" 
+												navbar_name="Новости"
+												navbar_link="{{page.news}}"
+												navbar_mod="  " 
+											]]	
+											[[azbntple 
+												tpl="/src/block/site/default/navbar/item.html" 
+												navbar_prefix="navbar__" 
+												navbar_name="Отзывы"
+												navbar_link="{{page.reviews}}"
+												navbar_mod="  " 
+											]]	
+										</ul>
+									</div>
+									<div class="cols {{navbar_prefix}}collapse-cols cols  is--inner-right">										
+										<div class="row {{navbar_prefix}}info-row">	
+											<div class="cols {{navbar_prefix}}info-cols  is--town">
+												<label class="{{navbar_prefix}}town-bar">
+													<span class="{{navbar_prefix}}town-icon">
+														[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="icon-place" ]]
+													</span>
+													<select class="{{navbar_prefix}}town-select">
+														<option>Москва</option>
+														<option>Орёл</option>
+													</select>
+												</label>
+											</div>										
+											<div class="cols {{navbar_prefix}}info-cols  is--soc">									
+												[[azbntple 
+													tpl="/src/block/site/default/social/panel.html" 
+													block_prefix="social__" 
+													block_mod="  " 
+												]]	
+											</div>										
+											<div class="cols {{navbar_prefix}}info-cols  is--lang">
+												<div class="{{navbar_prefix}}lang-bar">
+													<select class="{{navbar_prefix}}lang-select">
+														<option>RU</option>
+														<option>EN</option>
+														<option>FR</option>
+														<option>GE</option>
+													</select>
+												</div>
+											</div>	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>

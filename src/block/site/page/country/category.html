@@ -1,0 +1,53 @@
+<main class="{{content_prefix}}panel  {{content_mod}}">
+	[[azbntple 
+		tpl="/src/block/site/default/bg/card.html" 
+		block_prefix="bg-block__"
+		block_mod="is--plane-1800x1150"  
+		block_bg="bg-plane-1800x1150.png"
+	]] 
+	<div class="{{content_prefix}}container container  {{content_mod}}">
+		[[azbntple 
+			tpl="/src/block/site/default/page-header/panel-level2-flag.html" 
+			block_prefix="page-header__" 
+			block_mod="{{block_heading_mod}}"
+			block_heading_level="h1"
+			header="{{block_heading}}"
+			block_bread_mod="{{block_heading_mod}}"
+			block_bread_level1="{{block_bread_level1}}"
+			block_bread_level1_link="{{block_bread_level1_link}}"
+			block_flag="{{url-path-img}}/flag/country-australia.png"
+		]]
+		<div class="{{content_prefix}}elem">
+			<div class="{{content_prefix}}row row  is--wrap  is--gutter  {{content_mod}}">
+				<div class="{{content_prefix}}cols cols  is--cols-screen-3  is--aside  {{content_mod}}">					
+					[[azbntple 
+						tpl="/src/block/site/default/navbar/aside-country.html"
+						block_prefix="navbar-category__" 
+						block_mod="is--country"
+					]]
+				</div>
+				<div class="{{content_prefix}}cols cols  is--cols-screen-9  is--desc  {{content_mod}}">
+					<div class="{{content_prefix}}elem">
+						[[azbntple 
+							tpl="/src/block/site/default/content/panel-country-category.html"
+							block_prefix="content-block__" 
+							block_mod="is--country-category"
+							block_heading="{{block_heading}}"
+							block_heading_mod="{{block_heading_mod}}"
+						]] 
+					</div>
+					<div class="{{content_prefix}}elem">
+						[[azbntple 
+							tpl="/src/block/site/default/content/panel-programm-panel.html"
+							block_prefix="content-block__" 
+							block_mod="is--programm-category"
+							block_heading="Программы для выбранной страны"
+							block_heading_level="h4"
+							block_heading_mod="is--programm-panel"
+						]] 
+					</div>
+				</div>	
+			</div>
+		</div> 
+	</div>
+</main>

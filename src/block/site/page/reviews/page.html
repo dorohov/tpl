@@ -1,0 +1,38 @@
+<main class="{{content_prefix}}panel  {{content_mod}} colorbg--white3">
+	<div class="{{content_prefix}}container container  {{content_mod}}">
+		[[azbntple 
+			tpl="/src/block/site/default/page-header/panel-btn.html" 
+			block_prefix="page-header__" 
+			block_mod="{{block_heading_mod}}"
+			block_heading_level="h1"
+			header="{{block_heading}}"
+			block_bread_mod="{{block_heading_mod}}"
+			header_btn_mod="is--xl  scrollto"
+			header_btn_link="#form-reviews"
+			header_btn_name="Оставить отзыв"
+		]]
+		<div class="{{content_prefix}}elem">
+			[[azbntple  
+				tpl="/src/block/site/default/content/panel-reviews-page.html"
+				block_prefix="{{content_prefix}}"
+				block_mod="is--reviews-page"
+			]]
+		</div> 
+	</div>
+</main>
+	[[azbntple 
+		tpl="/src/block/site/default/form/panel-reviews.html"
+		block_id="form-reviews"
+		form_prefix="form-panel__"
+		form_mod="is--reviews"
+		form_bg="{{url-path-img}}/temp/bg-form-reviews.png"
+		header_mod="is--form-panel  is--center"
+
+		form_id="fpr"
+		form_heading="Оставьте свой отзыв" 
+		form_heading_small="  " 
+		form_mod_form="is--inline"
+		form_color="  "
+		form_btn_mod="is--xl"
+		form_btn_name="Оставить отзыв"
+	]]

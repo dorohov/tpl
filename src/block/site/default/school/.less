@@ -1,0 +1,62 @@
+.school-block__{
+	&preview{
+		@media @media-point-screen {
+			position: absolute;
+			z-index: 1;
+			top: 1.7vw;
+			left: 2.7vw;
+			max-width: 575px;
+			width: 30vw;
+		}	
+	}
+	&town{
+		.calcFontSize(20, 23, 320, 1680);
+		.calcLineHeight(20, 23, 320, 1680);
+		font-weight: 400;
+		span{
+			font-weight: 500;
+			color: @blue;
+		}
+		@media @media-point-screen {
+			padding-left: 2.4vw;
+		}
+	}
+	&map{
+		height: 400px;
+		@media @media-point-xs {
+			height: 250px;
+		}
+		@media @media-point-notsmart {
+			height: 490px;
+		}
+	}
+	&text-block{
+		&.is--lg{
+			font-size: @b-fs + 2;
+			.text__block&{
+				ul.is--styled{
+					margin-bottom: 15px;
+					& >li{
+						margin-bottom: 3px;
+					}
+				} 
+			} 
+		}
+		&.is--note-left{
+			@media @media-point-screen {
+				max-width: 960px;
+			}
+		}
+		.text__block&{
+			h3{
+				margin-bottom: 30px;
+			}
+			ul.is--styled{
+				margin-bottom: 13px;
+				& >li{
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+}

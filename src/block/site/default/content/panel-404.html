@@ -1,0 +1,23 @@
+<div class="{{block_prefix}}preview  {{block_mod}}">
+	<img src="{{url-path-img}}/default/preview-404.png" alt="">
+</div>
+<div class="text__container">
+	<div class="text__inner">
+		[[azbntple 
+			tpl="/src/block/site/default/page-header/heading.html" 
+			header_prefix="page-header__" 
+			header_mod="{{block_heading_mod}}"
+			header_level="h1"
+			header="{{block_heading}}"
+		]]
+		<div class="{{block_prefix}}btn  {{block_mod}}">
+			[[azbntple 
+				tpl="/src/block/site/default/button/link.html"
+				button_prefix="btn__" 
+				button_mod="is--xl"
+				button_link="{{page.index}}"
+				button_name="Ha главную"
+			]] 
+		</div>
+	</div>
+</div>
