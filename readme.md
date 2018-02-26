@@ -74,7 +74,7 @@ line-height: @b-lh - 2;
 Сетка сделана на flex. Grid пока не используем (когда решим вопрос с поддержкой ie, тогда будет смысл). Если хочеться поизголятся с grid - ок, но пишим флексовый fallback для ie10+.
 Для правильного выравнивания и заполнения используется `.container` в него помещается `.row` внутри которого `.cols`
 
-Модификаторы .row : 
+Модификаторы `.row` : 
 * `.is--wrap` (flex-wrap: wrap)
 * `.is--jcfs` (justify-content: flex-start)
 * `.is--jcfe` (justify-content: flex-end)
@@ -103,7 +103,6 @@ line-height: @b-lh - 2;
 * @columns - сколько колонок будет занимать элемент
 * @grid-columns - общее количество колонок
 ```
-Пример: 
 .makeCols(6, 12);
 ```
 ### SVG графика
@@ -111,8 +110,9 @@ line-height: @b-lh - 2;
 Шаблон для вызова иконки на странице
 ``` 
 [[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="" ]] 
-icon-name - название файла
 ```
+icon-name - название файла
+
 Изменения цвета иконки через color у родительского тега.
 ```
 <div class="vk" style="#000">
