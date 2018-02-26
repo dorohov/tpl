@@ -7,24 +7,68 @@
 Для каждого начертания шрифта заводится своя переменная в [var.less](/src/css/site/var.less):
 ```
 //===== fonts =====//
-@geometria:						geometria-400;
-@geometria-400i:				geometria-400i;
-@geometria-300:					geometria-300;
-@geometria-500:					geometria-500;
-@geometria-700:					geometria-700;
+@geometria: 			geometria-400;
+@geometria-400i: 			geometria-400i;
+@geometria-300: 			geometria-300;
+@geometria-500: 			geometria-500;
+@geometria-700: 			geometria-700;
+```
+Шрифт подключается в [font.less](/src/css/site/font.less) через миксин
+```
+.include-custom-font();
+Например:
+.include-custom-font(
+	@family: @geometria,
+	@src-name: @geometria,
+	@weight: 400, 
+	@style: normal
+);
+.include-custom-font(
+	@family: @geometria,
+	@src-name: @geometria-400i,
+	@weight: 400, 
+	@style: italic
+);
+```
+У шрифтов одной группы переменная @family должна быть одинаковой 
+
+#### Миксин для "адаптивного" font-size
+Использую когда нужно сделать шрифт "резиновым" (н-р для заголовков)
+```
+.calcFontSize(@f-min, @f-max, @v-min, @v-max);
+```
+где:
+* @f-min - размер шрифта в точке @v-min
+* @f-max - размер шрифта в точке @v-max
+* @v-min - минимальный размер экрана (обычно использую значение 320)
+* @v-max - максимальный размер экрана (обычно использую значение 1680)
+```
+Пример: .calcFontSize(30, 56, 320, 1680);
 ```
 
-		<p>Шрифт подключается в src/css/site/font.less через миксин include-custom-font()<br> (н-р: @family: @geometria, @src-name: @geometria-400i, @weight: 400, @style: italic).</p>
-		<p>У шрифтов одной группы переменная @family должна быть одинаковой <br>(н-р: @family: @geometria).</p>
-		<h3>Миксин для "адаптивного" размера шрифта</h3>
-		<p>Данный миксин использую когда нужно сделать шрифт резиновым <br>(н-р для заголовков), <br>в остальных случиях размер шрифта статичный в px через переменную @b-fs <br>(н-р font-size: @b-fs - 2;)</p>
-		<h4>.calcFontSize(@f-min, @f-max, @v-min, @v-max)</h4>
-		<p>где @f-min - размер шрифта в точке @v-min<br> @f-max - размер шрифта в точке @v-max<br> @v-min - минимальный размер экрана (обычно использую значение <b>320</b>), <br> @v-max - максимальный размер экрана (обычно использую значение <b>1680</b>)</p>
-		<p>Пример .calcFontSize(30, 56, 320, 1680);</p>
-		<p>&nbsp;</p>
-		<p>Ананлагичный миксин для line-height</p>
-		<h4>.calcLineHeight(@f-min, @f-max, @v-min, @v-max)</h4>
-		<p>Пример .calcLineHeight(30, 56, 320, 1680);</p>
+в остальных случиях размер шрифта статичный в px через переменную @b-fs
+```
+font-size: @b-fs - 2;
+```
+
+#### Миксин для "адаптивного" line-height
+Использую когда нужно сделать межстрочный интервал "резиновым" (н-р для заголовков)
+```
+.calcLineHeight(@f-min, @f-max, @v-min, @v-max);
+```
+где:
+* @f-min - размер шрифта в точке @v-min
+* @f-max - размер шрифта в точке @v-max
+* @v-min - минимальный размер экрана (обычно использую значение 320)
+* @v-max - максимальный размер экрана (обычно использую значение 1680)
+```
+Пример: .calcLineHeight(30, 56, 320, 1680);
+```
+
+в остальных случиях межстрочный интервал статичный в px через переменную @b-lh
+```
+line-height: @b-lh - 2;
+```
 
 ### Сетка в 12 колонок
 		<p>Стили для сетки находятся в src/css/bootstrap/grid.less</p>
