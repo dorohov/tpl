@@ -6,7 +6,6 @@
 Формат используемых шрифтов: .woff и .woff2.
 Для каждого начертания шрифта заводится своя переменная в [var.less](/src/css/site/var.less):
 ```
-//===== fonts =====//
 @geometria: 				geometria-400;
 @geometria-400i: 			geometria-400i;
 @geometria-300: 			geometria-300;
@@ -74,6 +73,7 @@ line-height: @b-lh - 2;
 Стили для сетки находятся в [var.less](/src/css/bootstrap/grid.less)</p>
 Сетка сделана на flex. Grid пока не используем (когда решим вопрос с поддержкой ie, тогда будет смысл). Если хочеться поизголятся с grid - ок, но пишим флексовый fallback для ie10+.
 Для правильного выравнивания и заполнения используется .container в него помещается .row внутри которого .cols
+
 Модификаторы .row : 
 * .is--wrap (flex-wrap: wrap)
 * .is--jcfs (justify-content: flex-start)
@@ -85,11 +85,14 @@ line-height: @b-lh - 2;
 * .is--gutter (30px)
 * .is--gutter15 (15px)
 * .is--gutter10 (10px)
+
 Подробнее в [grid.less](/src/css/bootstrap/grid.less)
+
 Модификаторы .cols :
 * .is--cols-* (от 1 до 12)
 * .is--cols-screen-* (от 1 до 12)
 * .is--cols-md-* (от 1 до 12)
+
 Подробнее в [grid.less](/src/css/bootstrap/grid.less)
 
 #### Миксин для создания ширины колонки:
@@ -104,74 +107,62 @@ line-height: @b-lh - 2;
 .makeCols(6, 12);
 ```
 ### SVG графика
-		<p>Простые иконки помещаем в папку src/svg/</p>
-		<p>с помощью шаблона [[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="" ]] вставляем иконку на страницу. В icon-name пишем название файла <br>(Н-р [[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="vk" ]]).</p>
-		<p>Изменения цвета иконки через color у родительского тега.</p>
+Простые иконки помещаем в папку [svg](/src/svg/)
+Шаблон для вызова иконки на странице
+``` 
+[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="" ]] 
+icon-name - название файла
+```
+Изменения цвета иконки через color у родительского тега.
+```
+<div class="vk" style="#000">
+	[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="vk" ]]
+</div>
+```
 
 ### Переменные для медиа запросов
 #### Последняя версия
-		<p>В новых проектах использовать их.</p>	
-		<h4>Общие:</h4>
-		<ul>
-			<li><b>@media-point-xxs</b> (x <= 565px)</li>
-			<li><b>@media-point-xs</b> (566px >= x <= 767px)</li>
-			<li><b>@media-point-sm</b> (768px >= x <= 991px)</li>
-			<li>
-				<b>@media-point-md</b> (992px >= x <= 1199px)
-				<ul>				
-					<li><b>@media-point-md1</b> (992px >= x <= 1024px)</li>
-					<li><b>@media-point-md2</b> (1025px >= x <= 1199px)</li>
-				</ul>
-			</li>
-			<li>
-				<b>@media-point-lg</b> (1200px >= x <= 1399px)
-				<ul>				
-					<li><b>@media-point-lg1</b> (1200px >= x <= 1299px)</li>
-					<li><b>@media-point-lg2</b> (1300px >= x <= 1399px)</li>
-				</ul>
-			</li>
-			<li><b>@media-point-mdl</b> (992px >= x <= 1399px)</li>
-			<li><b>@media-point-xl</b> (1400px >= x <= 1699px)</li>
-			<li><b>@media-point-xxl</b> (1700px >= x)</li>
-		</ul>
-		<h4>Специализированные:</h4>		
-		<ul>
-			<li><b>@media-point-screen</b> (1025px >= x)</li>	
-			<li><b>@media-point-device</b> (x <= 1024px)</li>
-			<li><b>@media-point-screen-lg</b> (1200px >= x)</li>	
-			<li><b>@media-point-device-lg</b> (x <= 1199px)</li>
-			<li><b>@media-point-tablet</b> (768px >= x <= 1024px)</li>	
-			<li><b>@media-point-smart</b> (x <= 767px)</li>
-			<li><b>@media-point-notsmart</b> (768px >= x)</li>	
-		</ul>
-####Предыдущая версия</h2>
-		<ul>
-			<li>
-				<b>@media-size-xs</b> (x <= 767px)
-				<ul>				
-					<li><b>@media-size-xs-p</b> (x <= 767px) и orientation:portrait</li>
-					<li><b>@media-size-xs-l</b> (x <= 767px) и orientation:landscape</li>
-				</ul>
-			</li>
-			<li>
-				<b>@media-size-sm</b> (768px >= x <= 1024px)
-				<ul>				
-					<li><b>@media-size-sm-p</b> (768px >= x <= 1024px) и orientation:portrait</li>
-					<li><b>@media-size-sm-l</b> (768px >= x <= 1024px) и orientation:landscape</li>
-				</ul>
-			</li>
-			<li><b>@media-size-md</b> (1025px >= x <= 1199px)
-			</li>
-			<li><b>@media-size-lg</b> (1200px >= x <= 1399px)</li>
-			<li><b>@media-size-mdl</b> (1025px >= x <= 1399px)</li>
-			<li><b>@media-size-xl</b> (1400px >= x <= 1699px)</li>
-			<li><b>@media-size-xxl</b> (1700px >= x)</li>
-		</ul>
-		<h4>Специализированные:</h4>		
-		<ul>
-			<li><b>@media-screen</b> (1025px >= x)</li>	
-			<li><b>@media-device</b> (x <= 1024px)</li>
-			<li><b>@media-screen-lg</b> (1200px >= x)</li>	
-			<li><b>@media-device-lg</b> (x <= 1199px)</li>
-			<li><b>@media-notsmart</b> (768px >= x)</li>	
-		</ul>
+В новых проектах использовать их.	
+
+##### Общие: 
+* `@media-point-xxs` (x <= 565px)
+* `@media-point-xs` (566px >= x <= 767px)
+* `@media-point-sm` (768px >= x <= 991px)
+* `@media-point-md` (992px >= x <= 1199px)
+** `@media-point-md1` (992px >= x <= 1024px)
+** `@media-point-md2` (1025px >= x <= 1199px)
+* `@media-point-lg` (1200px >= x <= 1399px)
+** `@media-point-lg1` (1200px >= x <= 1299px)
+** `@media-point-lg2` (1300px >= x <= 1399px)
+* `@media-point-mdl` (992px >= x <= 1399px)
+* `@media-point-xl` (1400px >= x <= 1699px)
+* `@media-point-xxl` (1700px >= x)
+
+#### Специализированные:
+* `@media-point-screen` (1025px >= x)
+* `@media-point-device` (x <= 1024px)
+* `@media-point-screen-lg` (1200px >= x)
+* `@media-point-device-lg` (x <= 1199px)
+* `@media-point-tablet` (768px >= x <= 1024px)
+* `@media-point-smart` (x <= 767px)
+* `@media-point-notsmart` (768px >= x)
+
+####Предыдущая версия
+* `@media-size-xs` (x <= 767px)
+** `@media-size-xs-p` (x <= 767px) и orientation:portrait
+** `@media-size-xs-l` (x <= 767px) и orientation:landscape
+* `@media-size-sm` (768px >= x <= 1024px)
+** `@media-size-sm-p` (768px >= x <= 1024px) и orientation:portrait
+** `@media-size-sm-l` (768px >= x <= 1024px) и orientation:landscape
+* `@media-size-md` (1025px >= x <= 1199px)
+* `@media-size-lg` (1200px >= x <= 1399px)
+* `@media-size-mdl` (1025px >= x <= 1399px)
+* `@media-size-xl` (1400px >= x <= 1699px)
+* `@media-size-xxl` (1700px >= x)
+
+#### Специализированные:
+* `@media-screen` (1025px >= x)
+* `@media-device` (x <= 1024px)
+* `@media-screen-lg` (1200px >= x)
+* `@media-device-lg` (x <= 1199px)
+* `@media-notsmart` (768px >= x)
