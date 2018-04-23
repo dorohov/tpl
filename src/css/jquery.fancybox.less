@@ -156,7 +156,10 @@
   padding: 0;
   border: 0;
   width: 80%;
-  height: calc(100% - 88px);
+  min-height: 80%;
+  @media @media-point-screen {
+    height: ~"calc(100% - 88px)";
+  }
   vertical-align: middle;
   line-height: normal;
   text-align: left;
