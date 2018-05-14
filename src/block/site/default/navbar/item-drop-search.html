@@ -1,0 +1,46 @@
+<li class="{{navbar_prefix}}nav-item dropdown  {{navbar_mod}}  azbn__search-dropdown">
+	<a href="#" class="dropdown-toggle {{navbar_prefix}}nav-link  is--search" data-toggle="dropdown">
+		<div class="{{navbar_prefix}}nav-search">
+			[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="{{navbar_name}}" ]]
+		</div>
+	</a>
+	<div class="{{navbar_prefix}}nav-dropdown dropdown-menu  is--search">
+		<div class="{{navbar_prefix}}nav-dropdown-container container">
+			<form action="{{page.search}}" class="{{navbar_prefix}}search-form">
+				<button type="submit" class="{{navbar_prefix}}search-btn">
+					[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="{{navbar_name}}" ]]
+				</button>
+				<input type="text" class="{{navbar_prefix}}search-input  azbn__search-input" placeholder="Поиск по сайту:">
+				<button type="button" class="{{navbar_prefix}}search-btn" data-toggle="dropdown">
+					[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="modal-close" ]]
+				</button>
+			</form>
+			<div class="{{navbar_prefix}}nav-dropdown-result">
+				<h4 class="{{navbar_prefix}}nav-dropdown-result-heading">Результаты поиска:</h4>					
+				<ul class="{{navbar_prefix}}nav-dropdown-menu">				
+					[[azbntple 
+						tpl="/src/block/site/default/navbar/item-drop-link.html" 
+						navbar_prefix="navbar__" 
+						navbar_mod="  "
+						navbar_name="Электронная информационно-образовательная среда" 
+						navbar_link="##"
+					]]						
+					[[azbntple 
+						tpl="/src/block/site/default/navbar/item-drop-link.html" 
+						navbar_prefix="navbar__" 
+						navbar_mod="  "
+						navbar_name="Молодежный центр" 
+						navbar_link="##"
+					]]							
+					[[azbntple 
+						tpl="/src/block/site/default/navbar/item-drop-link.html" 
+						navbar_prefix="navbar__" 
+						navbar_mod="  "
+						navbar_name="Студенческое самоуправление" 
+						navbar_link="##"
+					]]
+				</ul>
+			</div>
+		</div>
+	</div>
+</li>

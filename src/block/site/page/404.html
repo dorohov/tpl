@@ -1,0 +1,26 @@
+<main class="{{content_prefix}}panel  {{content_mod}}" role="main">
+	<div class="{{content_prefix}}container container  {{content_mod}}  is--full">
+		[[azbntple 
+			tpl="/src/block/site/default/breadcrumb/level1.html" 
+			bread_prefix="breadcrumb__"
+			bread_mod="  "
+			level_1="{{block_heading}}"
+		]]
+		[[azbntple
+			tpl="/src/block/site/default/page-header/heading.html" 
+			header_prefix="page-header__" 
+			header_mod="{{block_heading_mod}}  {{content_mod}}"
+			header_level="{{block_heading_level}}"
+			header="{{block_heading}}"
+		]]
+		<div class="text__block">		
+			[[azbntple 
+				tpl="/src/block/site/default/button/link.html"
+				button_prefix="btn__" 
+				button_mod="  "
+				button_link="{{page.index}}"
+				button_name="Ha главную"
+			]] 
+		</div>
+	</div>
+</main>

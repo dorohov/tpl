@@ -1,0 +1,106 @@
+<main class="{{content_prefix}}panel  {{content_mod}}" role="main">
+	<div class="{{content_prefix}}container container  {{content_mod}}  is--full">
+		<div class="{{content_prefix}}row row  is--gutter  is--wrap  {{content_mod}}">
+			<div class="{{content_prefix}}cols cols  is--aside">
+				<h4 class="{{content_prefix}}heading">Боковое меню</h4>
+				[[azbntple 
+					tpl="/src/block/site/default/navbar/aside-science.html"
+					block_prefix="navbar-aside__" 
+					block_mod="  "
+				]]
+
+				<h4 class="{{content_prefix}}heading">Дополнительное боковое меню</h4>
+				[[azbntple 
+					tpl="/src/block/site/default/navbar/panel-faculty.html"
+					block_prefix="navbar-panel__" 
+					block_mod="  "
+				]]
+			</div>
+			<div class="{{content_prefix}}cols cols  is--content">
+				[[azbntple 
+					tpl="/src/block/site/default/breadcrumb/level1.html" 
+					bread_prefix="breadcrumb__"
+					bread_mod="  "
+					level_1="{{block_heading}}"
+				]]
+				[[azbntple
+					tpl="/src/block/site/default/page-header/heading.html" 
+					header_prefix="page-header__" 
+					header_mod="{{block_heading_mod}}  {{content_mod}}"
+					header_level="{{block_heading_level}}"
+					header="{{block_heading}}"
+				]]	
+				<div class="{{content_prefix}}elem  {{content_mod}}">
+					[[azbntple 
+						tpl="/src/block/site/default/text/panel-test.html"
+						block_prefix="{{content_prefix}}"
+						block_heading="Тест шрифта"
+					]]
+				</div>
+				<div class="{{content_prefix}}elem  {{content_mod}}">
+					[[azbntple 
+						tpl="/src/block/site/default/page-header/include.html"
+						block_prefix="{{content_prefix}}"
+						block_heading="Заголовки"
+					]]
+				</div>
+				<div class="{{content_prefix}}elem  {{content_mod}}">
+					[[azbntple 
+						tpl="/src/block/site/default/color/include.html"
+						block_prefix="{{content_prefix}}"
+						block_heading="Палитра"
+					]]
+				</div>
+				<div class="{{content_prefix}}elem  {{content_mod}}">
+					[[azbntple 
+						tpl="/src/block/site/default/button/include.html"
+						block_prefix="{{content_prefix}}"
+						block_heading="Кнопки и ссылки"
+					]]
+				</div>
+				<div class="{{content_prefix}}elem  {{content_mod}}">
+					[[azbntple 
+						tpl="/src/block/site/default/form/include.html"
+						block_prefix="{{content_prefix}}"
+						block_heading="Формы"
+					]]
+				</div>
+				<div class="{{content_prefix}}elem  {{content_mod}}">
+					[[azbntple 
+						tpl="/src/block/site/default/table/include.html"
+						block_prefix="{{content_prefix}}"
+						block_heading="Таблицы"
+					]]
+				</div>
+				<div class="{{content_prefix}}elem  {{content_mod}}">
+					[[azbntple 
+						tpl="/src/block/site/default/pagination/include.html"
+						block_prefix="{{content_prefix}}"
+						block_heading="Постраничная навигация"
+					]]
+				</div>
+				<div class="{{content_prefix}}elem  {{content_mod}}">
+					[[azbntple 
+						tpl="/src/block/site/default/breadcrumb/include.html"
+						block_prefix="{{content_prefix}}"
+						block_heading="Хлебные крошки"
+					]]
+				</div>
+				<div class="{{content_prefix}}elem  {{content_mod}}">
+					[[azbntple 
+						tpl="/src/block/site/default/card/include.html"
+						block_prefix="{{content_prefix}}"
+						block_heading="Карточки"
+					]]
+				</div>
+				<div class="{{content_prefix}}elem  {{content_mod}}">
+					[[azbntple 
+						tpl="/src/block/site/default/tabs/include.html"
+						block_prefix="{{content_prefix}}"
+						block_heading="Вкладки"
+					]]
+				</div>
+			</div>
+		</div>
+	</div>
+</main>

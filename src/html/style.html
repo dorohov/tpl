@@ -12,12 +12,16 @@
 			tpl="/src/block/site/default/navbar/.html"
 			class="navbar-site scroll"
 			navbar_prefix="navbar__"   
-			navbar_mod="  "
-		]] 	  
+			navbar_mod="  "     
+		]] 
 		[[azbntple  
-			tpl="/src/block/site/page/style/.html"
-			block_prefix="style-page__"      
-		]]	
+			tpl="/src/block/site/page/style.html"
+			content_prefix="content-block__"       
+			content_mod="  "    
+			block_heading_mod="is--page-heading"
+			block_heading_level="h1"
+			block_heading="Страница стилей"  
+		]]
 		[[azbntple 
 			tpl="/src/block/site/default/footer/.html"
 			footer_prefix="footer__" 
@@ -32,6 +36,5 @@
 		]]
 		[[azbntple tpl="/src/block/site/default/script/script.html" ]]
 		[[azbntple tpl="/src/block/site/default/script/fancybox3.html" ]]
-		[[azbntple tpl="/src/block/site/default/script/slick.html" ]]
 	</body>
 </html>

@@ -34,7 +34,7 @@
 		text-align: center;
 		position: relative;
 		z-index: 1;
-		padding: 0 5px;
+		padding: 0 8px;
 		font-size: @b-fs;
 		line-height: @b-lh;
 		&:hover{	
@@ -42,25 +42,32 @@
 			//background-color: @pagin-bg;			
 		}
 		&.is--nav{
+			display: block;
 			position: relative;
-			font-size: @b-fs - 4;
-			line-height: @b-lh - 6;
+			width: 26px;
+			height: 26px;
+			border: 1px solid @b-color-a;
 			text-transform: uppercase;
-			margin: 0 8px;
-			color: @pagin-color-h;
+			margin: 0 4px;
+			padding: 5px 0;
+			color: @b-color-a;
+
+			svg{display: block;}
 			&:hover{
-				background: none;
-				color: @pagin-color;			
+				background: @b-color-a;
+				color: @white;			
 			}
 		}
 		&.is--prev{
+			margin-right: 15px;
 		}
-		&.is--next{
+		&.is--next{			
+			margin-left: 15px;
 		}
 		.pagination-panel__item.is--active &{
-			color: @pagin-color-h;		
+			color: @pagin-color-hover;		
 			cursor: default;
-			font-weight: 500;
+			background-color: @pagin-bg;
 		}
 		span{
 			position: relative;

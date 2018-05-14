@@ -1,26 +1,36 @@
 .kontakty-panel__{
 	&block{	
 		position: relative;
-		@media @media-point-notsmart {
-			padding-top: 45px;
-		}
 	}
-	&inner{
-		margin-bottom: 35px;
-		@media @media-point-notsmart {
-			margin: 0;
-			position: absolute;
-			z-index: 5;
-			box-shadow: 7px 12px 29px 0px fadeout(@black, 80%);
-			background: @white;
-			top: 0;
-			max-width: 655px;
-			min-width: 360px;
-			width: 34vw;
-			padding: 4.8vw 7vw;			
+	&row{
+		align-items: stretch;
+	}
+	&cols{
+		height: 100%;
+		.makeCols(12, 12);
+		&.is--address{
+			@media @media-point-screen {
+				.makeCols(4, 12);
+			}
 		}
-		@media @media-point-tablet {
-			padding: 30px 45px;
+		&.is--map{
+			@media @media-point-screen {
+				.makeCols(8, 12);
+			}
+		}
+		&.is--tel{
+			@media @media-point-screen {
+				margin-top: 3.3vw;
+			}
+		}
+		&.is--contacts{
+			.makeCols(6, 12);
+			@media @media-point-xxs {
+				.makeCols(12, 12);
+			}
+			@media @media-point-screen {
+				.makeCols(4, 12);
+			}
 		}
 	}
 	&map{
@@ -29,76 +39,73 @@
 			height: 250px;
 		}
 		@media @media-point-notsmart {
-			height: 620px;
+			height: 590px;
 		}
 		@media @media-point-md1 {
 			height: 500px;
 		}
 	}
-	&tabs-nav{
-		list-style: none;
-		margin: 0 -15px 20px;
-		padding: 0;
-		display: flex;
+	&heading{
+		margin-bottom: 30px;
 		@media @media-point-screen {
-			margin-left: -20px;
-			margin-right: -20px;
-			margin-bottom: 2.5vw;
+			margin-bottom: 2.8vw;
 		}
-	}
-	&tabs-item{
-		padding: 0 15px;
-		@media @media-point-screen {
-			padding: 0 20px;
-		}
-	}
-	&tabs-link{
-		display: block;
-		padding-left: 15px;
-		font-size: @b-fs + 6;
-		line-height: @b-lh + 4;
-		position: relative;
-		&, &:focus, &:hover{
-			color: @blue;			
-		}
-		.kontakty-panel__tabs-item.active &{
-			font-weight: 500;
-		}
-		&::before{
-			content: '';
-			position: absolute;
-			top: 50%;
-			left: 0;
-			transform: translateY(-50%);
-			border-left: 5px solid fadeout(@blue, 0%);
-			border-top: 5px solid fadeout(@blue, 100%);
-			border-bottom: 5px solid fadeout(@blue, 100%);
-			.kontakty-panel__tabs-item.active &{
-				transform: translateY(-50%) rotate(90deg);
-			}
-		}
-	}
-	&tabs-pane{
-		display: none;
-		&.active{display: block;}
 	}
 	&item-group{
-
+		padding-bottom: 30px;
+		@media @media-point-screen {
+			padding-top: 3vw;
+			padding-bottom: 3vw;
+		}
 	}
 	&item{
 		margin-bottom: 20px;
+		@media @media-point-screen {
+			margin-bottom: 1.2vw;
+		}
 		&:last-child{
 			margin-bottom: 0;
 		}
 	}
 }
-
+.kontakty-card__{
+	&card{}
+	&post{
+		color: @b-color-a;
+		font-weight: 700;
+		font-size: @b-fs + 4;
+		line-height: @b-lh - 2;
+		margin-bottom: 10px;
+	}
+	&heading{
+		color: @b-color-h;
+		font-weight: 500;
+		font-size: @b-fs + 4;
+		margin-bottom: 20px;
+	}
+	&item{
+		margin-bottom: 10px;
+	}
+	&item-heading{
+		color: @white-bd;
+		font-size: @b-fs + 2;
+		line-height: @b-lh - 4;
+		font-weight: 700;
+	}
+	&item-note{
+		&, a[href^="tel:"], a[href^="mailto:"]{
+			color: @b-color;
+		}
+	}
+}
 .kontakty-item__{
 	&item{
 		position: relative;
+		font-size: @b-fs + 4;
+		line-height: @b-lh + 6;
 		//
 		&, &:hover, &:focus{
-			color: @b-color-h;
+			color: @b-color;
 		}
 		span{
 			font-weight: 700;
@@ -107,7 +114,12 @@
 		&.is--icon{
 			padding-left: 40px;
 		}
-		//font-size: @b-fs;
+	}
+	&heading{
+		color: @b-color-a;
+		.calcFontSize(20, 28, 320, 1680);
+		.calcLineHeight(24, 32, 320, 1680);
+		font-weight: 400;
 	}
 	&link{
 		display: block;

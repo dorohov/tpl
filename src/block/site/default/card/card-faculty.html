@@ -1,0 +1,38 @@
+<article class="{{block_prefix}}card  {{block_mod}}">
+	<h3 class="{{block_prefix}}heading  {{block_mod}}"><a href="{{block_link}}">{{block_heading}}</a></h3>
+	<div class="{{block_prefix}}row row  is--wrap  {{block_mod}}">
+		<div class="{{block_prefix}}cols cols  {{block_mod}}  is--preview">
+			[[azbntple 
+				tpl="/src/block/site/default/card/card-team-card.html"
+				block_prefix="card-item__" 
+				block_mod="is--team  is--team-card  {{block_mod}}-inner"
+				block_link="{{page.faculty_card}}"
+				block_preview="http://via.placeholder.com/365x470"
+				block_preview_xs="http://via.placeholder.com/500x300"
+				block_heading="{{block_dean_heading}}"
+				block_heading_small="{{block_dean_heading_small}}"
+				block_info="{{block_dean_info}}"
+			]]
+		</div>
+		<div class="{{block_prefix}}cols cols  {{block_mod}}  is--desc">
+			<div class="{{block_prefix}}desc  {{block_mod}}">
+				<div class="{{block_prefix}}desc-elem  {{block_mod}}">
+					<div class="{{block_prefix}}contacts  {{block_mod}}">
+						<span>Адрес:</span> {{block_address}}
+					</div>
+					<div class="{{block_prefix}}contacts  {{block_mod}}">
+						<span>Телефон:</span> {{block_phone}}
+					</div>
+					<div class="{{block_prefix}}contacts  {{block_mod}}">
+						<span>E-mail:</span> {{block_email}}
+					</div>
+				</div>
+				<div class="{{block_prefix}}desc-elem  {{block_mod}}">
+					<div class="{{block_prefix}}note  {{block_mod}}">
+						{{block_note}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>

@@ -1,0 +1,57 @@
+<div style="margin-bottom: 5vw;">	
+	[[azbntple 
+		tpl="/src/block/site/default/page-header/heading.html" 
+		header_prefix="page-header__" 
+		header_mod="is--heading  is--center"
+		header_level="h1"
+		header="{{block_heading}}"
+	]]	
+	<!-- ** 
+		префиксы:
+			= btn__  				- для кнопок
+			= btn-link__			- для ссылок
+		модификаторы:
+			= по цвету
+				== без модификатора	- основной 
+				== is--invers 		- вспомогательный 
+				== is--white 		- белая 
+			= по размеру
+				== is--lg			- больной
+				== is--sm			- средний
+				== is--xs 			- маленький
+			= по типу контейнера
+				== is--block 		- блоковая
+				== is--form-inline 	- блоковая для горизонтальной формы 
+			= разное 
+				== is--hidden		- прячет кнопку / ссылку
+
+	** -->
+	<!-- Кнопка-ссылка -->
+	<div style="margin-bottom: 25px;">	 	
+		[[azbntple 
+			tpl="/src/block/site/default/button/button-modal.html"
+			button_prefix="btn__" 
+			button_mod="  "
+			button_target="modal-message"
+			button_name="Подобрать" 
+		]]
+	</div>
+	<div style="margin-bottom: 25px;">		
+		[[azbntple 
+			tpl="/src/block/site/default/button/link.html"
+			button_prefix="btn__" 
+			button_mod="is--invers"
+			button_link="{{page.index}}"
+			button_name="На главную"
+		]]
+	</div>
+	<div style="margin-bottom: 25px;">		
+		[[azbntple 
+			tpl="/src/block/site/default/button/button-modal.html"
+			button_prefix="btn__" 
+			button_mod="is--xl"
+			button_target="modal-order"
+			button_name="Отправить" 
+		]]
+	</div>
+</div>			

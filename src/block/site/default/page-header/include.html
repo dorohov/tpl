@@ -1,29 +1,7 @@
-<div>	
-	[[azbntple 
-		tpl="8/src/block/site/default/page-header/heading.html" 
-		header_prefix="page-header__" 
-		header_mod="is--heading  is--center"
-		header_level="h1"
-		header="{{block_heading}}"
-	]]	
-	<!-- ** 
-		префиксы:
-			= page-header__  				- для заголовка
-			= page-header-panel__			- для панели
-	** -->	
-	[[azbntple 
-		tpl="/src/block/site/default/page-header/panel.html"
-		block_prefix="page-header__" 
-		block_mod="is--page-heading  is--white-page"
-		block_bg="{{url-path-img}}/temp/bg-page-base.jpg"
-		block_heading="{{block_heading}} для светлых"
-	]]
-	[[azbntple 
-		tpl="/src/block/site/default/page-header/panel.html"
-		block_prefix="page-header__" 
-		block_mod="is--page-heading  is--black-page"
-		block_bg="{{url-path-img}}/temp/bg-page-base.jpg"
-		block_heading="{{block_heading}} для темных"
-	]]
-	
-</div>			
+<h4 class="{{block_prefix}}heading">{{block_heading}}</h4>
+<h1 style="margin-bottom: 20px">Заголовок H1</h1>
+<h2 style="margin-bottom: 20px">Заголовок H2</h2>
+<h3 style="margin-bottom: 20px">Заголовок H3</h3>
+<h4 style="margin-bottom: 20px">Заголовок H4</h4>
+<h5 style="margin-bottom: 20px">Заголовок H5</h5>
+<h6>Заголовок H6</h6>

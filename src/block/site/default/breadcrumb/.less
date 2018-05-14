@@ -1,5 +1,5 @@
 .breadcrumb__{
-	@gutter: 10px;
+	@gutter: 12px;
 	@gutter_top: 5px;
 	&block{
 		margin-bottom: 10px;
@@ -27,23 +27,15 @@
 		padding-top: @gutter_top;
 		padding-left: @gutter;
 		padding-right: @gutter;	
-		color: @bread_color;
-		text-transform: uppercase;
-		letter-spacing: 0.5px;		
-		&:before{
-			content: ''; 
+		color: @bread_color;		
+		&:after{
+			content: '...'; 
 			position: absolute;
-			top: 60%;
-			transform: translate(50%, -50%);
-			background-color: @bread_color;
-			width: 6px;
-			height: 2px;
-		}			
-		&:before{
+			bottom: 0%;
+			transform: translate(50%, 0%);		
 			right: 0;
 		}	
 		&.is--active{
-			font-weight: 700;
 			color: @bread_color_active;
 			&::before,	
 			&::after{display: none}	

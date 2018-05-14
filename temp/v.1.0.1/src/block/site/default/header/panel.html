@@ -1,0 +1,32 @@
+<header class="{{block_prefix}}block">
+	<div class="{{block_prefix}}bg">
+		<picture>
+			<source media="(min-width: 768px)" 
+					srcset="{{url-path-img}}/temp/bg-header-1920x860.jpg">
+			<source media="(min-width: 451px)" 
+					srcset="{{url-path-img}}/temp/bg-header-767x450.jpg">
+			<img src="{{url-path-img}}/temp/bg-header-450x500.jpg" alt="">
+		</picture>
+	</div>
+	<div class="{{block_prefix}}panel">
+		<div class="container {{block_prefix}}container">
+			<div class="{{block_prefix}}inner">
+				<h1 class="{{block_prefix}}heading">{{block_heading}}</h1>
+				<div class="{{block_prefix}}heading-small">{{block_heading_small}}</div>
+				[[azbntple 
+					tpl="/src/block/site/default/form/picking.html" 
+					form_prefix="form__"
+					form_id="fsp"
+					form_mod="is--inline  is--picking" 
+					form_heading="Подобрать прогрумму" 
+					form_color="is--header"
+					form_btn_mod="  "
+					form_btn_name="Подобрать"
+				]]
+			</div>
+		</div>
+	</div>
+	<a href=".scrollto-ready" class="{{block_prefix}}scrollto scrollto" data-scrollto-diff="0">
+		[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="next-panel" ]]
+	</a>
+</header>

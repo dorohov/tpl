@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[[azbntple 
+			tpl="/src/block/site/default/head/.html" 
+			title=" "
+			description=" "
+		]] 		
+	</head>
+	<body> 
+		[[azbntple 
+			tpl="/src/block/site/default/navbar/.html"
+			class="navbar-site scroll"
+			navbar_prefix="navbar__"   
+			navbar_mod="  "     
+		]] 
+		[[azbntple 
+			tpl="/src/block/site/default/header/panel.html"
+			block_prefix="header-block__"
+			block_heading="Учитесь и живите без границ"
+			block_heading_small="Обучение за рубежом"
+		]]	
+		[[azbntple  
+			tpl="/src/block/site/page/programm/index.html"
+			content_prefix="content-block__"      
+			content_mod="is--programm-index"      
+			block_heading_mod="is--page-heading  is--line"
+			block_heading="Категории программ"     
+		]]
+		[[azbntple  
+			tpl="/src/block/site/default/content/panel-about-index.html"
+			content_prefix="content-block__"       
+			content_mod="is--about-header  is--index"      
+			block_heading_mod="is--page-heading  is--line  is--line-blue-light"
+			block_heading="О нас"    
+			block_bg="{{url-path-img}}/temp/bg-about-header.jpg" 
+		]]
+		[[azbntple  
+			tpl="/src/block/site/page/index/page.html"
+			content_prefix="content-block__"      
+			content_mod="is--index-page"      
+			block_heading_mod="is--page-heading  is--line"
+			block_heading="  "     
+		]]
+		[[azbntple  
+			tpl="/src/block/site/default/content/panel-reviews-index.html"
+			content_prefix="content-block__"
+			content_mod="is--reviews-index"
+			block_heading_mod="is--page-heading  is--line"
+			block_heading="Отзывы наших клиентов"
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/form/panel-questions.html"
+			form_prefix="form-panel__"
+			form_mod="is--questions" 
+			form_bg="{{url-path-img}}/temp/bg-form-questions.jpg"
+			form_bg_after="{{url-path-img}}/temp/bg-form-questions-plans.png"
+			
+			header_mod="is--form-panel  is--center  color--blue-light"
+
+			form_id="fpr"
+			form_heading="Остались вопросы?" 
+			form_heading_small="Получите консультацию, отправив данные менеджеру" 
+			form_mod_form="is--inline"
+			form_color="is--white"
+			form_btn_mod="is--xl"
+			form_btn_name="Оптравить"
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/footer/.html"
+			footer_prefix="footer__" 
+		]]		
+		[[azbntple tpl="/src/block/site/default/script/script.html" ]]  
+		[[azbntple tpl="/src/block/site/default/script/slick.html" ]]
+	</body>
+</html>

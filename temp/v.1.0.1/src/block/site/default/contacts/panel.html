@@ -1,0 +1,91 @@
+<div class="{{block_prefix}}block">
+	<div class="{{block_prefix}}container container  is--nopadding">
+		<div class="{{block_prefix}}inner">
+			<ul class="{{block_prefix}}tabs-nav">
+				<li class="{{block_prefix}}tabs-item active">
+					<a href="#contacts-msk" class="{{block_prefix}}tabs-link  azbn__office__map__set-center-btn" data-toggle="tab" data-coord="55.7736, 37.602">Москва</a>
+				</li>
+				<li class="{{block_prefix}}tabs-item">
+					<a href="#contacts-orel" class="{{block_prefix}}tabs-link  azbn__office__map__set-center-btn" data-toggle="tab" data-coord="52.9842, 36.0601">Орёл</a>
+				</li>
+			</ul>
+			<div class="{{block_prefix}}tabs-content">
+				<div class="{{block_prefix}}tabs-pane active" id="contacts-msk">
+					<div class="{{block_prefix}}item-group">
+						<div class="{{block_prefix}}item">
+							[[azbntple 
+								tpl="/src/block/site/default/contacts/item-icon-tel.html" 
+								block_prefix="kontakty-item__"
+								block_mod="is--icon  is--tel"
+								block_name="{{contacts.phone}}"
+								block_link="tel:{{contacts.phone_tel}}"
+								block_attr="  "
+								block_icon="contacts-tel"
+							]]			
+						</div>
+						<div class="{{block_prefix}}item">
+							[[azbntple 
+								tpl="/src/block/site/default/contacts/item-icon-link.html" 
+								block_prefix="kontakty-item__"
+								block_mod="is--icon"
+								block_name="{{contacts.email}}"
+								block_link="mailto:{{contacts.email}}"
+								block_attr="  "
+								block_icon="contacts-email"
+							]]			
+						</div>		
+						<div class="{{block_prefix}}item">
+							[[azbntple 
+								tpl="/src/block/site/default/contacts/item-icon.html" 
+								block_prefix="kontakty-item__"
+								block_mod="is--icon"
+								block_name="{{contacts.address}}"
+								block_link="  "
+								block_attr="  "
+								block_icon="contacts-address"
+							]]			
+						</div>
+					</div>	
+				</div>	
+				<div class="{{block_prefix}}tabs-pane" id="contacts-orel">
+					<div class="{{block_prefix}}item-group">
+						<div class="{{block_prefix}}item">
+							[[azbntple 
+								tpl="/src/block/site/default/contacts/item-icon-link.html" 
+								block_prefix="kontakty-item__"
+								block_mod="is--icon"
+								block_name="{{contacts.email}}"
+								block_link="mailto:{{contacts.email}}"
+								block_attr="  "
+								block_icon="contacts-email"
+							]]			
+						</div>	
+						<div class="{{block_prefix}}item">
+							[[azbntple 
+								tpl="/src/block/site/default/contacts/item-icon-tel.html" 
+								block_prefix="kontakty-item__"
+								block_mod="is--icon"
+								block_name="{{contacts.phone}}"
+								block_link="tel:{{contacts.phone_tel}}"
+								block_attr="  "
+								block_icon="contacts-tel"
+							]]			
+						</div>
+						<div class="{{block_prefix}}item">
+							[[azbntple 
+								tpl="/src/block/site/default/contacts/item-icon.html" 
+								block_prefix="kontakty-item__"
+								block_mod="is--icon"
+								block_name="{{contacts.address2}}"
+								block_link="  "
+								block_attr="  "
+								block_icon="contacts-address"
+							]]			
+						</div>	
+					</div>	
+				</div>	 
+			</div>	
+		</div>
+	</div>
+	<div class="{{block_prefix}}map" id="map-google" data-map='{"center" : [55.7736, 37.602],"zoom" : 17,"placemarks" : [{"coord" : [55.773847, 37.603495], "title" : "Офис в Москве"},{"coord" : [52.984461, 36.061639], "title" : "Офис в Орле"}]}' ></div>
+</div>

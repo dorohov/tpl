@@ -1,0 +1,48 @@
+<div class="{{content_prefix}}panel  {{content_mod}}  colorbg--white-f2">
+	<div class="{{content_prefix}}container container  {{content_mod}}">			
+		[[azbntple 
+			tpl="/src/block/site/default/page-header/heading.html" 
+			header_prefix="page-header__" 
+			header_mod="{{block_heading_mod}}  {{content_mod}}"
+			header_level="{{block_heading_level}}"
+			header="{{block_heading}}"
+		]]	
+		<div class="{{content_prefix}}row row  is--gutter  is--wrap  {{content_mod}}">
+			<div class="{{content_prefix}}cols cols  {{content_mod}}">
+				[[azbntple 
+					tpl="/src/block/site/default/card/card-news.html"
+					block_prefix="card-item__" 
+					block_mod="is--news  is--event"
+					block_link="{{page.news_card}}"
+					block_preview="http://via.placeholder.com/755x395"
+					block_date="27.03.2018"
+					block_date_iso="2018-03-27"
+					block_heading="Выставка «Оружие Победы»"
+					block_note="<p>23&nbsp;марта 2018 года в&nbsp;Молодежном центре Орловского ГАУ прошла выставка «Оружие Победы», организованная активистами поискового отряда «Костёр».</p><p>В&nbsp;ходе выставки студенты узнали об&nbsp;оружии, которое пережило самое жестокое время в&nbsp;нашей истории&nbsp;— бои Великой Отечественной войны 1941-1945 гг., и&nbsp;которое помогло приблизить Победу.</p>"
+				]]
+			</div>
+			<div class="{{content_prefix}}cols cols  {{content_mod}}">
+				[[azbntple 
+					tpl="/src/block/site/default/card/card-news.html"
+					block_prefix="card-item__" 
+					block_mod="is--news  is--event"
+					block_link="{{page.news_card}}"
+					block_preview="http://via.placeholder.com/755x395"
+					block_date="27.03.2018"
+					block_date_iso="2018-03-27"
+					block_heading="День открытых дверей"
+					block_note="24 марта в Орловском государственном аграрном университете Н.В. Парахина проходил День открытых дверей."
+				]]
+			</div>
+		</div>
+		<div class="{{content_prefix}}btn  {{content_mod}}  is--center">
+			[[azbntple 
+				tpl="/src/block/site/default/button/link.html"
+				button_prefix="btn__" 
+				button_mod="is--lg"
+				button_link="{{page.event}}"
+				button_name="Все мероприятия"
+			]]
+		</div>
+	</div>
+</div>

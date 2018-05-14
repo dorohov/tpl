@@ -6,24 +6,21 @@ function initMap() {
     var map_data = JSON.parse(cont.attr('data-map') || '{}');    
     var coordMapOfficeOne = map_data.center;
     var zoomMapOfficeOne = map_data.zoom,
-        styleMapOfficeOne = [{"stylers":[{"hue":"#2c3e50"},{"saturation":250}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":50},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]}],
+        styleMapOfficeOne = [{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#e9e5dc"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"poi.medical","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"poi.sports_complex","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54},{"visibility":"off"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"water","elementType":"all","stylers":[{"saturation":43},{"lightness":-11},{"color":"#89cada"}]}],
         optionsMapOfficeOne = {
           zoom: zoomMapOfficeOne, 
           center: new google.maps.LatLng(coordMapOfficeOne[0], coordMapOfficeOne[1]), 
           styles: styleMapOfficeOne
         }, 
       idOfficeOne = document.getElementById(map_container_div_id),
-      mapOfficeOne = new google.maps.Map(idOfficeOne, optionsMapOfficeOne), 
-      //iconOfficeOne = '/wp-content/themes/azbn7theme/img/default/map-placeholder.png';
-      //iconOfficeOne = '/img/default/icon-map.png',
+      mapOfficeOne = new google.maps.Map(idOfficeOne, optionsMapOfficeOne),
       iconOfficeOne = {   
-        //path: "M25,0C12.1,0.5,1.4,10.5,0.1,23.4C-0.1,26,0,28.5,0.5,30.9l0,0c0,0,0,0.3,0.2,0.8c0.4,1.8,1,3.5,1.7,5.1 C5,43,11,53.3,24.5,64.5c0.8,0.7,2,0.7,2.9,0C40.9,53.3,46.9,43,49.5,36.8c0.8-1.6,1.3-3.3,1.7-5.1c0.1-0.5,0.2-0.8,0.2-0.8l0,0 c0.3-1.6,0.5-3.2,0.5-4.9C51.9,11.3,39.7-0.5,25,0z M25.9,38.8c-7,0-12.6-5.6-12.6-12.6S19,13.6,25.9,13.6s12.6,5.6,12.6,12.6     S32.9,38.8,25.9,38.8z", 
-        path: "M24,64c0,0,23.8-27,23.8-40.2C47.8,10.7,37.2,0,24,0S0.2,10.7,0.2,23.8S24,64,24,64z M24,7.4 c9.1,0,16.5,7.4,16.5,16.5S33.1,40.3,24,40.3c-9.1,0-16.5-7.4-16.5-16.5S14.9,7.4,24,7.4z", 
-        fillColor: '#0a4587',
+        path: "M24.5908 0.0162891C11.8908 0.462443 1.34026 10.3828 0.121372 23.0457C-0.127648 25.5783 0.0165219 28.0321 0.462136 30.381C0.462136 30.381 0.501455 30.6566 0.632518 31.1814C1.02571 32.9398 1.61549 34.6457 2.34944 36.2466C4.90517 42.3091 10.8161 52.4525 24.0797 63.4882C24.8923 64.1706 26.0849 64.1706 26.9106 63.4882C40.1742 52.4656 46.0851 42.3222 48.654 36.2335C49.401 34.6326 49.9777 32.9398 50.3709 31.1683C50.4889 30.6566 50.5413 30.3679 50.5413 30.3679C50.8427 28.7932 51 27.1792 51 25.5258C51 11.1176 39.0864 -0.495476 24.5908 0.0162891ZM25.4952 38.2281C18.6537 38.2281 13.1097 32.6774 13.1097 25.8276C13.1097 18.9778 18.6537 13.4271 25.4952 13.4271C32.3366 13.4271 37.8806 18.9778 37.8806 25.8276C37.8806 32.6774 32.3366 38.2281 25.4952 38.2281Z", 
+        fillColor: '#C31846',
         strokeColor: '#000000',
         fillOpacity: 1,
         //anchor: new google.maps.Point(26,65),
-        anchor: new google.maps.Point(24,64),
+        anchor: new google.maps.Point(25,64),
         strokeWeight: 0,
         scale: 1,
       }; 

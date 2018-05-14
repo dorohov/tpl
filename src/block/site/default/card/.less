@@ -1,615 +1,706 @@
 .card-item__{
 	&card{
-		&.is--partners,
-		&.is--programm-category{
-			display: block;
-			border: 1px solid @white6;
+		&.is--student{
+			background: @white-f2;
 			position: relative;
 			height: 100%;
-			&:hover,
-			&.is--active{
-				background-color: @blue-light;
-				border-color: @blue-light;
+			padding: 25px 20px;
+			@media @media-point-screen {
+				padding: 2.7vw 2.7vw;
 			}
 		}
-		&.is--programm-category{
-			padding: 30px 15px;
-			@media @media-point-screen {
-				padding: 4.6vw 15px;
-			}
-			&.is--sm{
-				@media @media-point-screen {
-					padding: 2.6vw 2vw;
+		&.is--news-card{
+			max-width: 485px;
+			margin-bottom: 25px;
+		}
+		&.is--team-card{
+			@media @media-point-notsmart {
+				max-width: 310px;	
+				&.is--faculty-inner{
+					max-width: 100%;
 				}				
 			}
+			/*@media @media-point-screen {
+				&.is--faculty-inner{
+					max-width: 235px;
+				}				
+			}*/
 		}
-		&.is--about-header{
-			min-height: 54px;
-			//margin-bottom: 20px;
+		&.is--team-dean{
+			margin-bottom: 25px;
 			@media @media-point-screen {
-				margin-bottom: 1.7vw;
+				margin-bottom: 15px;
 			}
 		}
-		&.is--news{
-			max-width: 493px;
-			&.is--lg{
-				@media @media-point-screen {
-					margin-bottom: 20px;
-				}
-			}
-		}
-		&.is--reviews-index{
-			padding-top: 45px;
-		}
-		&.is--school{
-			background-color: @white;
-			position: relative;
-			overflow: hidden;
-			padding: 20px 25px;
+		//old
+		/*&.is--team-card-full{
+			margin-bottom: 25px;
 			@media @media-point-screen {
-				padding: 2.4vw 2.5vw;
+				margin-bottom: 15px;
 			}
-		}
-		&.is--team{
-			margin-bottom: 35px;
+		}*/
+		&.is--faculty{
+			margin-bottom: 20px;
 			@media @media-point-screen {
-				margin-bottom: 1.8vw;
+				margin-bottom: 30px;
 			}
 		}
-		&.is--country{
+		&.is--faculty-link{
 			display: block;
 			position: relative;
-			padding: 35px 20px;
-			&.is--lg{}
-			&:hover,
-			&.is--active{
-				background-color: @blue-light;
-				border-color: @blue-light;
+			background-color: @white;
+			padding: 50px 15px;
+			height: 100%;
+			text-align: center;
+		}	
+		&.is--video{
+			max-width: 500px;
+		}
+		&.is--news-link{
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			.heading4();
+			font-weight: 700;
+			background-color: @white-f2;
+			padding: 20px;	
+			@media @media-point-smart {
+				background-color: @b-color-a;	
+				&:hover{
+					background-color: @b-color-a-hover;
+				}			
+			}
+			&:hover{
+				background-color: @b-color-a;
+			}
+		}
+		&.is--favorite{
+			background-color: @white;
+			display: flex;
+			align-items: center;
+			padding: 20px 20px 30px;
+			position: relative;
+			height: 100%;
+			color: @b-color;
+			border: 3px solid fadeout(@b-color-a-hover, 100%);
+			&:hover{
+				border-color: @b-color-a-hover;
 			}
 		}
 	}
 	&inner{
 		transition: @trs-site;
 		position: relative;
-		&.is--programm-category,
-		&.is--country,
-		&.is--school{
-			z-index: 3;
-		}
-		&.is--about-header{
-			padding-left: 65px;
-			padding-top: 5px;
-		}
-		&.is--reviews-index{
-			padding: 70px 20px 30px;
-			background-color: @white;
-			text-align: center;
-			@media @media-point-screen {
-				padding: 75px 2vw 30px;
-			}	
-			.card-item__card:hover &,
-			.card-item__card.is--active &{
-				background-color: @blue-light;
-			}		
-		}
-		&.is--reviews-page{
-			background-color: @white;
-			padding: 20px 30px;
-			@media @media-point-screen {
-				padding: 25px 40px;
+		&.is--news-link{
+			color: @white;
+			@media @media-point-notsmart {
+				color: @b-color;
 			}
 			.card-item__card:hover &,
 			.card-item__card.is--active &{
-				background-color: @blue-light;
-			}	
-		}
+				color: @white;
+			}
+		}		
 	}
 	&row{
-		&.is--reviews-page{
-			@media @media-point-smart {
-				flex-wrap: wrap;
-			}
+		&.is--event{
+			align-items: center;
 		}
+		&.is--team-dean{
+			align-items: center;
+		}	
+		&.is--entrants-team{
+			align-items: center;
+		}	
+		&.is--faculty-inner{
+			align-items: center;
+		}	
 	}
 	&cols{
-		&.is--team{
+		&.is--team-card{
+			.makeCols(12, 12);
+		}
+		&.is--student{
+			.makeCols(12, 12);
+			@media @media-point-screen {
+				.makeCols(6, 12);
+			}
+		}
+		&.is--news{
+			.makeCols(12, 12);
+		}		
+		&.is--event{
+			.makeCols(12, 12);
+			@media @media-point-screen {
+				.makeCols(6, 12);	
+				.content-block__cols.is--event-index:nth-child(even) &{
+					&.is--preview{
+						order: 1;
+					}
+					&.is--desc{
+						order: -1;
+					}
+				}
+			}
+		}	
+		&.is--second{
+			.makeCols(12, 12);
 			&.is--preview{
-				@media @media-point-screen {
+				@media @media-point-screen {					
+					.makeCols(4.5, 12);
+				}
+			}
+			&.is--desc{
+				@media @media-point-screen {					
+					.makeCols(7.5, 12);
+				}
+			}
+		}
+		&.is--entrants-team{
+			.makeCols(12, 12);
+			&.is--preview{
+				@media @media-point-xs {					
+					.makeCols(3.55, 12);
+				}
+				@media @media-point-notsmart {					
+					.makeCols(3.55, 12);
+				}
+			}
+			&.is--desc{
+				@media @media-point-xs {					
+					.makeCols(8.45, 12);
+				}
+				@media @media-point-notsmart {					
+					.makeCols(8.45, 12);
+				}
+			}
+		}		
+		&.is--team-dean{
+			.makeCols(12, 12);
+			&.is--preview{
+				@media @media-point-screen {				
 					.makeCols(3, 12);
 				}
 			}
-			&.is--note{				
-				@media @media-point-screen {
+			&.is--desc{
+				@media @media-point-screen {				
 					.makeCols(9, 12);
 				}
 			}
 		}
-	}
-	&bg-round{	
-		&.is--school{	
-			background-color: @green-dark;
-			position: absolute;
-			z-index: 1;
-			//top: -8vw;
-			//left: -3vw;
-			border-radius: 50%;	
-			top: -50%;
-    		left: -50%;
-			width: 964px;
-			height: 964px;
-			opacity: 1;
-			transition: @trs-site;   
-			transform-origin: bottom right;
-   			transform: scale(0);
-   			@media @media-point-xxl {		
-				max-width: 964px;
-				max-height: 964px;
-				width: 100vw;
-				height: 100vw;
-				top: -40%;
-	    		left: -11%;
-   			}
-			.card-item__card:hover &,
-			.card-item__card.is--active &{
-				opacity: 1;
-   				transform: scale(1);
+		//old	
+		/*&.is--team-card-full{
+			.makeCols(12, 12);
+			&.is--preview{
+				@media @media-point-screen {				
+					.makeCols(3, 12);
+				}
 			}
-		}
+			&.is--desc{
+				@media @media-point-screen {				
+					.makeCols(9, 12);
+				}
+			}
+		}*/		
+		&.is--team-card-note{
+			.makeCols(12, 12);
+			&.is--preview{
+				@media @media-point-notsmart {					
+					.makeCols(4.5, 12);
+				}
+			}
+			&.is--desc{
+				@media @media-point-notsmart {					
+					.makeCols(7.5, 12);
+				}
+			}
+		}		
+		&.is--faculty{
+			.makeCols(12, 12);
+			&.is--preview{
+				@media @media-point-screen {					
+					.makeCols(3.55, 12);
+				}
+			}
+			&.is--desc{
+				@media @media-point-screen {					
+					.makeCols(8.45, 12);
+				}
+			}
+		}		
+		&.is--faculty-inner{
+			.makeCols(12, 12);
+			&.is--preview{
+				@media @media-point-xs {					
+					.makeCols(3.55, 12);
+				}
+				@media @media-point-tablet {					
+					.makeCols(3.55, 12);
+				}
+			}
+			&.is--desc{ 
+				@media @media-point-xs {					
+					.makeCols(8.45, 12);
+				}
+				@media @media-point-tablet {					
+					.makeCols(8.45, 12);
+				}
+			}
+		}	
 	}
 	&bg{
-		position: absolute;
-		&.is--partners,
-		&.is--school,
-		&.is--news,
-		&.is--programm-category{
-			width: 100%;
-			height: 100%;
-			color: @white;
-			opacity: 0;
-			transition: @trs-site;
-			.card-item__card:hover &,
-			.card-item__card.is--active &{
-				opacity: 1;
-			}
-		}
-		&.is--news,
-		&.is--programm-category{
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
-		&.is--news{
-			max-width: 190px;
-			max-height: 190px;	
-			z-index: 2;		
-		}
-		&.is--programm-category{
-			max-width: 290px;
-			max-height: 290px;			
-		}
-		&.is--school{
-			z-index: 2;
-			max-width: 246px;
-			max-height: 246px;   
-			bottom: 0;
-		    right: 0;
-		    transform: translate(40%, 40%);
-			@media @media-point-screen {
-				transform: translate(25%, 25%);
-			}
-		}
-		&.is--partners{
-			z-index: 2;    
-			left: 0;
-		    top: 0;
-			background-color: @blue-light;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			padding: 15px 20px;		
-		}
-		&.is--country{
-			z-index: 1;    
-			left: 10px;
-		    top: 10px;
-		    bottom: 10px;
-		    right: 10px;
-			opacity: 0;
-			transition: @trs-site;
-			color: @white;
-			.card-item__card:hover &,
-			.card-item__card.is--active &{
-				opacity: 1;
-			}			
-		}
-	}
-	&round{
-		&.is--country,
-		&.is--school,
-		&.is--news,
-		&.is--programm-category{
-			position: absolute;
-			z-index: 1;
-			top: 10px;
-			left: 10px;
-			right: 10px;
-			bottom: 10px;
-		}
-	}
-	&plane{		
-		.card-item__card:hover &,
-		.card-item__card.is--active &{
-			animation: 5s linear 0s normal none infinite running rotate_plane;
-		}
-		&.is--country,
-		&.is--school,
-		&.is--news,
-		&.is--programm-category{
-			position: absolute;
-			z-index: 2;
-			top: 10px;
-			left: 10px;
-			right: 10px;
-			bottom: 10px;	
-		}
-	}
-	&plus{
-		position: absolute;
 		transition: @trs-site;
-		svg{display: block;}
-		&.is--news{
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			width: 40px;
-			height: 40px;
-			border-radius: 50%;
-			border: 2px solid @white;
-			padding: 10px;
-			color: @b-color;	
-		}		
-		&.is--school{
-			bottom: -5px;
-			right: -5px;
-			width: 40px;
-			height: 40px;
-			border-radius: 50%;
-			border: 3px solid #dcedf7;
-			padding: 10px;
-			html.safari &{
-				padding: 7px;
-			}
-			color: #dcedf7; 
-			.card-item__card:hover &,
-			.card-item__card.is--active &{
-				border: 3px solid @white;			
-				color: @b-color; 
-				color: @white; 
-			}
-		}
-	}
-	&preview{
-		display: block;
-		&.is--programm-category{
-			width: 64px;
-			height: 64px;
-			margin: 0 auto 15px;
-			color: @blue-light;
-			transition: @trs-site;
-			.card-item__card:hover &,
-			.card-item__card.is--active &{
-				color: @white;
-			}
-		}
-		&.is--about-header{
-			width: 54px;
-			height: 54px;
+		//&.is--news{
 			position: absolute;
 			top: 0;
 			left: 0;
-			color: @blue-light;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			background-color: fadeout(@b-color-a, 10%);
+			.card-item__card:hover &,
+			.card-item__card.is--active &{
+				opacity: 1;
+			}
+		//}
+	}
+	&view{
+		//&.is--news{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 44px;
+			height: 44px;
+			color: @white;
+			svg{display: block;}
+		//}
+	}
+	&preview-block{
+
+	}
+	&preview{
+		display: block;
+		position: relative;	
+		&.is--student{
+			width: 54px;
+			height: 54px;
+			color: @b-color-h;
 		}
-		&.is--country{
-			max-width: 102px;
-			margin: 0 auto;
+		&.is--favorite{
+			padding: 0 15px 0 0;
+			min-width: 140px;
+			@media @media-point-xxs {
+				min-width: 80px;
+			}
 		}
-		&.is--news{
-			position: relative;
+		&.is--news{	
+			margin-bottom: 25px;			
+		}
+		&.is--news-card{
+			max-width: 475px;			
+		}
+		&.is--event{
+			max-width: 755px;
+			@media @media-point-screen {
+				margin-bottom: 0;
+			}
+		}
+		&.is--team-dean{
+			@media @media-point-device {
+				margin-bottom: 25px;
+			}
+		}
+		&.is--second{
+			@media @media-point-screen {
+				margin-bottom: 0;
+			}
+		}
+		&.is--team-card{
 			margin-bottom: 25px;
+		}
+
+		&.is--entrants-team{
+			@media @media-point-smart {
+				margin-bottom: 25px;
+			}
+		}
+		&.is--faculty-link{
+			width: 64px;
+			height: 64px;
+			color: @b-color-a-hover;
+			margin: 0 auto 25px;
+		}	 
+		&.is--video{
 			&::before{
 				content: '';
 				position: absolute;
-				z-index: 1;
 				top: 0;
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background-color: fadeout(@blue-light, 50%);
-				opacity: 0;
-				transition: @trs-site;
-				.card-item__card:hover &,
-				.card-item__card.is--active &{
-					opacity: 1;
-				}
-			}
-		}
-		&.is--reviews-index{
-			position: absolute;
-			left: 50%;
-			top: 0px;
-			transform: translate(-50%, -45%);
-			max-width: 120px;
-		}
-		&.is--reviews-page{
-			max-width: 80px;
-			min-width: 80px;
-		}
-		&.is--team{
-			@media @media-point-smart {
-				max-width: 150px;
-				margin-bottom: 20px;
-			}
-			img{border-radius: 50%}
-		}
-		&.is--partners{
-			img{
-				margin: 0 auto;
+				z-index: 1;
+				background: linear-gradient(180deg, @black 0%, fadeout(@black, 100%) 22%, fadeout(@black, 100%) 100%);
 			}
 		}
 	}
+	&play{
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100px;
+		height: 100px;
+		color: fadeout(@black,30%);
+		transition: @trs-site;
+		.card-item__card:hover &,
+		.card-item__card.is--active &{
+			color: @b-color-a-hover;
+		}
+	}
+	&desc{
+		&.is--event{
+			@media @media-point-screen {
+				padding-left: 2.3vw;
+			}
+			.content-block__cols.is--event:nth-child(even) &{
+				@media @media-point-screen {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+	&desc-elem{		
+		&.is--faculty{
+			margin-bottom: 25px;
+			@media @media-point-screen {
+				margin-bottom: 30px;				
+			}
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+	&heading-group{
+		&.is--student{
+			display: flex;
+			align-items: center;
+			margin-bottom: 30px;
+			@media @media-point-screen {
+				margin-bottom: 2.3vw;
+			}		
+				
+		}
+	}
 	&heading{
-		font-weight: 500;
-		transition: @trs-site;		
-		&.is--programm-category{
-			margin: 0;		
-			text-align: center;
-			.calcFontSize(18, 23, 320, 1680);
-			.calcLineHeight(20, 23, 320, 1680);
-			.card-item__card:hover &,
-			.card-item__card.is--active &{
-				color: @white;
-			}	
-			&.is--sm{
-				font-size: @b-fs + 2;
-				line-height: @b-lh;
-			}	
-		}	
-		&.is--about-header{
-			color: @white;
-			font-weight: 700;
-			margin: 0;
-			.calcFontSize(16, 20, 320, 1680);
-			.calcLineHeight(20, 24, 320, 1680);
-		}	
-		&.is--country{
-			font-weight: 400;
-			text-align: center;
-			.calcFontSize(18, 23, 320, 1680);
-			.calcLineHeight(20, 23, 320, 1680);
+		transition: @trs-site;
+		&.is--student{
+			.heading3();
+			color: @b-color-h;
+			margin-bottom: 0;
+			font-family: @b-ff-2;
 		}
 		&.is--news{
 			.heading4();
+			margin-bottom: 15px;
 			a{
-				color: @blue;
+				color: @black;
 				.card-item__card:hover &,
 				.card-item__card.is--active &{
 					color: @b-color-a;
 				}
 			}
 		}
-		&.is--reviews-page,
-		&.is--reviews-index{
-			margin-bottom: 0px;
-			.heading4();
-			a{
-				color: @b-color;
-				.card-item__card:hover &,
-				.card-item__card.is--active &{
-					color: @white;
-				}
-			}
+		&.is--event{
+			.heading3();
 		}
-		&.is--school{
-			margin-bottom: 15px;
-			.heading4();
+		&.is--ads{
+			margin-bottom: 5px;
 			a{
-				color: @b-color;
+				color: @b-color-a;
 				.card-item__card:hover &,
 				.card-item__card.is--active &{
-					color: @white;
+					color: @b-color-a-hover;
+				}
+			}			
+		}
+		&.is--search{
+			a{
+				color: @b-color-a;
+				.card-item__card:hover &,
+				.card-item__card.is--active &{
+					color: @b-color-a-hover;
+				}
+			}			
+		}
+		&.is--short{
+			margin-bottom: 0px;
+			.heading5();
+			font-weight: 500;
+			a{
+				color: @white;
+				.card-item__card:hover &,
+				.card-item__card.is--active &{
+					color: @b-color-h;
 				}
 			}			
 		}
 		&.is--team{
-			color: @blue;
-			.heading3();
+			.heading4();
+			margin-bottom: 10px;
+			a{
+				color: @b-color;
+				.card-item__card:hover &,
+				.card-item__card.is--active &{
+					color: @b-color-a;
+				}
+			}			
 		}
-		&.is--partners{
-			font-size: @b-fs;
-			line-height: @b-lh;
-			text-align: center;
+		&.is--team-card-note{
+			margin-bottom: 15px;
+			a{
+				color: @b-color-h;
+				.card-item__card:hover &,
+				.card-item__card.is--active &{
+					color: @b-color-a;
+				}
+			}				
+		}
+		&.is--faculty{
+			margin-bottom: 35px;
+			@media @media-point-screen {
+				margin-bottom: 2.8vw;
+			}
+			a{
+				color: @b-color;
+				.card-item__card:hover &,
+				.card-item__card.is--active &{
+					color: @b-color-a;
+				}
+			}				
+		}
+		&.is--faculty-link{
+			.heading5();
 			margin-bottom: 0;
+			color: @b-color;			
 		}
-		&.is--country{			
-			color: @b-color;
-			.card-item__card:hover &,
-			.card-item__card.is--active &{
-				color: @white;
+		&.is--video{
+			.heading5();
+			position: absolute;
+			z-index: 2;
+			top: 15px;
+			color: @white;
+			left: 20px;
+			right: 20px; 
+		}
+		&.is--contacts{
+			font-weight: 700;
+			margin-bottom: 8px;
+		}
+		&.is--favorite{
+			margin-bottom: 0;			
+			html.msie &{
+				max-width: 200px;
+				@media @media-point-xxl {
+					max-width: 170px;
+				}
 			}
 		}
 	}
 	&heading-small{
 		transition: @trs-site;
-		font-weight: 400;
-		&.is--about-header{
-			color: @white;
-			font-size: @b-fs - 2;
-			line-height: @b-lh - 4;
-		}
-		&.is--news,
-		&.is--reviews-index{
-			margin-bottom: 15px;
-		}
-		&.is--reviews-page{
-			padding-top: 15px;
-			padding-bottom: 35px;
+		&.is--ads{
+			.heading5();
+			margin-bottom: 25px;
+			span{
+				color: @blue-dark;
+				font-weight: 700;
+			}
 		}
 		&.is--team{
-			font-weight: 500;
-			margin-bottom: 20px;
-			color: @blue;
-			.calcFontSize(17, 20, 320, 1680);
-			.calcLineHeight(17, 20, 320, 1680);			
+			line-height: @b-lh - 6;
+			color: @black-61;
+			margin-bottom: 10px;
+		}	
+		&.is--team-dean{
+			margin-bottom: 0;
+		}	
+		/*&.is--team-card-full{
+			margin-bottom: 0;
+		}*/	
+		&.is--team-card-note{
+			font-size: @b-fs + 2;
+			margin-bottom: 30px;
 		}
-		&.is--reviews-page,
-		&.is--reviews-index{
-			.card-item__card:hover &,
-			.card-item__card.is--active &{
-				color: @white;
+	}
+	&post{
+		&.is--team{
+			.heading4();
+			font-weight: 700;
+			color: @b-color-h;
+			margin-bottom: 15px;
+		}
+	}
+	&info{	
+		&.is--student{
+			margin-bottom: 35px;
+			@media @media-point-screen {
+				margin-bottom: 3.5vw;
+			}
+			ul{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				li{
+					line-height: @b-lh - 6;
+					margin-bottom: 8px;
+					a{
+						font-size: @b-fs + 2;
+						display: inline-block;
+						color: @black;
+						padding: 5px 0;
+						&:hover{
+							color: @b-color-a-hover;
+						}
+					}
+				}
+			}
+		}	
+		&.is--team{
+			line-height: @b-lh - 6;
+			color: @black-61;
+			p, div{
+				margin-bottom: 5px;
+				&:last-child{margin-bottom: 0;}
+			}		
+			a[href^="tel:"],
+			a[href^="mailto:"]{
+				color: @black-61;
+				white-space: nowrap;
+			}
+		}	
+		&.is--card-note{
+			p, div{
+				margin-bottom: 15px;
+				&:last-child{margin-bottom: 0;}
+			}
+		}
+		&.is--contacts{
+			font-size: @b-fs + 2;
+			line-height: @b-lh - 2;			
+			a[href^="tel:"],
+			a[href^="mailto:"]{
+				color: @b-color;
 			}
 		}
 	}
-	&place{
-		transition: @trs-site;
-		&.is--reviews-page,
-		&.is--reviews-index{
-			color: @blue-light;
+	&contacts{
+		&.is--faculty{
+			span{
+				font-weight: 700;
+			}
+			a, a[href^="tel:"], a[href^="mailto:"]{
+				color: @b-color;
+			}
 			margin-bottom: 10px;
-			.card-item__card:hover &,
-			.card-item__card.is--active &{
-				color: @white;
-			}
+			&:last-child{
+				margin-bottom: 0;
+			};
 		}
-		&.is--school{
-			font-size: @b-fs - 4;
-			line-height: @b-lh - 6;
-			margin-bottom: 5px;
-			span{font-weight: 700;}
-			.card-item__card:hover &,
-			.card-item__card.is--active &{
-				color: @white;
-			}
-		}
+
 	}
 
+	&date-group{
+		&.is--news{
+			display: flex;
+			align-items: center;			
+		}
+		&.is--second{
+			margin-top: -8px;
+			margin-bottom: 15px;
+		}
+		&.is--short{
+			margin-bottom: 10px;
+		}
+	}	
 	&date{	
 		display: block;
 		transition: @trs-site;
-		&.is--reviews-page{			
-			.card-item__card:hover &,
-			.card-item__card.is--active &{
-				color: @white;
-			}
-		}		
-		&.is--reviews-page,		
 		&.is--news{
-			color: @blue;
-			font-size: @b-fs - 4;
-			line-height: @b-lh - 8;
-		}	
+			.heading5();
+			color: @black-61;
+		}
 		&.is--news-card{
-			color: @blue;
-			font-size: @b-fs + 6;
-			line-height: @b-lh + 6;
+			margin-bottom: 5px;
+		}
+		&.is--event{
+			margin-bottom: 20px;
+		}
+		&.is--second{
+			.heading6();
+		}
+		&.is--search,
+		&.is--ads{
+			.heading6();
+		}
+		&.is--short{
+			color: @b-color-h;
+		}
+	}
+	&line{
+		//&.is--second{
+			flex-grow: 1;
+			margin: 0 15px;
+			height: 1px;
+			background-color: @white-bd;
+		//}
+		&.is--short{
+			background-color: @b-color-h;
+		}
+		&.is--student{
+			background-color: @b-color-h;
+			//height: 2px;			
+		}
+	}
+	&note{
+		&.is--news{
+			line-height: @b-lh - 4;
+			margin-bottom: 25px;
+			p, div{
+				margin-bottom: 5px;
+				&:last-child{margin-bottom: 0;}
+			}
+		}
+		&.is--event{
+			@media @media-point-screen {
+				margin-bottom: 30px;
+			}
+		}
+		&.is--faculty{
+			h2,h3,h4,h5,h6{
+				.heading5();
+				color: @b-color-a;
+				margin-bottom: 20px;
+			}
+			div, p{
+				margin-bottom: 5px;
+			}			
+			* + h5{
+				padding-top: 30px;
+			}
 		}
 	}
 	&btn{}
 	&elem-group{
-		padding-top: 20px;
 	}
 	&elem{
-		transition: @trs-site;
-		&.is--school{
-			position: relative;
-			padding-left: 35px;
-			color: @blue;
-			font-size: @b-fs - 2;
-			line-height: @b-lh - 2;
-			margin-bottom: 15px;
-			.card-item__card:hover &,
-			.card-item__card.is--active &{
-				color: @white;
-			}
-		}
-		&.is--team{
-			margin-bottom: 10px;
-			span{font-weight: 500;}
-			&.is--credo{
-				padding-top: 5px;
-				span{
-					display: block;
-					margin-bottom: 10px;
-				}
-			}
-		}
 	}
 	&elem-icon{
-		transition: @trs-site;
-		&.is--school{
-			position: absolute;
-			top: 50%;
-			left: 0;
-			transform: translateY(-50%);
-			width: 24px;
-			height: 24px;
-			padding: 5px;
-			border-radius: 50%;
-			border: 1px solid @b-color;
-			color: @b-color;
-			svg{display: block;}
-			.card-item__card:hover &,
-			.card-item__card.is--active &{
-				border-color: @white;
-				color: @white;
-			}
-		}
-	}
-	&cost{
-		transition: @trs-site;
-		&.is--school{
-			padding-top: 35px;
-			font-weight: 400;
-			//font-size: @b-fs + 2;
-			padding-right: 50px;
-			.calcFontSize(12, 20, 320, 1680);
-			@media @media-point-screen {
-				padding-top: 2.7vw;
-			}
-			.card-item__card:hover &,
-			.card-item__card.is--active &{
-				color: @white;
-			}
-		}
-		&.is--school-item{
-			padding-top: 5px;
-			color: @blue;
-			font-weight: 500;
-			font-size: @b-fs + 2;
-			margin-bottom: 8px;
-		}
-	}
-	&cost-num{
-		&.is--school{
-			font-weight: 500;
-			font-size: @b-fs + 6;
-		}
-		&.is--school-item{
-			font-size: @b-fs + 12; 
-			color: @b-color;
-		}
-	}
-	&cost-symbol{
-		display: inline-block;
-		width: 14px;
-		height: 14px;
+		
 	}
 
-}
-@keyframes rotate_plane {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
 }

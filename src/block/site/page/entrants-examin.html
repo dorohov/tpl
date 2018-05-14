@@ -1,0 +1,148 @@
+<main class="{{content_prefix}}panel  {{content_mod}}" role="main">
+	<div class="{{content_prefix}}container container  {{content_mod}}  is--full">
+		<div class="{{content_prefix}}row row  is--gutter  is--wrap  {{content_mod}}">
+			<div class="{{content_prefix}}cols cols  is--aside">
+				[[azbntple 
+					tpl="/src/block/site/default/navbar/aside-entrants.html"
+					block_prefix="navbar-aside__" 
+					block_mod="  "
+				]]
+				[[azbntple 
+					tpl="/src/block/site/default/form/panel-entrants.html" 
+					block_prefix="form-panel__"
+					block_mod="is--aside"
+					form_prefix="form__"
+					form_id="fsr"
+					form_mod="  " 
+					form_color="  "
+					form_heading="Форма обратной связи"
+					form_heading_small="  "
+					form_btn_name="Отправить"
+					form_btn_mod="is--block"
+				]]
+			</div>
+			<div class="{{content_prefix}}cols cols  is--content">
+				[[azbntple 
+					tpl="/src/block/site/default/breadcrumb/level2.html" 
+					bread_prefix="breadcrumb__"
+					bread_mod="  "
+					level_1="Абитуриентам"
+					level_1_link="{{page.entrants}}"
+					level_2="{{block_heading}}"
+				]]
+				[[azbntple
+					tpl="/src/block/site/default/page-header/heading.html" 
+					header_prefix="page-header__" 
+					header_mod="{{block_heading_mod}}  {{content_mod}}"
+					header_level="{{block_heading_level}}"
+					header="{{block_heading}}"
+				]]	
+				<div class="{{content_prefix}}elem  {{content_mod}}">
+					[[azbntple 
+						tpl="/src/block/site/default/tabs/panel-entrants-examin.html"
+						block_prefix="tabs__" 
+						block_mod="  "
+					]]
+					<div class="tabs__pane  {{content_mod}}  active" id="examin-card1">
+						<div class="text__block  {{content_mod}}">
+							<table> 
+								<thead> 
+									<tr> 
+										<th rowspan="2">№</th>
+										<th rowspan="2">Код направления подготовки</th>
+										<th rowspan="2">Название направления подготовки</th>
+										<th colspan="4" class="is--center">Вступительные испытания</th>
+									</tr>
+									<tr> 
+										<th>наименование</th>
+										<th>min проходной балл</th>
+										<th>приоритет</th>
+										<th>форма проведения</th>
+									</tr>
+								</thead>
+								<tbody> 
+									<tr> 
+										<td colspan="7"  class="is--center"><em>Среднее профессиональное образование&nbsp;— Программа подготовки специалистов среднего звена</em></td>
+									</tr>
+									<tr> 
+										<td>1</td>
+										<td>07.02.01</td>
+										<td>Архитектура</td>
+										<td>Рисунок</td>
+										<td>3</td>
+										<td>1</td>
+										<td>Творческое испытание</td>
+									</tr>
+									<tr> 
+										<td>2</td>
+										<td>08.02.01</td>
+										<td>Строительство и&nbsp;эксплуатация зданий и&nbsp;сооружений</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr> 
+										<td>3</td>
+										<td>21.02.05</td>
+										<td>Земельно-имущественные отношения</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr> 
+										<td>4</td>
+										<td>23.02.03</td>
+										<td>Техническое обслуживание и&nbsp;ремонт автомобильного транспорта</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr> 
+										<td>5</td>
+										<td>35.02.05</td>
+										<td>Агрономия</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr> 
+										<td>6</td>
+										<td>35.02.12</td>
+										<td>Садово-парковое и&nbsp;ландшафтное строительство</td>
+										<td>Рисунок</td>
+										<td>3</td>
+										<td>1</td>
+										<td>Творческое испытание</td>
+									</tr>
+									<tr> 
+										<td>7</td>
+										<td>36.02.01</td>
+										<td>Ветеринария</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr> 
+										<td>8</td>
+										<td>38.02.01</td>
+										<td>Экономика и&nbsp;бухгалтерский учет (по&nbsp;отраслям)</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div> 
+					<div class="tabs__pane  {{content_mod}}" id="examin-card2"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>

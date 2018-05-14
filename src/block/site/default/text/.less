@@ -5,7 +5,8 @@
 	}
 	&inner{
 	}		
-	&block{		
+	&block{	
+		line-height: @b-lh - 2;
 		div, p{
 			margin-bottom: 10px;
 		}
@@ -22,36 +23,44 @@
 			margin-bottom: 25px;
 		}
 		h3{
-			font-weight: 500;
+			//font-weight: 500;
 		}
 		h4{
 			margin-bottom: 20px;
 		}
+		h5{
+			margin-bottom: 20px;
+			color: @black;
+		}
 		ol{
-			& > li{margin-bottom: 10px}
+			& > li{margin-bottom: 25px}
 			&.is--counts{
 				counter-reset: list;
 				padding-left: 0;
 				margin-left: 0;
 				list-style: none;
 				& > li{
-					padding-left: 25px;
+					padding-left: 20px;
 					position: relative;
 					&::before{
 						counter-increment: list;
-						content: counter(list) ".";
+						content: counter(list) ")";
 						position: absolute;
 						//font-family: @b-ff-2;
 						position: absolute;
 						left: 0;
-						color: @b-color-a;
+						color: @b-color-a-hover;
 						font-weight: 700;
 						font-size: @b-fs - 2;
+					}
+					& > ul{
+						padding-top: 15px;
 					}
 				}
 			} 
 		}
 		ul{
+			color: @black-61;
 			& > li{margin-bottom: 15px}
 			&.is--styled{
 				padding-left: 0;
@@ -60,27 +69,15 @@
 				& > li{
 					position: relative;
 					z-index: 1;
-					padding-left: 20px;
-					margin-bottom: 10px;
+					padding-left: 15px;
+					margin-bottom: 3px;
 					&::before{
 						content: '';
 						position: absolute;
-						top: 5px;
+						top: 7px;
 						left: 0px;
-						width: 13px;
-						height: 13px;
-						border-width: 2px;
-						border-style: solid;
-						border-color: @b-color-a;
-						border-radius: 50%;
-					}
-					&::after{
-						content: '';
-						position: absolute;
-						top: 9px;
-						left: 4px;
-						width: 5px;
-						height: 5px;
+						width: 7px;
+						height: 7px;
 						background-color: @b-color-a;
 						border-radius: 50%;
 					}
@@ -92,6 +89,7 @@
 			& + h2{padding-top: 10px;}
 			& + h3{padding-top: 25px;}
 			& + h4{padding-top: 20px;}
+			& + h5{padding-top: 25px;}
 			& + blockquote{
 				margin-top: 30px;
 			}
@@ -127,26 +125,6 @@
 			border: 0; 
 			margin-bottom: 25px;
 		} 
-		&.is--about-index{		
-			line-height: @b-lh - 2;	
-			color: @black27;
-			h3, h4, h5{
-				margin-bottom: 10px;
-				color: @b-color;
-				//@media @media-screen{margin-bottom: 25px;}
-			}
-			h3{				
-				.calcFontSize(25, 35, 320, 1680);
-				.calcLineHeight(30, 40, 320, 1680);
-				margin-bottom: 15px;
-			}
-			*{
-				& + h3{padding-top: 20px;}
-				@media @media-point-screen {				
-					& + h3{padding-top: 2vw;}
-				}
-			}
-		}
 	}
 }
 

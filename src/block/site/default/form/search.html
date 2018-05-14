@@ -1,0 +1,51 @@
+<form action="#" class="{{form_prefix}}block  {{form_mod}}"  >
+	<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
+	<input type="hidden" name="f[Форма: {{form_heading}}]">
+	<div class="{{form_prefix}}inner  {{form_mod}}"  >
+		<div class="row {{form_prefix}}row  is--wrap">
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--name">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-input.html"
+					form_id="{{form_id}}"
+					block_id="name"
+					block_prefix="{{form_prefix}}"
+					block_mod="{{form_mod}}"
+					block_mod_elem="is--name"
+					block_color="{{form_color}}"
+					block_type="text"
+					block_attr="  "
+					block_required="  "
+					block_required_custom="  "
+					block_label="Поиск по сайту"
+					block_placeholder="Поиск по сайту"
+				]]
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--select">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-select.html"
+					form_id="{{form_id}}"
+					block_id="name"
+					block_prefix="{{form_prefix}}"
+					block_mod="{{form_mod}}"
+					block_mod_elem="is--where"
+					block_color="{{form_color}}"
+					block_type="text"
+					block_attr="  "
+					block_required="  "
+					block_required_custom="  "
+					block_label="Поиск по сайту"
+					block_option="<option>(везде)</option><option>Форум</option><option>Новости</option><option>Блоги</option>"
+				]]
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--select-btn">
+				[[azbntple 
+					tpl="/src/block/site/default/button/button.html"
+					button_prefix="btn__" 
+					button_mod="{{form_btn_mod}}"
+					button_type="submit"
+					button_name="{{form_btn_name}}"
+				]]				
+			</div>
+		</div>	
+	</div> 
+</form> 

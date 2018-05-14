@@ -1,0 +1,56 @@
+{
+	"contacts":{
+		"name":"beinternational",
+		"domain":"beinternational.ru",
+		"domain_link":"http://beinternational.ru/",
+		"agreement_page":"agreement",
+		"copyright":"",
+		"email":"info@beinternational.ru",
+		"phone":"+7 (903) 728-10-81",  
+		"phone_tel":"+79037281081",   
+		"clock":"с&nbsp;9 до&nbsp;1:30",  
+		"address":"г.&nbsp;Москва, ул.&nbsp;Долгоруковская, д.7, БЦ&nbsp;«Садовая плаза»",
+		"address2":"г.&nbsp;Орёл, ул.&nbsp;Ломоносова, д.6, БЦ&nbsp;«Модус»",
+		"inn":"",
+		"ogrninn":""
+	},
+	"soc":{
+		"vk":"https://vk.com/",
+		"fb":"https://www.facebook.com/",
+		"ok":"https://ok.ru/group/",
+		"tw":"https://twitter.com/",
+		"inst":"https://www.instagram.com/"
+	},
+	"page":{
+		"index":"/",
+		"about":"/about.html",
+		"team":"/team.html",
+		"partners":"/partners.html",
+		"certificates":"/certificates.html",
+		"country":"/country.html",
+		"country_category":"/country-category.html",
+		"country_card":"/country-card.html",
+		"country_card":"/country-card.html",
+		"school":"/school.html",
+		"school_card":"/school-card.html",
+		"programm":"/programm.html",
+		"programm_category":"/programm-category.html",
+		"programm_card":"/programm-card.html",
+		"news":"/news.html",
+		"article":"/article.html",
+		"news_card":"/news-item.html",
+		"reviews":"/reviews.html",
+		"reviews_card":"/reviews-card.html",
+		"contacts":"/contacts.html",
+		"search":"/search.html",
+		"404":"/404.html",
+		"agreement":"/agreement.html"
+	},	                           
+	"url-path-css":"/css",
+	"url-path-img":"/img",
+	"url-path-js":"/js",
+	"url-path-plugins":"/plugins",
+	"url-path-favicon":"/favicon"
+}
+
+

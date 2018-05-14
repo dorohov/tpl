@@ -1,0 +1,30 @@
+<article class="{{block_prefix}}card  {{block_mod}}">
+	<div class="{{block_prefix}}desc  {{block_mod}}">
+		<div class="{{block_prefix}}date-group  {{block_mod}}">
+			<time class="{{block_prefix}}date  {{block_mod}}" datetime="{{block_date_iso}}">{{block_date}}</time>
+			<div class="{{block_prefix}}line  {{block_mod}}"></div>
+			<div class="{{block_prefix}}btn  {{block_mod}}">
+				[[azbntple 
+					tpl="/src/block/site/default/button/link-icon-name.html"
+					button_prefix="btn-link__" 
+					button_mod="is--more"
+					button_link="{{block_link}}"
+					button_name="Подробнее" 
+					button_icon="link-more"
+				]]
+			</div>
+		</div>
+		<h4 class="{{block_prefix}}heading  {{block_mod}}"><a href="{{block_link}}">{{block_heading}}</a></h4>
+		<div class="{{block_prefix}}note  {{block_mod}}">{{block_note}}</div>		
+		<div class="{{block_prefix}}breadcrumb  {{block_mod}}">			
+			[[azbntple 
+				tpl="/src/block/site/default/breadcrumb/level2.html" 
+				bread_prefix="breadcrumb__"
+				bread_mod="  "
+				level_1="Факультет Агробизнеса и экологии"
+				level_1_link="{{page.faculty_card}}"
+				level_2="Кафедра Защиты растений и экотоксикологии"
+			]]
+		</div>		
+	</div>
+</article>

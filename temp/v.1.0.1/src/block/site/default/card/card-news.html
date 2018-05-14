@@ -1,0 +1,34 @@
+<article class="{{block_prefix}}card  {{block_mod}}">
+	<a href="{{block_link}}" class="{{block_prefix}}preview  {{block_mod}}">
+		<img src="{{block_preview}}" alt="{{block_heading}}">
+		<div class="{{block_prefix}}bg  {{block_mod}}">
+			<div class="{{block_prefix}}round  {{block_mod}}">
+				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="programm-round" ]]
+			</div>
+			<div class="{{block_prefix}}plane  {{block_mod}}">
+				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="programm-plane" ]]			
+			</div>
+			<div class="{{block_prefix}}plus  {{block_mod}}">
+				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="plus" ]]			
+			</div>
+		</div>
+	</a>
+	<h3 class="{{block_prefix}}heading  {{block_mod}}"><a href="{{block_link}}">{{block_heading}}</a></h3>
+	<div class="{{block_prefix}}heading-small  {{block_mod}}">{{block_heading_small}}</div>
+	<div class="{{block_prefix}}row row  is--wrap  is--gutter15  is--aic  is--jcsb">
+		<div class="{{block_prefix}}cols  cols">
+			<time class="{{block_prefix}}date  {{block_mod}}" datetime="{{block_date_iso}}">{{block_date}}</time>
+		</div>
+		<div class="{{block_prefix}}cols  cols">
+			[[azbntple 
+				tpl="/src/block/site/default/button/link-icon-name.html"
+				button_prefix="btn-link__" 
+				button_mod="is--more   {{block_mod}}"
+				button_link="{{block_link}}"
+				button_attr="  "
+				button_icon="slick-right"
+				button_name="Подробнее" 
+			]]
+		</div>
+	</div>
+</article>

@@ -1,0 +1,199 @@
+<main class="{{content_prefix}}panel  {{content_mod}}" role="main">
+	<div class="{{content_prefix}}container container  {{content_mod}}  is--full">
+		<div class="{{content_prefix}}row row  is--gutter  is--wrap  {{content_mod}}">
+			<div class="{{content_prefix}}cols cols  is--aside">
+				[[azbntple 
+					tpl="/src/block/site/default/navbar/aside-entrants.html"
+					block_prefix="navbar-aside__" 
+					block_mod="  "
+				]]
+			</div>
+			<div class="{{content_prefix}}cols cols  is--content">
+				[[azbntple 
+					tpl="/src/block/site/default/breadcrumb/level1.html" 
+					bread_prefix="breadcrumb__"
+					bread_mod="  "
+					level_1="{{block_heading}}"
+				]]
+				[[azbntple
+					tpl="/src/block/site/default/page-header/heading.html" 
+					header_prefix="page-header__" 
+					header_mod="{{block_heading_mod}}  {{content_mod}}"
+					header_level="{{block_heading_level}}"
+					header="{{block_heading}}"
+				]]	
+				<div class="{{content_prefix}}elem  {{content_mod}}">
+					<div class="{{content_prefix}}row row  is--gutter  is--wrap  {{content_mod}}">
+						<div class="{{content_prefix}}cols cols  {{content_mod}}  is--contacts-card">
+							[[azbntple 
+								tpl="/src/block/site/default/card/card-contacts.html"
+								block_prefix="card-item__" 
+								block_mod="is--contacts"
+								block_heading="Адрес:"
+								block_info="302019, г. Орел, ул. Генерала Родина, д. 69, ауд. 101."
+							]]
+						</div>
+						<div class="{{content_prefix}}cols cols  {{content_mod}}  is--contacts-card">
+							[[azbntple 
+								tpl="/src/block/site/default/card/card-contacts.html"
+								block_prefix="card-item__" 
+								block_mod="is--contacts"
+								block_heading="Телефон:"
+								block_info="<a href='tel:+74862436998'>+7 (4862) 43-69-98</a>"
+							]]
+						</div>
+						<div class="{{content_prefix}}cols cols  {{content_mod}}  is--contacts-card">
+							[[azbntple 
+								tpl="/src/block/site/default/card/card-contacts.html"
+								block_prefix="card-item__" 
+								block_mod="is--contacts"
+								block_heading="E-mail:"
+								block_info="<a href='mailto:priem3@orelsau.ru'>priem3@orelsau.ru</a>"
+							]]
+						</div> 
+					</div>
+				</div>
+				<div class="{{content_prefix}}elem  {{content_mod}}">
+					<div class="{{content_prefix}}row row  is--gutter  is--wrap  {{content_mod}}">
+						<div class="{{content_prefix}}cols cols  {{content_mod}}  is--team-card  is--entrants">
+							[[azbntple 
+								tpl="/src/block/site/default/card/card-team-card-full.html"
+								block_prefix="card-item__" 
+								block_mod="is--team  is--entrants-team"
+								block_link="{{page.team_card}}"
+								block_preview="http://via.placeholder.com/365x470"
+								block_post="Ответственный секретарь приемной комиссии"
+								block_heading="Кондыков Алексей Витальевич"
+								block_heading_small="Проректор по международным связям и профориентационной работе, кандидат педагогических наук"
+							]]
+						</div>
+					</div>
+				</div>
+				<div class="{{content_prefix}}elem  {{content_mod}}">
+					<div class="{{content_prefix}}row row  is--gutter  is--wrap  {{content_mod}}">
+						<div class="{{content_prefix}}cols cols  {{content_mod}}  is--team-card  is--entrants">
+							[[azbntple 
+								tpl="/src/block/site/default/card/card-faculty.html"
+								block_prefix="card-item__" 
+								block_mod="is--faculty"
+								block_link="{{page.faculty_card}}"
+								
+								block_dean_heading="Полухин Андрей Александрович"
+								block_dean_heading_small="Доктор экономических наук, декан"
+								block_dean_info="  " 
+
+								block_address="302040 г. Орёл, ул. Красноармейская 17" 
+								block_phone="<a href='tel:+74862431301'>+7 (4862) 43-13-01</a>" 
+								block_email="<a href='mailto:decanat-209@orelsau.ru'>decanat-209@orelsau.ru</a>"
+
+								block_preview="http://via.placeholder.com/365x470"
+								block_heading="Факультет Агробизнеса и экологии"
+								block_note="<h5>Направления подготовки:</h5><p>35.03.03&nbsp;— «Агрохимия и&nbsp;агропочвоведение» (профиль «Агроэкология»);</p><p>35.03.04&nbsp;— «Агрономия» (профиль «Агробизнес»).</p><p>Присваиваются квалификации&nbsp;— «Бакалавр», «Магистр».</p>"
+							]]
+						</div>
+						<div class="{{content_prefix}}cols cols  {{content_mod}}  is--team-card  is--entrants">
+							[[azbntple 
+								tpl="/src/block/site/default/card/card-faculty.html"
+								block_prefix="card-item__" 
+								block_mod="is--faculty"
+								block_link="{{page.faculty_card}}"
+								block_preview="http://via.placeholder.com/365x470"
+								
+								block_dean_heading="Коношин Иван Вячеславович"
+								block_dean_heading_small="Кандидат технических наук, декан"
+								block_dean_info="  " 
+
+								block_address="302019, ул. Генерала Родина, 69, корпус 2, кабинет 208" 
+								block_phone="<a href='tel:+74862761107'>+7 (4862) 76-11-07</a>" 
+								block_email="<a href='mailto:ingdek1@orelsau.ru'>ingdek1@orelsau.ru</a>"
+
+								block_heading="Факультет Агротехники и энергообеспечения"
+								block_note="<h5>Направления подготовки:</h5><p>35.03.06&nbsp;— «Агроинженерия» (профили: «Технические системы в&nbsp;агробизнесе», «Электрооборудование и&nbsp;электротехнологии», «Технический сервис в&nbsp;АПК»);</p><p>13.03.02&nbsp;— «Электроэнергетика и&nbsp;электротехника» (профиль «Электроснабжение»);</p><p>23.03.03&nbsp;— «Эксплуатация транспортно-технологических машин и&nbsp;комплексов» (профиль «Автомобили и&nbsp;автомобильное хозяйство»);</p><p>20.03.01&nbsp;— «Техносферная безопасность». </p><p>Присваивается квалификация&nbsp;— степень&nbsp;— «Бакалавр», «Магистр».</p>"
+							]]
+						</div>
+						<div class="{{content_prefix}}cols cols  {{content_mod}}  is--team-card  is--entrants">
+							[[azbntple 
+								tpl="/src/block/site/default/card/card-faculty.html"
+								block_prefix="card-item__" 
+								block_mod="is--faculty"
+								block_link="{{page.faculty_card}}"
+								block_preview="http://via.placeholder.com/365x470"
+								block_heading="Факультет Биотехнологии и ветеринарной медицины"
+								
+								block_dean_heading="Ляшук Роман Николаевич"
+								block_dean_heading_small="Профессор, доктор с.х. наук, декан"
+								block_dean_info="  " 
+
+								block_address="302019, г. Орел, ул. Генерала Родина, 69, корпус 1" 
+								block_phone="<a href='tel:+74862764106'>+7 (4862) 76-41-06</a>" 
+								block_email="<a href='mailto:biodek1@orelsau.ru'>biodek1@orelsau.ru</a>, <a href='mailto:biodek2008@yandex.ru'>biodek2008@yandex.ru</a>"
+
+								block_note="<h5>Направления подготовки:</h5><p>36.03.02&nbsp;— «Зоотехния» (профили: «Технология производства продукции животноводства», «Кинология»);</p><p>19.03.01&nbsp;— «Биотехнология»;</p><p>19.03.03&nbsp;— «Продукты питания животного происхождения» (профили: «Технология молока и&nbsp;молочных продуктов»; «Технология мяса и&nbsp;мясных продуктов»).</p><p>Присваивается квалификация&nbsp;— «Бакалавр» </p><h5>Направления подготовки магистратуры:</h5><p>36.04.02&nbsp;— «Зоотехния»;</p><p>19.04.01&nbsp;— «Биотехнология»;</p><p>19.04.03&nbsp;— «Продукты питания животного происхождения»</p><p>Присваивается квалификация «Магистр».</p><h5>Специальность:</h5><p> 36.05.01&nbsp;— «Ветеринария»</p><p>Присваивается квалификация&nbsp;— «Ветеринарный врач». </p>"
+							]]
+						</div>
+						<div class="{{content_prefix}}cols cols  {{content_mod}}  is--team-card  is--entrants">
+							[[azbntple 
+								tpl="/src/block/site/default/card/card-faculty.html"
+								block_prefix="card-item__" 
+								block_mod="is--faculty"
+								block_link="{{page.faculty_card}}"
+								block_preview="http://via.placeholder.com/365x470"
+								
+								block_dean_heading="Бураева Елена Викторовна"
+								block_dean_heading_small="кандидат экономических наук, доцент, декан"
+								block_dean_info="  " 
+
+								block_address="302028, г. Орел, ул. Бульвар победы, д. 19, ауд. 509" 
+								block_phone="<a href='tel:+74862431338'>+7 (4862) 43-13-38</a>, <a href='tel:+74862430115'>+7 (4862) 43-01-15</a>" 
+								block_email="  "
+
+								block_heading="Экономический факультет"
+								block_note="<h5>Направления подготовки:</h5><p>38.03.01&nbsp;— «Экономика» (профили: «Финансы и&nbsp;кредит», «Банковское дело и&nbsp;рынок ценных бумаг», «Государственный и&nbsp;финансовый контроль», «Налоги и&nbsp;налогообложение», «Бухгалтерский учет, анализ и&nbsp;аудит», «Мировая экономика»);</p><p>38.03.02&nbsp;— «Менеджмент» (профили «Маркетинг», "Производственный менеджмент","Менеджмент организации«, «Менеджмент в&nbsp;предпринимательской деятельности», «Финансовый менеджмент»).</p><p>Присваиваются квалификации&nbsp;— «Бакалавр», «Магистр».</p>"
+							]]
+						</div>
+						<div class="{{content_prefix}}cols cols  {{content_mod}}  is--team-card  is--entrants">
+							[[azbntple 
+								tpl="/src/block/site/default/card/card-faculty.html"
+								block_prefix="card-item__" 
+								block_mod="is--faculty"
+								block_link="{{page.faculty_card}}"
+								block_preview="http://via.placeholder.com/365x470"
+								
+								block_dean_heading="Мысишин Игорь Сергеевич"
+								block_dean_heading_small="И.о. директора"
+								block_dean_info="  " 
+
+								block_address="302016 г. Орел, ул. Комсомольская, 142 " 
+								block_phone="<a href='tel:+74862751541'>+7 (4862) 75-15-41</a>" 
+								block_email="  "
+
+								block_heading="Инженерно-строительный институт"
+								block_note="<h5>Направления подготовки:</h5><p>08.03.01&nbsp;— «Строительство» (профили: «Промышленное и&nbsp;гражданское строительство», «Экспертиза и&nbsp;управление недвижимостью», «Жилищно-коммунальный комплекс»);</p><p>35.03.10&nbsp;— «Ландшафтная архитектура».</p><p>Присваивается квалификация&nbsp;— степень&nbsp;— «Бакалавр», «Магистр». </p>"
+							]]
+						</div>
+						<div class="{{content_prefix}}cols cols  {{content_mod}}  is--team-card  is--entrants">
+							[[azbntple 
+								tpl="/src/block/site/default/card/card-faculty.html"
+								block_prefix="card-item__" 
+								block_mod="is--faculty"
+								block_link="{{page.faculty_card}}"
+								block_preview="http://via.placeholder.com/365x470"
+								block_heading="Многопрофильный колледж"
+
+								block_dean_heading="Петрушина Наталья Николаевна"
+								block_dean_heading_small="Директор"
+								block_dean_info="  " 
+
+								block_address="302016 г. Орел, ул. Комсомольская, 170 " 
+								block_phone="<a href='tel:+74862591730'>+7 (4862) 59-17-30</a>, <a href='tel:+74862591865'>+7 (4862) 59-18-65</a>, <a href='tel:+74862591735'>+7 (4862) 59-17-35</a>" 
+								block_email="  "
+
+								block_note="<h5>Направления подготовки:</h5><p>08.03.01&nbsp;— «Строительство» (профили: «Промышленное и&nbsp;гражданское строительство», «Экспертиза и&nbsp;управление недвижимостью», «Жилищно-коммунальный комплекс»);</p><p>35.03.10&nbsp;— «Ландшафтная архитектура».</p><p>Присваивается квалификация&nbsp;— степень&nbsp;— «Бакалавр», «Магистр». </p>"
+							]]
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
