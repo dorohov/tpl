@@ -6,7 +6,8 @@ window.onerror = function(error, url, lineNumber, column, errorObj) {
 	return;
 }
 
-
+[[azbntple tpl="/src/block/bootstrap/js/bootstrap.js" ]]
+[[azbntple tpl="/src/block/fancybox3/js/fancybox.js" ]]
 [[azbntple tpl="/src/_/concat.plugin.js" ]]
 
 
