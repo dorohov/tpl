@@ -1,0 +1,145 @@
+<div class="{{content_prefix}}block">
+	<div class="{{content_prefix}}container container content-block__container  is--full">
+		<div class="{{content_prefix}}row row  is--wrap  is--gutter  {{content_mod}}">
+			<div class="{{content_prefix}}cols cols  is--address  {{content_mod}}">	
+				[[azbntple 
+					tpl="/src/block/site/default/breadcrumb/level1.html" 
+					bread_prefix="breadcrumb__"
+					bread_mod="  "
+					level_1="{{block_heading}}"
+				]]
+				[[azbntple
+					tpl="/src/block/site/default/page-header/heading.html" 
+					header_prefix="page-header__" 
+					header_mod="{{block_heading_mod}}  {{content_mod}}"
+					header_level="{{block_heading_level}}"
+					header="{{block_heading}}"
+				]]
+				<div class="{{content_prefix}}item-group">
+					<div class="{{content_prefix}}item">
+						[[azbntple 
+							tpl="/src/block/site/default/contacts/item-heading.html" 
+							block_prefix="kontakty-item__"
+							block_mod="  "
+							block_heading="Адрес:"
+							block_name="{{contacts.address}}"
+							block_link="  "
+							block_attr="  "
+						]]			
+					</div>		
+					<div class="{{content_prefix}}item">
+						[[azbntple 
+							tpl="/src/block/site/default/contacts/item-heading.html" 
+							block_prefix="kontakty-item__"
+							block_mod="  "
+							block_heading="График работы:"
+							block_name="{{contacts.clock}}"
+							block_link="  "
+							block_attr="  "
+							block_icon="contacts-address"
+						]]			
+					</div>
+				</div>
+				[[azbntple 
+					tpl="/src/block/site/default/button/link-icon-name.html"
+					button_prefix="btn-icon__" 
+					button_mod="is--download"
+					button_attr="  " 
+					button_link="##"
+					button_name="Реквизиты ФГБОУ ВО Орловский ГАУ" 
+					button_icon="icon-download"
+				]]
+			</div>
+			<div class="{{content_prefix}}cols cols  is--map  {{content_mod}}">
+				<div class="{{content_prefix}}map" id="map-google" data-map='{"center" : [52.9768713,36.03347],"zoom" : 16,"placemarks" : [{"coord" : [52.976730, 36.033234], "title" : "Главный корпус"},{"coord" : [52.979997, 36.062285], "title" : "Факультет агробизнеса и экологии"},{"coord" : [52.975654, 36.053380], "title" : "Экономический факультет"},{"coord" : [52.947705, 36.057753], "title" : "Инженерно-строительный институт"},{"coord" : [52.945901, 36.055198], "title" : "Многопрофильный колледж"}]}' ></div>
+			</div>
+			<div class="{{content_prefix}}cols cols  is--tel  {{content_mod}}">
+				<h3 class="{{content_prefix}}heading">Телефоны и  E-mail Орловского ГАУ</h3>
+				<div class="{{content_prefix}}row row  is--wrap  is--gutter  {{content_mod}}">
+					<div class="{{content_prefix}}cols cols  is--contacts  {{content_mod}}">
+						[[azbntple 
+							tpl="/src/block/site/default/contacts/item-contacts-three.html" 
+							block_prefix="kontakty-card__"
+							block_mod="  "
+							block_heading="Ректор"
+							block_name="Гуляева Татьяна Ивановна"
+							block_item1_heading="Приемная:"
+							block_item1_note="<a href='tel:+74862761517'>+7 (4862) 76-15-17</a>, <a href='tel:+74862764101'>76-41-01</a>"
+							block_item2_heading="Факс:"
+							block_item2_note="<a href='tel:+74862764101'>+7 (4862) 76-41-01</a>"
+							block_item3_heading="E-mail:"
+							block_item3_note="<a href='mailto:rector@orelsau.ru'>rector@orelsau.ru</a>"
+						]]	
+					</div>
+					<div class="{{content_prefix}}cols cols  is--contacts  {{content_mod}}">
+						[[azbntple 
+							tpl="/src/block/site/default/contacts/item-contacts-three.html" 
+							block_prefix="kontakty-card__"
+							block_mod="  "
+							block_heading="Проректор по экономике и имущественному комплексу, главный бухгалтер"
+							block_name="Кузнецова Татьяна Михайловна"
+							block_item1_heading="Телефон:"
+							block_item1_note="<a href='tel:+74862761121'>+7 (4862) 76-11-21</a>"
+							block_item2_heading="Бухгалтерия:"
+							block_item2_note="<a href='tel:+74862761121'>+7 (4862) 76-11-21</a>"
+							block_item3_heading="E-mail:"
+							block_item3_note="<a href='mailto:prorector1@orelsau.ru'>prorector1@orelsau.ru</a>"
+						]]	
+					</div>
+					<div class="{{content_prefix}}cols cols  is--contacts  {{content_mod}}">
+						[[azbntple 
+							tpl="/src/block/site/default/contacts/item-contacts-two.html" 
+							block_prefix="kontakty-card__"
+							block_mod="  "
+							block_heading="Проректор по научной и инновационной деятельности"
+							block_name="Родимцев Сергей Александрович"
+							block_item1_heading="Телефон:"
+							block_item1_note="<a href='tel:+74862760664'>+7 (4862) 76-06-64</a>"
+							block_item2_heading="E-mail:"
+							block_item2_note="<a href='mailto:prorector1@orelsau.ru'>prorector1@orelsau.ru</a>"
+						]]	
+					</div>
+					<div class="{{content_prefix}}cols cols  is--contacts  {{content_mod}}">
+						[[azbntple 
+							tpl="/src/block/site/default/contacts/item-contacts-two.html" 
+							block_prefix="kontakty-card__"
+							block_mod="  "
+							block_heading="Проректор по воспитательной работе и социальным вопросам"
+							block_name="Первых Нина Анатольевна"
+							block_item1_heading="Телефон:"
+							block_item1_note="<a href='tel:+74862761517'>+7 (4862) 76-15-17</a>"
+							block_item2_heading="E-mail:"
+							block_item2_note="<a href='mailto:rector@orelsau.ru'>rector@orelsau.ru</a>"
+						]]	
+					</div>
+					<div class="{{content_prefix}}cols cols  is--contacts  {{content_mod}}">
+						[[azbntple 
+							tpl="/src/block/site/default/contacts/item-contacts-two.html" 
+							block_prefix="kontakty-card__"
+							block_mod="  "
+							block_heading="Проректор по учебно-методической работе"
+							block_name="Калиничева Елена Юрьевна"
+							block_item1_heading="Телефон:"
+							block_item1_note="<a href='tel:+74862760664'>+7 (4862) 76-06-64</a>"
+							block_item2_heading="E-mail:"
+							block_item2_note="<a href='mailto:prorector1@orelsau.ru'>prorector1@orelsau.ru</a>"
+						]]	
+					</div>
+					<div class="{{content_prefix}}cols cols  is--contacts  {{content_mod}}">
+						[[azbntple 
+							tpl="/src/block/site/default/contacts/item-contacts-two.html" 
+							block_prefix="kontakty-card__"
+							block_mod="  "
+							block_heading="Проректор по международным связям и профориентационной работе"
+							block_name="Кондыков Алексей Витальевич"
+							block_item1_heading="Телефон:"
+							block_item1_note="<a href='tel:+74862760664'>+7 (4862) 76-06-64</a>"
+							block_item2_heading="E-mail:"
+							block_item2_note="<a href='mailto:prorector1@orelsau.ru'>prorector1@orelsau.ru</a>"
+						]]	
+					</div>
+				</div>
+			</div>
+		</div>				
+	</div>
+</div>

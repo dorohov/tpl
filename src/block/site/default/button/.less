@@ -1,21 +1,22 @@
 .btn-base(){
-	font-weight: 700;
-	padding: 10px 25px;
-	font-size: @btn_fs;
-	line-height: @btn_lh;
+	.heading5();
+	font-weight: 400;
+	padding: 15px 25px;
+	//font-size: @btn_fs;
+	//line-height: @btn_lh;
 	border-radius: @btn_border_radius;
 	@media @media-point-screen {
-		padding: 17px 4.4vw;
+		padding: 20px 3vw;
 	}
 }
 .btn-lg(){
 	@media @media-point-screen {
-		padding: 17px 3.2vw;
+		padding: 17px 3vw;
 	}
 }
 .btn-sm(){
 	@media @media-point-screen {
-		padding: 9px 3.2vw;
+		padding: 11.5px 3vw;
 	}
 }
 .btn__{
@@ -60,10 +61,8 @@
 			}
 		}	
 		&.is--block{
-			padding: 10px 25px;
 			@media @media-point-screen {
 				width: 100%;
-				padding: 17px 25px;
 			}
 		}	
 		&.is--lg{
@@ -103,8 +102,21 @@
 		position: relative;
 		transition: @trs-btn; 	
 		color: @btn_l_color;
-		&.is--more{
-			padding: 5px 0;
+		text-transform: uppercase;
+		font-size: @btn_fs - 2;
+		line-height: @btn_lh - 4;
+		font-weight: 400;
+		letter-spacing: 2px;
+		padding-left: 2px;
+		&::after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			transition: @trs-site;
+			background-color: @btn_l_bg_color;
+			height: 10px;
 		}
 		.card-item__card:hover &,
 		.card-item__card.is--active &,
@@ -112,12 +124,19 @@
 			color: @btn_l_hover_color;
 			//background-color: @btn_l_hover_bg_color;
 			//border-color: @btn_l_hover_border_color;		
+			&::after{
+				height: 100%;
+			}
 		}
 		&.is--white{
 			color: @white;
 		}
 	}
-	&icon{
+	&item-name{
+		position: relative;
+		z-index: 2;
+	}
+	/*&icon{
 		//display: none;
 		transition: @trs-btn;
 		svg{display: block;}
@@ -139,7 +158,7 @@
 				transform: scale(1.2, 1);
 			}
 		}		
-	}
+	}*/
 }
 .btn-icon__{
 	&item{

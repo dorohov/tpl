@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[[azbntple 
+			tpl="/src/block/site/default/head/.html" 
+			title=" "
+			description=" "
+		]] 		
+	</head>
+	<body> 
+		[[azbntple 
+			tpl="/src/block/site/default/navbar/.html"
+			class="navbar-site scroll"
+			navbar_prefix="navbar__"   
+			navbar_mod="  "     
+		]] 
+		[[azbntple 
+			tpl="/src/block/site/default/header/panel.html"
+			block_prefix="header-block__"
+			block_heading="Орловский ГАУ <span>им. Н.В. Парахина</span>"
+			block_heading_small="Орловский государственный<br> аграрный университет"
+		]]	
+		[[azbntple  
+			tpl="/src/block/site/page/relevant-index.html"
+			content_prefix="content-block__"       
+			content_mod="is--relevant-index"    
+			block_heading_mod="is--page-heading  is--white"
+			block_heading_level="h2"
+			block_heading="Актуально"  
+			block_heading_btn_name="Все объявления"
+			block_heading_btn_link="{{page.news}}"
+			block_heading_btn_mod="is--more  is--white"
+		]]
+		[[azbntple  
+			tpl="/src/block/site/page/student-index.html"
+			content_prefix="content-block__"       
+			content_mod="is--student-index"
+		]]	
+		[[azbntple  
+			tpl="/src/block/site/page/faculty-index.html"
+			content_prefix="content-block__"       
+			content_mod="is--faculty-index"    
+			block_heading_mod="is--page-heading"
+			block_heading_level="h2"
+			block_heading="Факультеты" 
+		]]
+		[[azbntple  
+			tpl="/src/block/site/page/news-index.html"
+			content_prefix="content-block__"       
+			content_mod="is--news-index"    
+			block_heading_mod="is--page-heading"
+			block_heading_level="h2"
+			block_heading="Новости" 
+		]]	
+		[[azbntple  
+			tpl="/src/block/site/page/event-index.html"
+			content_prefix="content-block__"       
+			content_mod="is--event-index"    
+			block_heading_mod="is--page-heading"
+			block_heading_level="h2"
+			block_heading="Мероприятия" 
+		]]	
+		[[azbntple  
+			tpl="/src/block/site/page/favorite-index.html"
+			content_prefix="content-block__"       
+			content_mod="is--favorite-index"    
+			block_heading_mod="is--page-heading"
+			block_heading_level="h2"
+			block_heading="Полезные ссылки" 
+		]]	
+		[[azbntple 
+			tpl="/src/block/site/default/footer/.html"
+			footer_prefix="footer__" 
+		]]		
+		[[azbntple tpl="/src/block/site/default/script/script.html" ]]  
+	</body>
+</html>

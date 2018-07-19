@@ -1,0 +1,137 @@
+.page-header__{	
+	&panel{}	
+	&container{}
+	&block{	
+		margin-bottom: 30px;
+		@media @media-point-screen {margin-bottom: 2.5vw;}
+		&.is--page-heading{}
+		&.is--mb0{
+			margin-bottom: 0;
+		}
+		//index
+		&.is--faculty-index{
+			@media @media-point-screen {margin-bottom: 20px;}
+		}	
+		&.is--news-index{
+			@media @media-point-screen {
+				margin-bottom: 3.8vw;
+			}
+		}	
+		&.is--event-index{
+			@media @media-point-screen {
+				margin-bottom: 5.6vw;
+			}
+		}
+		&.is--modals{
+			margin-bottom: 20px;
+		}
+	}
+	&row{
+		@media @media-point-xxs {
+			flex-wrap: wrap;
+		}
+		align-items: center;
+		justify-content: space-between;
+	}
+	&cols{
+		&.is--heading{
+			flex-grow: 1;
+		}
+		&.is--btn{}
+	}
+	&heading{
+		//color: @page_header_color;
+		margin: 0;
+		position: relative;
+		@media @media-point-smart {
+			br {display: none;}
+		}		
+		&.is--page-heading{
+			.heading2();
+		}	
+		&.is--center{
+			text-align: center;
+			@media @media-point-smart {text-align: left;}
+		}	
+		&.is--form-panel{
+			.heading4();
+		}
+		&.is--reviews-heading{
+			text-align: center;
+		}
+		&.is--white{
+			color: @white;
+		}	
+		//
+		&.is--news-card{
+			.heading2();
+		}
+		&.is--panel{
+					
+		}
+		&.is--modals{
+		}
+	}
+	&heading-small{
+		.calcFontSize(19, 23, 320, 1680);
+		.calcLineHeight(23, 27, 320, 1680);
+		//color: @b-color;
+		font-weight: 400;
+		margin: 0;
+		letter-spacing: 0.2px;
+		.page-header__heading + &{
+			padding-top: 5px;
+		}
+		//color
+		&.is--white{
+			color: @white;
+		}
+		&.is--center{
+			text-align: center;
+			@media @media-point-smart {text-align: left;}
+		}
+		@media @media-point-smart {
+			br {display: none;}
+		}
+		&.is--heading{
+			//font-weight: 700;
+		}
+		&.is--form-panel{
+			.heading4();
+			letter-spacing: 1px;
+			margin-bottom: 0px;
+			padding-bottom: 3px;
+			.page-header__heading + &{
+				@media @media-point-screen {
+					padding-top: 3px;
+				}
+			}
+		}
+		&.is--modals{
+			font-size: @b-fs;
+			line-height: @b-lh - 4;
+			.page-header__heading + &{
+				padding-top: 10px;
+			}
+		}	
+	}
+	&icon-row{
+		margin-right: -5px;
+		margin-left: -5px;
+	}
+	&icon-cols{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	&heading-icon{
+		&.is--icon{
+			display: block;
+			width: 20px;
+			height: 20px;			
+			@media @media-point-notsmart {
+				width: 40px;
+				height: 40px;
+			}			
+		}
+	}
+}

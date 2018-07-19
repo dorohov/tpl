@@ -1,0 +1,58 @@
+<footer class="{{footer_prefix}}block">	
+	<div class="{{footer_prefix}}inner">	
+		<div class="container {{footer_prefix}}container">
+			<div class="row {{footer_prefix}}row  is--base">
+				<div class="cols {{footer_prefix}}cols  is--copyright">
+					<div class="{{footer_prefix}}copyright">
+						<p>&copy; 2001-2017</p>
+						<p>{{contacts.copyright}}</p>
+					</div>
+				</div>
+				<div class="cols {{footer_prefix}}cols  is--contacts">
+					<div class="{{footer_prefix}}address">
+						<div class="{{footer_prefix}}address-heading">Адрес и телефон:</div> 
+						<div>{{contacts.address}}</div>
+						<div><a href="tel:{{contacts.phone_tel}}">{{contacts.phone}}</a></div>
+					</div>
+				</div>
+				<div class="cols {{footer_prefix}}cols  is--contacts">
+					<div class="{{footer_prefix}}address">
+						<div class="{{footer_prefix}}address-heading">График работы:</div> 
+						{{contacts.clock}}
+					</div>
+				</div>
+				<div class="cols {{footer_prefix}}cols  is--soc">
+					[[azbntple 
+						tpl="/src/block/site/default/social/panel.html" 
+						block_prefix="social__" 
+						block_mod="is--footer" 
+					]]
+				</div>
+				<div class="cols {{footer_prefix}}cols  is--dorohovdesign">
+					<div class="row {{footer_prefix}}dorohovdesign-row"> 
+						<div class="cols {{footer_prefix}}dorohovdesign-cols  is--text">
+							<div class="{{footer_prefix}}dorohovdesign-text">Создание сайта</div>
+						</div>
+						<div class="cols {{footer_prefix}}dorohovdesign-cols  is--logotip">
+							<a href="http://dorohovdesign.ru/" target="_blank" class="{{footer_prefix}}dorohovdesign-logotip">
+								[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="dorohovdesign" ]]
+							</a>
+						</div>
+					</div>				 
+				</div>
+			</div>			
+			<div class="row {{footer_prefix}}row  is--text">
+				<div class="cols {{footer_prefix}}cols  is--text">
+					<div class="{{footer_prefix}}text">
+						<p>Продолжая пользование данным сайтом, я выражаю свое согласие на обработку моих персональных данных с использованием интернет-сервиса «Яндекс.Метрика». </p>
+					</div>
+				</div>
+				<div class="cols {{footer_prefix}}cols  is--text">
+					<div class="{{footer_prefix}}text">
+						<p>С <a href="{{url-path-docs}}/agreement.pdf" target="_blank">Политикой федерального государственного бюджетного образовательного учреждения высшего образования «Орловский государственный аграрный университет имени Н.В. Парахина» в отношении обработки персональных данных</a> ознакомлен.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

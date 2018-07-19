@@ -1,0 +1,51 @@
+{
+	"contacts":{
+		"name":"ФГБОУ ВО Орловский ГАУ",
+		"domain":"orelsau.ru",
+		"domain_link":"http://orelsau.ru/",
+		"agreement_page":"agreement",
+		"copyright":"ФГБОУ ВО Орловский ГАУ",
+		"email":"info@orelsau.ru",
+		"phone":"+7 (4862) 43-69-98",  
+		"phone_tel":"+74862436998",   
+		"clock":"<p>Пн-Пт: 8:00-17:00. Перерыв 13:00-14:00</p><p>Сб-Вс: выходной</p>",  
+		"address":"302019, г. Орёл, Генерала Родина ул., 69"
+	},
+	"soc":{
+		"vk":"https://vk.com/orel_sau",
+		"fb":"https://www.facebook.com/groups/orelsau/",
+		"ok":"https://ok.ru/group/",
+		"tw":"https://twitter.com/",
+		"inst":"https://www.instagram.com/orel_sau/"
+	},
+	"page":{
+		"index":"/",
+		"about":"/about.html",
+		"docs":"/docs.html",
+		"rectorate":"/rectorate.html",
+		"team_card":"/team-card.html",
+		"faculty":"/faculty.html",
+		"faculty_card":"/faculty-card.html",
+		"entrants":"/entrants.html",
+		"entrants_card":"/entrants-card.html",
+		"entrants_examin":"/entrants-examin.html",
+		"student":"/student.html",
+		"event":"/event.html",
+		"news":"/news.html",
+		"news_card":"/news-item.html",
+		"science":"/science.html",
+		"science_docs":"/science-docs.html",
+		"contacts":"/contacts.html",
+		"search":"/search.html",
+		"404":"/404.html",
+		"sitemap":"/sitemap.html",
+		"style":"/style.html",
+		"agreement":"/agreement.html"
+	},	                           
+	"url-path-css":"/css",
+	"url-path-img":"/img",
+	"url-path-js":"/js",
+	"url-path-plugins":"/plugins",
+	"url-path-favicon":"/favicon",
+	"url-path-docs":"/docs"
+}

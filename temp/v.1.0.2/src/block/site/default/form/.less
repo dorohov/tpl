@@ -1,0 +1,419 @@
+.form-panel__{
+	&panel{
+		position: relative;
+		&.is--aside{
+			background-color: @white;
+			padding: 20px 25px;
+			@media @media-point-notsmart {
+				max-width: 445px;
+				padding: 2.5vw 2.2vw;
+			}
+		}
+	}
+	&panel-inner{
+		
+	}
+	&info{
+		&.is--aside{
+			margin-bottom: 20px;
+			@media @media-point-screen {
+				margin-bottom: 1.5vw;
+			}
+			font-size: @b-fs - 2;
+			color: @black-61;
+			a[href^="tel:"],
+			a[href^="mailto:"]{
+				font-weight: 700;
+				color: @b-color;
+				font-size: @b-fs;
+			}
+			h5{
+				color: @b-color;
+				font-weight: 500;
+			}
+			* + h5{
+				padding-top: 5px;
+			}
+		}		
+	}
+}
+.form__{
+	&block{
+		
+	}
+	&inner{
+
+	}
+	&row{
+		margin-top: -10px;
+		&.is--inline{
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+	&cols{
+		width: 100%;
+		padding-top: 10px;
+		&.is--btn{
+			text-align: center;	
+			padding-top: 20px;
+		}
+		&.is--search{
+			@media @media-point-notsmart {
+				&.is--name{
+					.makeCols(5, 12);
+				}
+				&.is--select{
+					.makeCols(3, 12);
+				}
+				&.is--select-btn{
+					.makeCols(4, 12);
+				}
+			}
+		}
+	}
+	&item{
+		position: relative;
+	}
+	&control{
+		width: 100%;
+		background: @form_control_bg_color;
+		border-width: @form_control_border_width;   
+		border-style: solid;   
+		border-color: @form_control_border_color;
+		border-radius: @form_control_border_radius;	   
+		height: @form_control_height;
+		padding: 10px 20px;
+		box-shadow: none;
+		&[type="text"]{
+			-webkit-appearance: none;
+		}
+
+		//text-align: center;
+		color: @form_control_t_color;
+		font-size: @form_control_t_fs;
+		line-height: @form_control_t_lh;
+		transition: @trs-site;
+
+		&::-moz-placeholder{
+			transition: @trs-site;
+			color: @form_control_plh_color;
+			font-size: @form_control_plh_fs;
+			line-height: @form_control_plh_lh;
+			//text-transform: uppercase;
+			//letter-spacing: 0.5px;
+		}
+		&::-webkit-input-placeholder {
+			transition: @trs-site;
+			color: @form_control_plh_color;
+			font-size: @form_control_plh_fs;
+			line-height: @form_control_plh_lh;
+			//text-transform: uppercase;
+			//letter-spacing: 0.5px;
+		}
+		&:focus{ 
+			outline:none;
+			border-color: @form_control_focus_border_color;
+			background-color: @form_control_focus_bg_color;
+			color: @form_control_focus_t_color;	
+			//&::-moz-placeholder{color: @form_control_focus_plh_color;}
+			//&::-webkit-input-placeholder {color: @form_control_focus_plh_color;}
+
+		}
+		&.is--textarea{
+			height: @form_control_height_textarea;
+			//padding: 15px 25px;
+			background-color: @form_control_bg_color;
+			border-width: @form_control_border_width;
+			border-style: solid;
+			border-color: @form_control_border_color;
+			border-radius: @form_control_border_radius;
+			&:focus{
+				border-color: @form_control_focus_border_color;
+			}	
+		}
+		&.is--select{
+			//border-radius: @form_control_border_radius - 20;  
+			height: @form_control_height;
+			padding: 5px 20px;
+			&.is--xs{
+				height: @form_control_height - 24;
+				font-size: @form_control_t_fs - 4;
+				line-height: @form_control_t_lh - 4;
+				color: @form_control_plh_color;
+				border-width: @form_control_border_width + 1;
+			}
+		}
+		&.is--white{
+			border-color: @form_control_w_border_color;
+			background-color: @form_control_w_bg_color;
+			&::-moz-placeholder{
+				color: @form_control_w_plh_color;
+			}
+			&::-webkit-input-placeholder {
+				color: @form_control_w_plh_color;
+			}
+			&:focus{
+				background-color: @form_control_w_focus_bg_color;
+				border-color: @form_control_w_focus_border_color;
+				&::-moz-placeholder{
+					color: @form_control_plh_color;
+				}
+				&::-webkit-input-placeholder {
+					color: @form_control_plh_color;
+				}
+			}
+			&.is--select{
+				color: @white;
+				background-color: fadeout(@form_control_w_bg_color, 100%);
+				&:focus{
+					color: @form_control_w_plh_color;
+					background-color: fadeout(@form_control_w_bg_color, 0%);
+				}
+			}
+		}
+	}
+	&switch{
+		padding-top: 10px;    
+		padding-bottom: 10px;
+		position: relative;
+		padding-left: 35px; 
+		display: inline-block;
+		font-size: @form_control_sw_fs;
+		line-height: @form_control_sw_lh;
+		text-align: left;	
+		color: @form_control_sw_color;	
+	}
+	&switch-input{
+		visibility: hidden;
+		margin: 0;
+		width: 1px;
+		height: 1px;
+		position: absolute;
+		left: 0;
+		top: 70%;
+		transform: translateY(-50%); 		
+	}
+	&switch-label{		
+		cursor: pointer;
+		position: absolute;
+		display: block; 
+		left: 0;
+		transition: @trs-site;
+		transform: translateY(-50%);
+		top: 47%;
+		opacity: 0.7;
+		width: @form_control_sw_size;
+		height: @form_control_sw_size;	
+		color: @form_control_sw_border_color;
+		.form__switch-input[type="checkbox"]:checked + &{
+			color: @form_control_focus_sw_border_color;
+			opacity: 1;			
+		}
+		&.is--white{ 
+			color: @form_control_w_sw_color;
+			border-color: @form_control_w_sw_border_color;
+			background-color: @form_control_w_sw_bg_color;
+			&::before{
+				background-color: @form_control_w_sw_l_bg_color;
+			}
+			.form__switch-input[type="checkbox"]:checked + &{
+				border-color: @form_control_w_focus_sw_border_color;
+			}
+		}	
+	}
+	&switch-text{
+		display: inline;
+		font-weight: 400;
+		a{
+			font-weight: 700;
+		}
+		&.is--white{
+			color: @white;
+			a{
+				color: @blue-light;
+			}
+		}	
+	}	
+}
+// === formError === //
+@popupBg: @b-color-a;
+@popupTextColor: @white;
+@borderColor: @b-color-a;  
+@borderWidth: 0px;
+@popupFontSize: 12px;
+@popupLineHeight: 18px; 
+@popupRadius: 0px;
+@popupShadowWidth: 2px;
+@popupShadowColor: #333;
+@popupFontFamily: 	@b-ff;
+/* Z-INDEX */
+.formError { z-index: 990; }
+.formError .formErrorContent { z-index: 991; }
+.formError .formErrorArrow { z-index: 996; }
+
+.ui-dialog .formError { z-index: 5000; }
+.ui-dialog .formError .formErrorContent { z-index: 5001; }
+.ui-dialog .formError .formErrorArrow { z-index: 5006; }
+
+
+
+
+.inputContainer {
+	position: relative;
+	float: left;
+}
+
+.formError {
+	position: absolute;
+	top: 300px;
+	left: 300px;
+	display: block;
+	cursor: pointer;
+	text-align: left;
+}
+
+.formError.inline {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: inline-block;
+}
+
+.ajaxSubmit {
+	padding: 20px;
+	background: #55ea55;
+	border: 1px solid #999;
+	display: none;
+}
+
+.formError .formErrorContent {
+	width: 100%;
+	background: @popupBg;
+	position:relative;
+	color: @popupTextColor;
+	min-width: 120px;
+	font-size: @popupFontSize;
+	line-height: @popupLineHeight;
+	border: @borderWidth solid @borderColor;
+	//box-shadow: 0 0 @popupShadowWidth @popupShadowColor;
+	padding: 7px 10px 6px;
+	border-radius: @popupRadius;
+    text-transform: uppercase;
+    font-family: @popupFontFamily;
+}
+
+.formError.inline .formErrorContent {
+	box-shadow: none;
+	border: none;
+	border-radius: 0;
+}
+
+.greenPopup .formErrorContent {
+	background: #33be40;
+}
+
+.blackPopup .formErrorContent {
+	background: #393939;
+	color: #FFF;
+}
+
+.formError .formErrorArrow {
+	width: 15px;
+	margin: -2px 0 0 13px;
+	position:relative;
+}
+body[dir='rtl'] .formError .formErrorArrow,
+body.rtl .formError .formErrorArrow {
+	margin: -2px 13px 0 0;
+}
+
+.formError .formErrorArrowBottom {
+	box-shadow: none;
+	margin: 0px 0 0 12px;
+	//top:2px;
+
+	top: 0px;
+    border-bottom: 10px solid fadeout(@popupBg, 0%);
+    border-left: 8px solid fadeout(@popupBg, 100%);
+    border-right: 8px solid fadeout(@popupBg, 100%);
+}
+
+.formError .formErrorArrow div {
+	border-left: @borderWidth solid @borderColor;
+	border-right: @borderWidth solid @borderColor;
+	box-shadow: 0 ceil(@popupShadowWidth/3) ceil(@popupShadowWidth/2) lighten(@popupShadowColor,10%);
+	font-size: 0px;
+	height: 1px;
+	background: @popupBg;
+	margin: 0 auto;
+	line-height: 0;
+	font-size: 0;
+	display: block;
+	display: none;
+}
+
+.formError .formErrorArrowBottom div {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+}
+
+.greenPopup .formErrorArrow div {
+	background: #33be40;
+}
+
+.blackPopup .formErrorArrow div {
+	background: #393939;
+	color: #FFF;
+}
+
+.formError .formErrorArrow .line10 {
+	width: 13px;
+	border: none;
+}
+
+.formError .formErrorArrow .line9 {
+	width: 11px;
+	border: none;
+}
+
+.formError .formErrorArrow .line8 {
+	width: 11px;
+}
+
+.formError .formErrorArrow .line7 {
+	width: 9px;
+}
+
+.formError .formErrorArrow .line6 {
+	width: 7px;
+}
+
+.formError .formErrorArrow .line5 {
+	width: 5px;
+}
+
+.formError .formErrorArrow .line4 {
+	width: 3px;
+}
+
+.formError .formErrorArrow .line3 {
+	width: ceil(@borderWidth/2);
+	border-left: @borderWidth solid @borderColor;
+	border-right: @borderWidth solid @borderColor;
+	border-bottom: 0 solid @borderColor;
+}
+
+.formError .formErrorArrow .line2 {
+	width: 3px;
+	border: none;
+	background: @borderColor;
+}
+
+.formError .formErrorArrow .line1 {
+	width: 1px;
+	border: none;
+	background: @borderColor;
+} 

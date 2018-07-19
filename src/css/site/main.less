@@ -9,8 +9,7 @@ html {
 		//height: 100%;
 		width: 100%;
 		position: relative;		
-	}
-	//&.open-navbar{overflow-y: hidden;}		
+	}	
 }
 *::selection{background: darken(@white, 20%);}
 body {
@@ -132,9 +131,11 @@ a{
 .ruble__{
 	&symbol{
 		display: inline-block;
-		&.is--table{
-			width: 10px;
-			height: 10px;
+		width: 10px;
+		height: 10px;
+		&.is--xs{
+			width: 5px;
+			height: 7px;
 		}
 		svg{display: block;}
 	}

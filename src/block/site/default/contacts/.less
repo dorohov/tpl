@@ -2,47 +2,35 @@
 	&block{	
 		position: relative;
 	}
-	&row{
-		align-items: stretch;
-	}
-	&cols{
-		height: 100%;
-		.makeCols(12, 12);
-		&.is--address{
-			@media @media-point-screen {
-				.makeCols(4, 12);
-			}
+	&panel{
+		padding: 30px 15px;
+		@media @media-point-screen-lg {
+			position: absolute;
+			z-index: 2;
+			background-color: @white;
+			top: 28.8%;
+			left: 10%;
+			max-width: 495px;
+			padding: 3.6vw 3.4vw;	
+			box-shadow: 3px 4px 10px fadeout(@black, 85%);		
 		}
-		&.is--map{
-			@media @media-point-screen {
-				.makeCols(8, 12);
-			}
-		}
-		&.is--tel{
-			@media @media-point-screen {
-				margin-top: 3.3vw;
-			}
-		}
-		&.is--contacts{
-			.makeCols(6, 12);
-			@media @media-point-xxs {
-				.makeCols(12, 12);
-			}
-			@media @media-point-screen {
-				.makeCols(4, 12);
-			}
+		@media @media-point-xxl {
+			left: 26.2%;
 		}
 	}
 	&map{
+		width: 100%;
 		height: 300px;
 		@media @media-point-xs {
 			height: 250px;
 		}
-		@media @media-point-notsmart {
-			height: 590px;
-		}
-		@media @media-point-md1 {
+		@media @media-point-tablet {
 			height: 500px;
+		}
+		@media @media-point-screen {
+			max-height: 870px;
+			min-width: 500px;
+			height: 100vh;
 		}
 	}
 	&heading{

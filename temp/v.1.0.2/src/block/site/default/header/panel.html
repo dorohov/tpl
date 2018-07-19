@@ -1,0 +1,39 @@
+<header class="{{block_prefix}}block">
+	<div class="{{block_prefix}}panel">
+		<div class="container {{block_prefix}}container">
+			<div class="{{block_prefix}}inner">
+				<h1 class="{{block_prefix}}heading">{{block_heading}}</h1>
+				<div class="{{block_prefix}}heading-small">{{block_heading_small}}</div>
+				<div class="{{block_prefix}}btn-group">
+					<div class="{{block_prefix}}btn">
+						[[azbntple 
+							tpl="/src/block/site/default/button/link.html"
+							button_prefix="btn__" 
+							button_mod="is--invers  is--block"
+							button_link="{{page.faculty}}"
+							button_name="Факультеты"
+						]]
+					</div>
+					<div class="{{block_prefix}}btn">
+						[[azbntple 
+							tpl="/src/block/site/default/button/link.html"
+							button_prefix="btn__" 
+							button_mod="is--invers  is--block"
+							button_link="{{page.entrants}}"
+							button_name="Абитуриентам"
+						]]
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="{{block_prefix}}slick" data-slider-slick="slick-header">
+		<div class="{{block_prefix}}slick-item">
+			<img src="{{url-path-img}}/temp/header-slider-item1.jpg" alt="">
+		</div>
+		<div class="{{block_prefix}}slick-item">
+			<img src="{{url-path-img}}/temp/header-slider-item2.jpg" alt="">
+		</div>		
+	</div>
+	
+</header>

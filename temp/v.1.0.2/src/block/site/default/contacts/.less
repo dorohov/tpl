@@ -1,0 +1,149 @@
+.kontakty-panel__{
+	&block{	
+		position: relative;
+	}
+	&row{
+		align-items: stretch;
+	}
+	&cols{
+		height: 100%;
+		.makeCols(12, 12);
+		&.is--address{
+			@media @media-point-screen {
+				.makeCols(4, 12);
+			}
+		}
+		&.is--map{
+			@media @media-point-screen {
+				.makeCols(8, 12);
+			}
+		}
+		&.is--tel{
+			@media @media-point-screen {
+				margin-top: 3.3vw;
+			}
+		}
+		&.is--contacts{
+			.makeCols(6, 12);
+			@media @media-point-xxs {
+				.makeCols(12, 12);
+			}
+			@media @media-point-screen {
+				.makeCols(4, 12);
+			}
+		}
+	}
+	&map{
+		height: 300px;
+		@media @media-point-xs {
+			height: 250px;
+		}
+		@media @media-point-notsmart {
+			height: 590px;
+		}
+		@media @media-point-md1 {
+			height: 500px;
+		}
+	}
+	&heading{
+		margin-bottom: 30px;
+		@media @media-point-screen {
+			margin-bottom: 2.8vw;
+		}
+	}
+	&item-group{
+		padding-bottom: 30px;
+		@media @media-point-screen {
+			padding-top: 3vw;
+			padding-bottom: 3vw;
+		}
+	}
+	&item{
+		margin-bottom: 20px;
+		@media @media-point-screen {
+			margin-bottom: 1.2vw;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+.kontakty-card__{
+	&card{}
+	&post{
+		color: @b-color-a;
+		font-weight: 700;
+		font-size: @b-fs + 4;
+		line-height: @b-lh - 2;
+		margin-bottom: 10px;
+	}
+	&heading{
+		color: @b-color-h;
+		font-weight: 500;
+		font-size: @b-fs + 4;
+		margin-bottom: 20px;
+	}
+	&item{
+		margin-bottom: 10px;
+	}
+	&item-heading{
+		color: @white-bd;
+		font-size: @b-fs + 2;
+		line-height: @b-lh - 4;
+		font-weight: 700;
+	}
+	&item-note{
+		&, a[href^="tel:"], a[href^="mailto:"]{
+			color: @b-color;
+		}
+	}
+}
+.kontakty-item__{
+	&item{
+		position: relative;
+		font-size: @b-fs + 4;
+		line-height: @b-lh + 6;
+		//
+		&, &:hover, &:focus{
+			color: @b-color;
+		}
+		span{
+			font-weight: 700;
+			color: @green-dark;
+		}
+		&.is--icon{
+			padding-left: 40px;
+		}
+	}
+	&heading{
+		color: @b-color-a;
+		.calcFontSize(20, 28, 320, 1680);
+		.calcLineHeight(24, 32, 320, 1680);
+		font-weight: 400;
+	}
+	&link{
+		display: block;
+		a[href^="mailto:"]&,
+		a[href^="tel:"]&,
+		&, &:hover, &:focus{
+			color: @b-color-h;
+		}
+		&.is--tel{
+			display: inline-block;
+		}
+	}
+	&icon{ 
+		position: absolute;
+		top: 50%; 
+		left: 0;
+		transform: translateY(-50%);
+		transition: @trs-site;
+		width: 30px;
+		height: 30px;
+		border: 2px solid @b-color;
+		border-radius: 50%;
+		color: @b-color;
+		padding: 6px;
+		svg{display: block;}
+	}
+}

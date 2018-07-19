@@ -7,71 +7,75 @@
 			description=" "
 		]] 		
 	</head>
-	<body> 
+	<body class="is--index-page"> 
 		[[azbntple 
 			tpl="/src/block/site/default/navbar/.html"
 			class="navbar-site scroll"
-			navbar_prefix="navbar__"   
-			navbar_mod="  "     
+			navbar_prefix="navbar__"
+			navbar_mod="is--index"
 		]] 
 		[[azbntple 
 			tpl="/src/block/site/default/header/panel.html"
 			block_prefix="header-block__"
-			block_heading="Орловский ГАУ <span>им. Н.В. Парахина</span>"
-			block_heading_small="Орловский государственный<br> аграрный университет"
+			block_heading="Ремонт, реставрация и замена окон в Москве"
+			block_heading_small="Никогда не настаиваем на замене, если можно отремонтировать."
+			block_bg="{{url-path-img}}/temp/bg-index-header.jpg"
 		]]	
 		[[azbntple  
-			tpl="/src/block/site/page/relevant-index.html"
-			content_prefix="content-block__"       
-			content_mod="is--relevant-index"    
-			block_heading_mod="is--page-heading  is--white"
-			block_heading_level="h2"
-			block_heading="Актуально"  
-			block_heading_btn_name="Все объявления"
-			block_heading_btn_link="{{page.news}}"
-			block_heading_btn_mod="is--more  is--white"
+			tpl="/src/block/site/page/index-adv.html"
+			content_prefix="content-block__"
+			content_mod="is--adv-index"
+			content_id="adv-block"
 		]]
 		[[azbntple  
-			tpl="/src/block/site/page/student-index.html"
-			content_prefix="content-block__"       
-			content_mod="is--student-index"
+			tpl="/src/block/site/page/index-services.html"
+			content_prefix="content-block__"  
+			content_mod="is--services-index"
+			content_id="services-block"
+			content_bg="{{url-path-img}}/temp/bg-index-services.jpg"
+			block_heading_mod="is--index-heading"
+			block_heading_level="h2"
+			block_heading="Наши услуги"
 		]]	
 		[[azbntple  
-			tpl="/src/block/site/page/faculty-index.html"
-			content_prefix="content-block__"       
-			content_mod="is--faculty-index"    
-			block_heading_mod="is--page-heading"
+			tpl="/src/block/site/page/index-portfolio.html"
+			content_prefix="content-block__"   
+			content_mod="is--portfolio-index"
+			content_id="portfolio-block"
+			block_heading_mod="is--index-heading"
 			block_heading_level="h2"
-			block_heading="Факультеты" 
+			block_heading="Гарантия по договору, а не на словах"
+		]]	
+		[[azbntple 
+			tpl="/src/block/site/default/form/block.html" 
+			block_prefix="form-panel__"
+			block_mod="is--bg  is--form"
+			block_bg="{{url-path-img}}/temp/bg-form.jpg"
+			form_prefix="form__"
+			form_id="fscalc"
+			form_mod="is--calc" 
+			form_color="is--white"
+			form_heading="Получите предварительный рассчет"
+			form_heading_small="  "
+			form_heading_mod="is--form-block"
+			form_btn_name="Отправить"
+			form_btn_mod="is--sm  is--block"
 		]]
 		[[azbntple  
-			tpl="/src/block/site/page/news-index.html"
-			content_prefix="content-block__"       
-			content_mod="is--news-index"    
-			block_heading_mod="is--page-heading"
+			tpl="/src/block/site/default/contacts/panel.html"
+			content_prefix="kontakty-panel__"       
+			content_mod="  "
+			content_id="contacts-block"  
+			block_heading_mod="is--index-contacts"
 			block_heading_level="h2"
-			block_heading="Новости" 
-		]]	
-		[[azbntple  
-			tpl="/src/block/site/page/event-index.html"
-			content_prefix="content-block__"       
-			content_mod="is--event-index"    
-			block_heading_mod="is--page-heading"
-			block_heading_level="h2"
-			block_heading="Мероприятия" 
-		]]	
-		[[azbntple  
-			tpl="/src/block/site/page/favorite-index.html"
-			content_prefix="content-block__"       
-			content_mod="is--favorite-index"    
-			block_heading_mod="is--page-heading"
-			block_heading_level="h2"
-			block_heading="Полезные ссылки" 
-		]]	
+			block_heading="Контакты"  
+		]]		
 		[[azbntple 
 			tpl="/src/block/site/default/footer/.html"
 			footer_prefix="footer__" 
 		]]		
-		[[azbntple tpl="/src/block/site/default/script/script.html" ]]  
+		[[azbntple tpl="/src/block/site/default/script/script.html" ]]
+		[[azbntple tpl="/src/block/site/default/modals/include.html" ]]
+		[[azbntple tpl="/src/block/site/default/script/googleMap.html" ]]
 	</body>
 </html>

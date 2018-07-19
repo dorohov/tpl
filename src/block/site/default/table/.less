@@ -48,18 +48,22 @@
 		th{
 			border: 0;
 			border-left: 0;
-			background-color: @b-color-a;
-			font-weight: 500;
-			//border-bottom: none;
-			padding: 10px;
-			//letter-spacing: 1px;
+			background-color: @blue;
+			color: @blue-deep-dark;	
+			font-weight: 700;
+			padding: 15px 12px;
+			letter-spacing: 1px;
+			font-size: @b-fs - 6;
+			line-height: @b-lh - 8;
+			text-transform: uppercase;
 			border-top: 0!important;
-			color: @white;	
+			vertical-align: middle!important;
+			border-bottom: 1px solid fadeout(@white, 50%);	
+			//border-bottom: none;
+			//letter-spacing: 1px;
 			//text-align: center;
 			//text-transform: uppercase;	
-			vertical-align: middle!important;
-			border-right: 1px solid fadeout(@white, 50%);	
-			border-bottom: 1px solid fadeout(@white, 50%);	
+			//border-right: 1px solid fadeout(@white, 50%);	
 			@media print{
 				font-size: @b-fs - 4;
 				line-height: @b-lh - 8;
@@ -84,19 +88,22 @@
 	tbody {	
 		tr{			
 			th, td{
-				padding: 18px 10px;
-				border-bottom: 1px solid @b-color-a;
+				padding: 12px;
+				border-bottom: 1px solid @blue-light;
 				//text-align: center;
+				&[colspan]{
+					background-color: @blue-deep-light;
+				}
 			}
 			&:first-child{
 				th, td{
 					//border-top: 2px solid @green;
-					@media print{border-top-color: @black}
+					//@media print{border-top-color: @black}
 				}
 			}
 			&:last-child{
 				th, td{
-					border-bottom: 4px solid @b-color-a;
+					border-bottom: 4px solid @blue-light;
 					@media print{border-bottom-color: @black}
 				}
 			}
@@ -107,6 +114,7 @@
 		padding: 10px 10px;
 		vertical-align: middle;
 		background-color: @white;
+		color: @b-color-h;
 		&.is--left{text-align: left;}
 		&.is--right{text-align: right;}
 		&.is--del{

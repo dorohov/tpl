@@ -1,0 +1,93 @@
+.pagination-panel__{
+	&block{
+		padding-bottom: 30px;
+		/*padding-top: 30px;
+		padding-bottom: 30px;
+		@media @media-screen {
+			padding-top: 2.6vw;
+			padding-bottom: 2.6vw;
+		}*/
+	}
+	&list{
+		font-weight: 400;
+		list-style: none;
+		margin-top: -(@pagin-gutter + 5px);
+		margin-left: -(@pagin-gutter);
+		margin-right: -(@pagin-gutter);
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		//
+		&.is--center{
+			justify-content: center; 
+		}
+	}
+	&item{
+		padding-top: @pagin-gutter + 5px;
+		padding-left: @pagin-gutter;
+		padding-right: @pagin-gutter; 
+	}
+	&link{
+		display: block;
+		position: relative;
+		color: @pagin-color;
+		text-align: center;
+		position: relative;
+		z-index: 1;
+		padding: 0 8px;
+		font-size: @b-fs;
+		line-height: @b-lh;
+		&:hover{	
+			color: @pagin-color-h;			
+			//background-color: @pagin-bg;			
+		}
+		&.is--nav{
+			display: block;
+			position: relative;
+			width: 26px;
+			height: 26px;
+			border: 1px solid @b-color-a;
+			text-transform: uppercase;
+			margin: 0 4px;
+			padding: 5px 0;
+			color: @b-color-a;
+
+			svg{display: block;}
+			&:hover{
+				background: @b-color-a;
+				color: @white;			
+			}
+		}
+		&.is--prev{
+			margin-right: 15px;
+		}
+		&.is--next{			
+			margin-left: 15px;
+		}
+		.pagination-panel__item.is--active &{
+			color: @pagin-color-hover;		
+			cursor: default;
+			background-color: @pagin-bg;
+		}
+		span{
+			position: relative;
+			z-index: 2;
+		}
+	}
+	&icon{
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		svg{display: block;}
+	}
+	/*&line{
+		max-width: 60px;
+		min-width: 20px;
+		width: 4vw;
+		height: 1px;
+		background-color: @b-color-h;
+	}*/
+}

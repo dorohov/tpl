@@ -1,0 +1,57 @@
+<main class="{{content_prefix}}panel  {{content_mod}}" role="main">
+	<div class="{{content_prefix}}container container  {{content_mod}}  is--full">
+		<div class="{{content_prefix}}row row  is--gutter  is--wrap  {{content_mod}}">
+			<div class="{{content_prefix}}cols cols  is--aside">
+				[[azbntple 
+					tpl="/src/block/site/default/navbar/aside-search.html"
+					block_prefix="navbar-aside__" 
+					block_mod="  "
+				]]
+			</div>
+			<div class="{{content_prefix}}cols cols  is--content">
+				[[azbntple 
+					tpl="/src/block/site/default/breadcrumb/level1.html" 
+					bread_prefix="breadcrumb__"
+					bread_mod="  "
+					level_1="{{block_heading}}"
+				]]
+				[[azbntple
+					tpl="/src/block/site/default/page-header/heading.html" 
+					header_prefix="page-header__" 
+					header_mod="{{block_heading_mod}}  {{content_mod}}"
+					header_level="{{block_heading_level}}"
+					header="{{block_heading}}"
+				]]	
+				<div class="{{content_prefix}}elem  {{content_mod}}  text__block">
+					<ul class="{{content_prefix}}sitemap  {{content_mod}}">
+						<li><a href="{{page.index}}" target="_blank">Главная страница</a></li>
+						<li>Типовые Блоки
+							<ul>
+								<li><a href="{{page.rectorate}}" target="_blank">Блок Сотрудники</a></li>
+								<li><a href="{{page.team_card}}" target="_blank">Блок Карточка сотрудника</a></li>
+								<li><a href="{{page.entrants}}" target="_blank">Блоки Контакты / Карточка факультета</a></li>
+								<li><a href="{{page.entrants_card}}" target="_blank">Блоки Текст / формой обратной связи</a></li>
+								<li><a href="{{page.entrants_examin}}" target="_blank">Блок Табы</a></li>
+								<li><a href="{{page.news}}" target="_blank">Блок Новости</a></li>
+								<li><a href="{{page.news_card}}" target="_blank">Блоки Новостная карточка / Фотогалерея</a></li>
+								<li><a href="{{page.science}}" target="_blank">Блоки Контакты / Сотрудники / Текст</a></li>
+								<li><a href="{{page.docs}}" target="_blank">Блок Документы</a></li>
+								<li><a href="{{page.search}}" target="_blank">Блоки Поиск / Результаты поиска</a></li>
+							</ul>
+						</li>
+						<li>Типовые страницы
+							<ul>
+								<li><a href="{{page.faculty}}" target="_blank">Для Факультет / Кафедра</a></li>
+								<li><a href="{{page.faculty_card}}" target="_blank">Карточка Факультет / Кафедра</a></li>
+							</ul>
+						</li>
+						<li><a href="{{page.contacts}}" target="_blank">Страница контакты</a></li> 
+						<li><a href="{{page.404}}" target="_blank">Страница 404</a></li> 
+						<li><a href="{{page.agreement}}" target="_blank">Страница Пользовательское соглашение <b>(на этом сайте не используется)</b></a></li> 
+						<li><a href="{{page.style}}" target="_blank">Страница стилей</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>

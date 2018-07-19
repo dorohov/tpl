@@ -4,7 +4,7 @@
 @soc_border: 				@blue-light;
 @soc_bg: 					#764E26;
 @soc_bg_hover: 				@b-color-a;
-@soc_color: 				@b-color-a;
+@soc_color: 				@white;
 @soc_color_hover: 			@white;
 @soc_color_contacts:		@b-color;
 @soc_gutter:				5px; 
@@ -81,8 +81,8 @@
 	&row{		
 		align-items: center;
 		margin-top: -15px;
-		margin-left: -(@soc_gutter) - 15px;
-		margin-right: -(@soc_gutter) - 15px;
+		margin-left: -15px;
+		margin-right: -15px;
 		@media @media-point-notsmart {
 			justify-content: space-between;
 		}
@@ -91,11 +91,14 @@
 				flex-wrap: wrap;
 			}
 		}
+		&.is--contacts{
+			flex-wrap: wrap;
+		}
 	}
 	&cols{
 		padding-top: 15px;
-		padding-left: @soc_gutter + 15px;
-		padding-right: @soc_gutter + 15px;
+		padding-left: 15px;
+		padding-right: 15px;
 		&.is--footer{
 			@media @media-point-sm {
 				.makeCols(4, 12);
@@ -112,12 +115,26 @@
 				}
 			}
 		}
+		&.is--contacts{
+			.makeCols(12, 12);
+		}
 	}
 	&item{
 		position: relative;
 		padding-left: 45px;
+		display: inline-block;
 		@media @media-point-smart {
 			padding-left: 0;
+		}
+		&.is--contacts{
+			color: @b-color-h;
+			font-weight: 400;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			margin-bottom: 5px;	
+			@media @media-point-smart {
+				padding-left: 45px;
+			}			
 		}
 	}
 	&item-icon{
@@ -133,10 +150,17 @@
 		border-width: 2px;
 		border-style: solid;
 		border-radius: 50%;
-		padding: 5px;
+		padding: 6px;
 		&.is--footer{
-			border-color: @b-color;
-			color: @b-color;
+			border-color: @blue-light;
+			color: @white;
+		}
+		&.is--contacts{
+			border-color: @blue-light;
+			color: @b-color-h;
+			@media @media-point-smart {
+				display: block;
+			}
 		}
 		svg{display: block;}
 	}

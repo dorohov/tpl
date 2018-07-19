@@ -1,0 +1,22 @@
+<div class="{{header_prefix}}block  {{header_mod}}">
+	<div class="{{header_prefix}}row row  is--gutter10  is--wrap  {{header_mod}}">
+		<div class="{{header_prefix}}cols cols  is--date  {{header_mod}}">
+			<time class="{{header_prefix}}date  {{header_mod}}" datetime="{{header_date_iso}}">
+				{{header_date}}
+			</time>
+		</div>			
+		<div class="{{header_prefix}}cols cols  is--btn  {{header_mod}}">			
+			[[azbntple 
+				tpl="/src/block/site/default/button/link-icon-name.html"
+				button_prefix="btn-link__" 
+				button_mod="is--more"
+				button_link="{{header_btn_link}}"
+				button_name="{{header_btn_name}}"
+				button_icon="link-more"
+			]]
+		</div>
+		<div class="{{header_prefix}}cols cols  is--heading  {{header_mod}}">
+			<{{header_level}}  class="{{header_prefix}}heading  {{header_mod}}"><span>{{header}}</span></{{header_level}}>		
+		</div>
+	</div>
+</div>

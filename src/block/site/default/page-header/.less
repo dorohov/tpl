@@ -8,22 +8,25 @@
 		&.is--mb0{
 			margin-bottom: 0;
 		}
-		//index
-		&.is--faculty-index{
-			@media @media-point-screen {margin-bottom: 20px;}
-		}	
-		&.is--news-index{
+		&.is--form-block{
 			@media @media-point-screen {
-				margin-bottom: 3.8vw;
+				margin-bottom: 2vw;
+				&.is--sm{
+					margin-bottom: 1.5vw;
+				}
 			}
 		}	
-		&.is--event-index{
+		&.is--index-heading{
+		}
+		&.is--index-contacts{
 			@media @media-point-screen {
-				margin-bottom: 5.6vw;
+				margin-bottom: 20px;
 			}
 		}
 		&.is--modals{
-			margin-bottom: 20px;
+			@media @media-point-screen {
+				margin-bottom: 1.8vw;
+			}
 		}
 	}
 	&row{
@@ -47,14 +50,32 @@
 			br {display: none;}
 		}		
 		&.is--page-heading{
-			.heading2();
+			.heading1();
 		}	
 		&.is--center{
 			text-align: center;
 			@media @media-point-smart {text-align: left;}
+		}
+		&.is--index-heading{
+			text-align: center;
+			//font-family: @b-ff-2;
+			.heading1();
 		}	
+		&.is--index-contacts{
+			.heading1();			
+		}
 		&.is--form-panel{
-			.heading4();
+			.heading3();
+			font-weight: 700;
+		}	
+		&.is--form-block{
+			.heading2();
+			font-weight: 700;
+			color: @white;
+			text-align: center;
+			&.is--sm{
+				.heading3();
+			}
 		}
 		&.is--reviews-heading{
 			text-align: center;
@@ -70,6 +91,11 @@
 					
 		}
 		&.is--modals{
+			.heading5();
+			text-align: center;
+			font-weight: 700;
+			color: @b-color-h;
+			
 		}
 	}
 	&heading-small{
@@ -97,21 +123,23 @@
 			//font-weight: 700;
 		}
 		&.is--form-panel{
-			.heading4();
-			letter-spacing: 1px;
-			margin-bottom: 0px;
-			padding-bottom: 3px;
+			.heading6();			
 			.page-header__heading + &{
 				@media @media-point-screen {
-					padding-top: 3px;
+					padding-top: 15px;
 				}
 			}
 		}
+		&.is--form-block{
+			color: @white;
+			text-align: center;
+		}
 		&.is--modals{
-			font-size: @b-fs;
+			text-align: center;
+			font-size: @b-fs - 2;
 			line-height: @b-lh - 4;
 			.page-header__heading + &{
-				padding-top: 10px;
+				padding-top: 5px;
 			}
 		}	
 	}

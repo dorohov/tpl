@@ -207,20 +207,15 @@
 		position: relative;
 		display: block;
 		//padding: 5px 42px;
-		font-size: @b-fs - 2;
+		font-size: @b-fs;
 		line-height: @b-lh - 2;
-		color: @b-color;
-		padding: 15px 10px;
-		//border-radius: 3px 3px 0 0;
+		color: @black-92;
+		padding: 12px 30px;
 		margin-bottom: 10px;
-		//border-width: 1px;
-		//border-style: solid;
-		//border-color: fadeout(@b-color-a, 100%);
+		border-width: 3px;
+		border-style: solid;
+		border-color: fadeout(@black-92, 0%);
 		//border-bottom-color: fadeout(@b-color-a, 0%);
-
-		background-color: @white-e0;
-		//border-radius: 30px;
-		padding: 10px 15px;
 		&.dropdown-toggle{
 
 		}
@@ -236,14 +231,13 @@
 		.tabs__item.open &,
 		.tabs__item.is--active &,
 		.tabs__item.active &{
-			color: @white;
-			background-color: @b-color-a;
+			color: @blue-light;
 		}
 		.tabs__item.open &,
 		.tabs__item.is--active &,
 		.tabs__item.active &{
 			cursor: default;
-			font-weight: 500;
+			border-color: @blue-light;
 		}
 	}
 	&dropdown-icon{ 
