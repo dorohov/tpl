@@ -1,5 +1,5 @@
 var topPos = $(document).scrollTop();		
-var snb = $('.navbar-site.scroll');	
+var snb = $('.navbar__block.is--scroll');	
 
 if(snb.hasClass('opacity')) {
 	if(topPos <= 200) {

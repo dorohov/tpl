@@ -1,66 +1,37 @@
-.navbar-site{ 
-	@media @media-point-device-lg{
+.navbar__{
+	&block{
 		color: @navbar-color-device;
 		position: fixed;
 		width: 100%;
 		z-index: 100;
 		top: 0;
-		left: 0; 		
-		//background: @navbar-bg-device;
-		//padding-top: 10px;
-		//padding-bottom: 10px; 	
-	} 
-	@media @media-point-device {		
-		body.admin-bar &{
-			top: @wp_bar_device;				
-		}	
-	}
-	@media @media-point-md {		
-		body.admin-bar &{
-			top: @wp_bar_screen;				
-		}	
-	}
-	@media @media-point-screen {
-		&.opacity{					
-			body.admin-bar &{
-				top: @wp_bar_screen;				
-			}			
-		}	
-	}
-	@media @media-point-screen-lg {
-		color: @navbar-color;
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		width: 100%;
-		z-index: 100; 
-		&.opacity{
-			opacity: 0;
-			transform: translateY(-100%);
-			transition: @trs-site;	
+		left: 0;
+		@media @media-point-screen-lg {
+			color: @navbar-color;
+			position: absolute;
+			&.opacity{
+				opacity: 0;
+				transform: translateY(-100%);
+				transition: @trs-site;
+			}
+			&.fixed{
+				position: fixed;
+				width: 100%;	
+			}
+			&.scroll-navbar{
+				opacity: 1;
+				transform: translateY(0%);
+				transition: @trs-site;
+			}
+			&.is--index{}
+		}
+		@media print{display: none;}
 
-		}
-		&.fixed{
-			position: fixed;
-			width: 100%;	
-		}
-		&.scroll-navbar{
-			opacity: 1;
-			transform: translateY(0%);
-			transition: @trs-site;
-		}
-		&.is--index{
-		}
 	}
-	//box-shadow: 4px 7px 38px 0px fadeout(@black, 85%);
-	@media print{display: none;}
-}
-.navbar__{
 	&inner{		
 		padding-top: 10px;
 		padding-bottom: 10px; 
-		background: @navbar-bg-device;	
-
+		background: @navbar-bg-device;
 		@media @media-point-screen-lg {			
 			background-color: @navbar-bg-screen;
 			padding-top: 0;

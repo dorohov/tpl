@@ -2,12 +2,12 @@
 $(function() { 
 	var header = $('[data-slider-slick="slick-header"]');	
 	var gallery = $('[data-slider-slick="slick-gallery"]');	
-	var prevArrow = '<button type="button" class="slick-prev  is--horizontal"><svg class="icon-svg icon-slick-left" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/svg/sprite.svg#pagin-prev"></use></svg></button>';
-	var nextArrow = '<button type="button" class="slick-next  is--horizontal"><svg class="icon-svg icon-slick-right" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/svg/sprite.svg#pagin-next"></use></svg></button>';	
-	var prevArrow = '<button type="button" class="slick-prev  is--horizontal"><svg class="icon-svg icon-slick-left" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/themes/azbn7theme/img/svg/sprite.svg#pagin-prev"></use></svg></button>';
-	var nextArrow = '<button type="button" class="slick-next  is--horizontal"><svg class="icon-svg icon-slick-right" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/themes/azbn7theme/img/svg/sprite.svg#pagin-next"></use></svg></button>';	
-	//var prevArrow = '<button type="button" class="slick-prev  is--horizontal"><svg class="icon-svg icon-slick-left" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/orelsau/img/svg/sprite.svg#slick-left"></use></svg></button>';
-	//var nextArrow = '<button type="button" class="slick-next  is--horizontal"><svg class="icon-svg icon-slick-right" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/orelsau/img/svg/sprite.svg#slick-right"></use></svg></button>';
+	var CMS__TPL_PATH = '/local/templates/azbn7theme';  
+	//var CMS__TPL_PATH = '/esbvolga';  
+	var CMS__TPL_PATH = '';  
+	//local
+	var prevArrow = '<button type="button" class="btn-nav__item  is--prev  slick-prev"><span class="sr-only">Предыдущий слайд</span><svg class="icon-svg icon-icon-prev" role="img"><use xlink:href="'+ CMS__TPL_PATH +'/img/svg/sprite.svg#icon-prev"></use></svg></button>';
+	var nextArrow = '<button type="button" class="btn-nav__item  is--next  slick-next"><span class="sr-only">Следующий слайд</span><svg class="icon-svg icon-icon-next" role="img"><use xlink:href="'+ CMS__TPL_PATH +'/img/svg/sprite.svg#icon-next"></use></svg></button>';	
 	
 	/*header.slick({
 		slidesToShow: 1,
