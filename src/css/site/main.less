@@ -1,12 +1,5 @@
 html {
-	/*@media @media-size-xs{
-		&.open-navbar{
-			overflow: hidden;
-			body{overflow: hidden;}
-		}
-	}*/
 	@media @media-point-notsmart{
-		//height: 100%;
 		width: 100%;
 		position: relative;		
 	}	
@@ -17,7 +10,6 @@ body {
 	background-color: @b-body-bg;
 	@media @media-point-device-lg{padding-top: @navbar-device;}
 	@media @media-point-xs{
-		//padding-top: @navbar-top-xs;
 		overflow-x: hidden; 
 		width: 100%;
 	}
@@ -55,23 +47,6 @@ body {
 	&.is--navbar-bottom{
 		@media @media-point-device-lg {
 			padding-bottom: @navbar-bottom;
-		}
-	}
-	/*&.ourproduct-template-default,
-	&.is--calc-result{
-		@media @media-device-lg {
-			padding-bottom: 70px;
-		}
-	}*/
-	&.admin-bar{
-		@media @media-point-device {
-			//padding-top: ~"calc(@{navbar-device} + @{wp_bar_device})";
-		}
-		@media @media-point-md2 {
-			padding-top: ~"calc(@{navbar-md} - @{wp_bar_screen})";
-		}
-		@media @media-point-screen-lg {
-			padding-top: ~"calc(@{navbar-screen} - @{wp_bar_screen})";
 		}
 	}
 }
@@ -128,18 +103,6 @@ a{
 		position: fixed;
 	}
 }
-.ruble__{
-	&symbol{
-		display: inline-block;
-		width: 10px;
-		height: 10px;
-		&.is--xs{
-			width: 5px;
-			height: 7px;
-		}
-		svg{display: block;}
-	}
-}
 .fw--{
 	&300{
 		font-weight: 300;
@@ -158,13 +121,6 @@ a{
 	}
 }
 /*
-.content-container{	
-	@media @media-screen{
-		padding-top: 20px;
-		padding-bottom: 3.8vw;
-	}
-}
-
 ._czr__loader{
 	position: fixed;
 	top: 0;
