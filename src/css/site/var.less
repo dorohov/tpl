@@ -115,6 +115,9 @@
 @navbar-collapse-color:			@white;
 @navbar-collapse-color-hover:	@yellow;
 
+@navbar-humb-width:				42px;
+@navbar-humb-bg:				@blue;
+@navbar-humb-bg-active:			@blue;
 
 @navbar_cat_bg:					@white;
 
@@ -366,79 +369,6 @@
 	border-radius: @rad_tl @rad_tr @rad_br @rad_bl;
 }
 
-.mix-indicators-panel(){
-	list-style: none;
-	margin: 0 -8px;
-	padding: 15px 0;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	left: 0;
-	//right: 0;
-	position: absolute;
-	bottom: 15px;
-	width: 100%;
-	z-index: 4;
-	@media @media-point-screen {
-		bottom: 2vw;
-	}
-}	
-.mix-indicators-item(){
-	width: 14px;
-	height: 14px;
-	border-radius: 50%;
-	cursor: pointer;
-	background-color: @green-dark;
-	transition: @trs-site;
-	margin: 0 8px;
-	@media @media-point-screen {		
-		width: 11px;
-		height: 11px;
-	}
-	&.active{
-		background-color: fadeout(@b-color-a, 0%);
-		transform: scale(2);
-	}
-}
-.mix-btn-slider() {	
-	position: absolute;
-	z-index: 6;
-	width: 36px;
-	height: 36px;
-	padding: 8px;
-	border-radius: 50%;
-	color: @green-dark;
-	transition: @trs-site;
-	border-width: 2px;
-	border-style: solid;
-	border-color: @b-color-a;
-	bottom: 20px;
-	&.is--prev{
-		left: 5px;
-	}
-	&.is--next{
-		right: 5px;
-	}
-	@media @media-point-screen {
-		border-width: 5px;
-		width: 52px;
-		height: 52px;
-		padding: 10px;
-		bottom: 2.2vw;		
-		&.is--prev{
-			left: 2.7vw;
-		}
-		&.is--next{
-			right: 2.7vw;
-		}
-	}
-	svg{display: block;}
-	
-	&:hover{
-		color: @white;
-		background-color: @b-color-a;
-	}
-}
 #site {
 	.bi(@img:'') {
 		background-image:url('@{url-path-img}/@{img}');
