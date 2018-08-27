@@ -23,10 +23,6 @@
 @green-light:		#AAC72D;
 @green-dark:		#009948;
 @red:				#C31846;
-
-//base
-@black: 			#000;
-@white:				#fff;
 @orange:			#DF8600;
 @yellow:			#FECC0E;
 @blue:				#00AEF3;
@@ -34,6 +30,15 @@
 @blue-deep-light:	#DDEEF4;
 @blue-deep-dark:	#004A7F;
 @blue-dark:			#0460A2;
+
+@black: 			#000;
+@black-5d: 			#5D5D5E;
+@black-d2: 			#D2D2D2;
+@black-af: 			#AFA59C;
+@white:				#fff;
+@white-f5:			#F5EAE4;
+@white-e9:			#E9E7E0;
+@green:				#C6D088;
 
 @color-vk: 			#4d7198;
 @color-youtube: 	#bb0000;
@@ -199,13 +204,13 @@
 @btn_w_hover_border_color:		@yellow;
 
 //== invers ==
-@btn_i_color:					@b-color-h;
-@btn_i_border_color:			@yellow;
-@btn_i_bg_color:				@yellow;
+@btn_i_color:					@btn_hover_color;
+@btn_i_border_color:			@btn_hover_border_color;
+@btn_i_bg_color:				@btn_hover_bg_color;
 //= hover =
-@btn_i_hover_color:				@white;
-@btn_i_hover_bg_color:			@b-color-a;	
-@btn_i_hover_border_color:		@b-color-a;
+@btn_i_hover_color:				@btn_color;
+@btn_i_hover_border_color:		@btn_border_color;
+@btn_i_hover_bg_color:			@btn_bg_color;	
 
 //== link ==
 @btn_l_color:					@b-color-a;
@@ -275,6 +280,35 @@
 @form_control_w_focus_sw_l_bg_color:		@yellow;
 
 //===== end's form input =====//
+//===== search =====//
+@search_border:				1px;
+@search_border_radius:		22px;
+@search_border_color:		@black-af;
+@search_height:				44px;
+
+@search_input_color:		@b-color;
+@search_input_bg:			@white;
+
+@search_btn_color:			@b-color;
+@search_btn_bg:				@white-e9;
+//= focus =
+@search_input_f_color:		@b-color-h;
+@search_input_f_bg:			@white-e9;
+
+@search_btn_f_color:		@b-color-h;
+@search_btn_f_bg:			@white-e9;
+//===== end's search =====//
+//===== table =====//
+@table_color:				@b-color;
+@table_border_color:		@black-af;
+@table_bg_colspan:			@white-e9;
+@table_padding:				13px 12px;
+
+@table_head_color:			@black;
+@table_head_bg:				@white-e9;
+@table_head_padding:		12px;
+@table_head_border_color:	@black-af;
+//===== end's table =====//
 
 
 

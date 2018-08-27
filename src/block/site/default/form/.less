@@ -304,7 +304,65 @@
 				color: @white;
 			}
 		}	
-	}	
+	}		
+	&search{
+		display: flex;
+	}
+	&search-input{
+		display: block;
+		width: 100%;
+		border-width: 1px;
+		border-style: solid;
+		border-color: @search_border_color;
+		border-right: 0;
+		background-color: @search_input_bg;
+		padding: 0 20px;
+		height: @search_height;
+		transition: @trs-site;
+		color: @search_input_color;
+		font-size: @b-fs - 6;
+		line-height: @b-lh - 6;
+		border-radius: @search_border_radius 0 0 @search_border_radius;
+		&::-moz-placeholder{
+			color: @search_input_color;
+			transition: @trs-site;
+		}
+		&::-webkit-input-placeholder {
+			color: @search_input_color;
+			transition: @trs-site;
+		}
+		&:focus{
+			color: @search_input_f_color;
+			background-color: @search_input_f_bg;
+			&::-moz-placeholder{
+				color: @search_input_f_color;
+			}
+			&::-webkit-input-placeholder {
+				color: @search_input_f_color;
+			}
+		}
+	}
+	&search-btn{
+		.btn-clearfix();
+		width: @search_height + 8;
+		height: @search_height;
+		border-radius: 0 @search_border_radius @search_border_radius 0;
+		border-width: 1px;
+		border-style: solid;
+		border-color: @search_border_color;
+		border-left: 0;
+		background-color: @search_btn_bg;
+		color: @search_btn_color;
+		padding: 13px 16px ;
+		svg{display: block;}
+		.form__search-input:focus + &{
+			//border-color: @b-color-a;
+		}
+		&:hover{
+			color: @search_btn_f_color;
+			background-color: @search_btn_f_bg;
+		}
+	}
 }
 // === formError === //
 @popupBg: @b-color-a;
