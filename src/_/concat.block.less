@@ -470,6 +470,7 @@
 			.btn-sm();
 		}
 	}
+	&name{}
 	&icon{
 		.btn-clearfix();
 		display: inline-block; 
@@ -589,6 +590,12 @@
 			width: 54px;
 			height: 54px;
 		}		
+	}
+}
+.btn-nav__{
+	&item{
+		&.is--prev{}
+		&.is--next{}
 	}
 }
 .card-item__{
@@ -1416,7 +1423,65 @@
 				color: @white;
 			}
 		}	
-	}	
+	}		
+	&search{
+		display: flex;
+	}
+	&search-input{
+		display: block;
+		width: 100%;
+		border-width: 1px;
+		border-style: solid;
+		border-color: @search_border_color;
+		border-right: 0;
+		background-color: @search_input_bg;
+		padding: 0 20px;
+		height: @search_height;
+		transition: @trs-site;
+		color: @search_input_color;
+		font-size: @b-fs - 6;
+		line-height: @b-lh - 6;
+		border-radius: @search_border_radius 0 0 @search_border_radius;
+		&::-moz-placeholder{
+			color: @search_input_color;
+			transition: @trs-site;
+		}
+		&::-webkit-input-placeholder {
+			color: @search_input_color;
+			transition: @trs-site;
+		}
+		&:focus{
+			color: @search_input_f_color;
+			background-color: @search_input_f_bg;
+			&::-moz-placeholder{
+				color: @search_input_f_color;
+			}
+			&::-webkit-input-placeholder {
+				color: @search_input_f_color;
+			}
+		}
+	}
+	&search-btn{
+		.btn-clearfix();
+		width: @search_height + 8;
+		height: @search_height;
+		border-radius: 0 @search_border_radius @search_border_radius 0;
+		border-width: 1px;
+		border-style: solid;
+		border-color: @search_border_color;
+		border-left: 0;
+		background-color: @search_btn_bg;
+		color: @search_btn_color;
+		padding: 13px 16px ;
+		svg{display: block;}
+		.form__search-input:focus + &{
+			//border-color: @b-color-a;
+		}
+		&:hover{
+			color: @search_btn_f_color;
+			background-color: @search_btn_f_bg;
+		}
+	}
 }
 // === formError === //
 @popupBg: @b-color-a;
@@ -1700,139 +1765,109 @@ body.rtl .formError .formErrorArrow {
 		100% {transform:translateX(-50%) translateY(0);}
 	}
 }
- //
-// Modals
-// --------------------------------------------------
-
-// .modal-open      - body class for killing the scroll
-// .modal           - container to scroll within
-// .modal-dialog    - positioning shell for the actual modal
-// .modal-content   - actual modal w/ bg and corners and shit
-
-// Kill the scroll on the body
 .modal-open {
 	overflow: hidden; 
 }
-.modal {
-	display: none;
-	overflow: hidden;
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: @zindex-modal;
-	-webkit-overflow-scrolling: touch;
-	outline: 0;
-	@media @media-point-smart {
-		&.fade .modal-dialog {left: -100%;}
-		&.in .modal-dialog {left: 0;}
+.modal__ {
+	&block{
+		display: none;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1000;
+		-webkit-overflow-scrolling: touch;
+		outline: 0;		
+		.modal-open &{
+			overflow-x: hidden;
+			overflow-y: auto;
+			@media @media-point-notsmart{overflow-y: hidden;}
+		}		
+		//display: block;
+		//opacity: 1;
+		//background: @black;
 	}
-	@media @media-point-notsmart{
-		&.fade .modal-dialog {top: 0;}
-		&.in .modal-dialog {top: 5%;}
+	&dialog {
+		transition: all 0.5s;
+		position: relative;
+		width: auto;	
+		margin: 0px;
+		@media @media-point-notsmart {
+			box-shadow: 6px 8px 16px fadeout(@black, 80%);
+		}
+		@media @media-point-tablet 	{
+			width: @modal_width_device;	
+			margin: 10px auto;
+		}  
+		@media @media-point-screen 	{
+			width: @modal_width;	
+			margin: 0px auto;
+		} 
+		.modal__block.fade &{
+			left: -100%;
+		}
+		.modal__block.in &{
+			left: 0;
+		}
+		@media @media-point-notsmart{			
+			.modal__block.fade &{
+				top: 0;
+				left: inherit;
+			}
+			.modal__block.in &{
+				top: 5%;
+				left: inherit;
+			}
+		}
 	}
-	@media @media-point-md2{
-		&.fade .modal-dialog {top: 0;}
-		&.in .modal-dialog {top: 0%;}
+	&body {
+		position: relative;
+		background: @white;
+		border-radius: 5px;
+		padding: 35px 40px;
+		@media @media-point-tablet{padding: 70px 60px 50px;}
+		@media @media-point-screen{padding: 3.8vw 5vw;}
 	}
-}
-.modal-open .modal {
-	overflow-x: hidden;
-	overflow-y: auto;
-	@media @media-point-notsmart{overflow-y: hidden;}
-	
+	&content{}
+	&btn-close{
+		.btn-clearfix();
+	    position: absolute;
+	    z-index: 5; 
+		top: 15px;
+		right: 15px;
+	    border-width: @modal_btn_border; 
+	    border-style: solid; 
+	    border-color: @modal_btn_border_color; 
+	   	color: @modal_btn_color;
+	   	background-color: @modal_btn_bg; 
+	   	border-radius: @modal_btn_border_rad;
+		width: @modal_btn_width;
+		height: @modal_btn_width;
+		padding: 8px;
+		svg{display: block;}
+	   	transition: @trs-site;  	 
+		&:hover{
+			background-color: @modal_btn_bg_hover;
+			border-color: @modal_btn_border_color_hover;
+			color: @modal_btn_color_hover;
+		}
+	}
 }
 .modal-backdrop {
 	position: fixed;
 	top: 0;
 	right: 0;
-	bottom: 0;
+	bottom: -1px;
 	left: 0;
-	z-index: @zindex-modal-background;
-	background-color: @modal-backdrop-bg;
-	// Fade for backdrop
-	&.fade { .opacity(0); }
-	&.in { .opacity(0.90); }
-
-}
-.modal-dialog {
-	transition: all 0.5s;
-	position: relative;
-	width: auto;	
-	margin: 0px;
-	@media @media-point-notsmart {
-		box-shadow: 6px 8px 16px fadeout(@black, 80%);
+	z-index: 940;
+	background-color: @modal_backdrop;
+	&.fade { 
+		opacity: 0;
 	}
-	@media @media-point-tablet 	{width: 620px;	margin: 10px auto;}  
-	@media @media-point-screen 	{width: 495px;	margin: 0px auto;} 
-	 
-}
-.modal-body {
-	position: relative;
-	background: @white;
-	border-radius: 5px;
-	padding: 35px 40px;
-	@media @media-point-tablet{padding: 70px 60px 50px;}
-	@media @media-point-screen{padding: 3.8vw 5vw;}
-}
-.modal-content{}
-// Title text within header
-.modal-title {}
-.modal-close{	
-    position: absolute;
-    z-index: 5; 
-    border: 2px solid @b-color-a; 
-   	color: @b-color-a-hover;
-   	background-color: @white; 
-   	border-radius: 50%;
-   	transition: @trs-site;  	 
-	width: 30px;
-	height: 30px;
-	padding: 7px;
-	top: 15px;
-	right: 15px;
-	svg{display: block;} 	
-		
-	&:hover{
-		background-color: @b-color-a;
-		border-color: @b-color-a;
-		color: @white;
-	}
-}
-.modal-note{
-	margin-bottom: 20px;
-}
-// Measure scrollbar width for padding body during modal show/hide
-.modal-scrollbar-measure {
-  position: absolute;
-  top: -9999px;
-  width: 50px;
-  height: 50px;
-  overflow: scroll;
-}
-
-//custom styles
-.modal-base__{
-	&modal{
-		//display: block;
-		//opacity: 1;
-		//background: @black
-	}
-	&dialog {
-		//background: url('/img/maket/products-modal.jpg') no-repeat -738px -148px;
-		//height: 100%;
-		//overflow: auto;
-		/*&.is--lg{
-			@media @media-point-notsmart {
-				width: 445px;
-			}
-		}*/
-	}
-	&body {
-		//opacity: 0.7;
-		//background-color: @blue-light;
-		//overflow: hidden;
+	&.in {
+		opacity: @modal_backdrop_fade;
 	}
 }
 .navbar__{
@@ -3726,21 +3761,20 @@ body.rtl .formError .formErrorArrow {
 		caption-side: bottom;
 	}			
 	thead{ 
-		td,
-		th{
+		tr{
+			td,th{
 			border: 0;
 			border-left: 0;
-			background-color: @blue;
-			color: @blue-deep-dark;	
-			font-weight: 700;
-			padding: 15px 12px;
-			letter-spacing: 1px;
+			background-color: @table_head_bg;
+			color: @table_head_color;	
+			padding: @table_head_padding;
+			font-weight: 400;
 			font-size: @b-fs - 6;
 			line-height: @b-lh - 8;
 			text-transform: uppercase;
 			border-top: 0!important;
 			vertical-align: middle!important;
-			border-bottom: 1px solid fadeout(@white, 50%);	
+			border-bottom: 1px solid @table_head_border_color;	
 			//border-bottom: none;
 			//letter-spacing: 1px;
 			//text-align: center;
@@ -3756,113 +3790,49 @@ body.rtl .formError .formErrorArrow {
 				//padding-left: 0;
 				//text-align: left;
 			}
-			&:last-child{
-				//padding-right: 0;
-				//text-align: right;
-			}
 			small{
 				text-transform: none;
 				letter-spacing: 0;
 				font-weight: 300;
 			}
-		}
-	}
-	tbody {	
-		tr{			
-			th, td{
-				padding: 12px;
-				border-bottom: 1px solid @blue-light;
-				//text-align: center;
-				&[colspan]{
-					background-color: @blue-deep-light;
-				}
-			}
-			&:first-child{
-				th, td{
-					//border-top: 2px solid @green;
-					//@media print{border-top-color: @black}
-				}
 			}
 			&:last-child{
-				th, td{
-					border-bottom: 4px solid @blue-light;
-					@media print{border-bottom-color: @black}
+				td,th{
+					border-bottom: 1px solid @table_head_border_color;
 				}
 			}
 		}
 	}
-	td, th{
-		border: 0;
-		padding: 10px 10px;
-		vertical-align: middle;
-		background-color: @white;
-		color: @b-color-h;
-		&.is--left{text-align: left;}
-		&.is--right{text-align: right;}
-		&.is--del{
-			@media print{
-				display: none;
+	tr{	
+		td, th{
+			border: 0;
+			vertical-align: middle;
+			background-color: @white;
+			color: @table_color;
+			&.is--left{text-align: left;}
+			&.is--right{text-align: right;}
+			p, div{
+				margin: 0;
+			}
+			padding: @table_padding;
+			border-bottom: 1px solid @table_border_color;
+			//text-align: center;
+			&[colspan]{
+				background-color: @table_bg_colspan;
 			}
 		}
-		&.is--th-cost{
-			small{
-				display: none;
-				@media print{
-					display: inline;
-				}
+		&:first-child{
+			th, td{
+				//border-top: 2px solid @green;
+				//@media print{border-top-color: @black}
 			}
 		}
-		&.is--basket-preview{
-			width: 255px;
-		}
-		p, div{
-			margin: 0;
-		}
-	}	
-	.is--name{
-		@media @media-point-notsmart {
-			min-width: 250px;
-			max-width: 250px;
-		}
-	}
-	.is--link{
-		color: @b-color-h;
-		&:hover{color: @b-color-a;}
-	}
-	.is--ruble{
-		padding-right: 17px;
-		background-repeat: no-repeat;
-		background-position: center right;
-		background-image: url("@{url-path-img}/svg/ruble-orange.svg");
-		background-size: 12px;
-		html.msie &{
-			//padding-right: 25px;
-			//background-size: 32px;
-		}
-		&.is--bold{
-			color: @b-color-a;
-			font-weight: 500;
-			font-size: @b-fs + 2;
-			padding-right: 12px;
-			background-image: url("@{url-path-img}/svg/ruble-pink.svg");
-			@media print{color: @black}
-		}
-	}
-	&.is--lg{
-		thead {	
-			tr{			
-				th, td{
-					//padding: 10px 20px;
-				}
+		&:last-child{
+			th, td{
+				border-bottom: 1px solid @table_border_color;
+				@media print{border-bottom-color: @black}
 			}
-		}
-		tbody {	
-			tr{			
-				th, td{
-					padding: 25px 10px;
-				}
-			}
-		}
+		}	
 	}
 }
 .tabs__{

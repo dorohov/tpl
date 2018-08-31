@@ -229,32 +229,32 @@
 svg4everybody();
 document.createElement("picture");
 </script> 
-		<div class="modal fade modal-base__modal" id="modal-message" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-dialog modal-base__dialog">
-		<div class="modal-body modal-base__body" >
-			<button type="button" class="btn-site  modal-base__close  modal-close" data-dismiss="modal" aria-hidden="true">
+		<div class="modal__block  fade    " id="modal-message" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal__dialog    ">
+		<div class="modal__body    " >
+			<button type="button" class="modal__btn-close  modal-close" data-dismiss="modal" aria-hidden="true">
 				<svg class="icon-svg icon-modal-close" role="img">
 	<use xlink:href="/img/svg/sprite.svg#modal-close"></use>
 </svg>
 			</button>
-			<div class="modal-content modal-base__content">
+			<div class="modal__content    ">
 				<div class="page-header__block  is--modals">
 	<h4 class="page-header__heading  is--modals"><span>Ваше сообщение успешно отправлено!</span></h4>	
 	<div class="page-header__heading-small  is--modals">Мы свяжемся с вами в ближайшее время.</div>		
-</div>	
+</div>
 			</div> 
 		</div>
 	</div>
 </div>
-<div class="modal fade modal-base__modal    " id="modal-calc" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-dialog modal-base__dialog    ">
-		<div class="modal-body modal-base__body    " >
-			<button type="button" class="btn-site  modal-base__close  modal-close" data-dismiss="modal" aria-hidden="true">
+<div class="modal__block  fade    " id="modal-calc" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal__dialog    ">
+		<div class="modal__body    " >
+			<button type="button" class="modal__btn-close  modal-close" data-dismiss="modal" aria-hidden="true">
 				<svg class="icon-svg icon-modal-close" role="img">
 	<use xlink:href="/img/svg/sprite.svg#modal-close"></use>
 </svg>
 			</button>
-			<div class="modal-content modal-base__content    ">
+			<div class="modal__content    ">
 				<div class="form-panel__panel    ">
 	<div class="form-panel__panel-inner    ">
 		<div class="page-header__block  is--modals">
@@ -277,18 +277,17 @@ document.createElement("picture");
 </div>
 			</div>
 			<div class="cols form__cols      is--agreement">
-				<div class="form__item  is--switch        ">
-	<div class="form__switch        ">
-		<input class="form__switch-input validate[required]            " id="fsord[agreement]" name="f[Согласие на обработку персональных данных]" type="checkbox"  checked/>
-		<label for="fsord[agreement]" class="form__switch-label              "></label> 
-		<label for="fsord[agreement]" class="form__switch-text              "> 
-			Я согласен на обработку <a href='/agreement.html' target='_blank'>персональных данных</a>
-		</label>
+				<div class="form__item  is--agreement        ">
+	<input type="hidden" name="f[Согласие на обработку персональных данных]" value="Да">
+	<div class="form__text        ">		
+		Нажимая на кнопку «Отправить заявку» вы соглашаетесть с правилами обработки <a href='/agreement.html' target='_blank'>персональных данных</a>
 	</div>	
 </div>	
 			</div>
 			<div class="cols form__cols      is--btn">
-				<button type="submit" class="btn__item    ">Отправить заявку</button>				
+				<button type="submit" class="btn__item    ">
+	<span class="btn__name">Отправить заявку</span>
+</button>				
 			</div>
 		</div>	
 	</div> 
@@ -299,15 +298,15 @@ document.createElement("picture");
 		</div>
 	</div>
 </div>
-<div class="modal fade modal-base__modal    " id="modal-call" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-dialog modal-base__dialog    ">
-		<div class="modal-body modal-base__body    " >
-			<button type="button" class="btn-site  modal-base__close  modal-close" data-dismiss="modal" aria-hidden="true">
+<div class="modal__block  fade    " id="modal-call" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal__dialog    ">
+		<div class="modal__body    " >
+			<button type="button" class="modal__btn-close  modal-close" data-dismiss="modal" aria-hidden="true">
 				<svg class="icon-svg icon-modal-close" role="img">
 	<use xlink:href="/img/svg/sprite.svg#modal-close"></use>
 </svg>
 			</button>
-			<div class="modal-content modal-base__content    ">
+			<div class="modal__content    ">
 				<div class="form-panel__panel    ">
 	<div class="form-panel__panel-inner    ">
 		<div class="page-header__block  is--modals">
@@ -330,18 +329,17 @@ document.createElement("picture");
 </div>
 			</div>
 			<div class="cols form__cols      is--agreement">
-				<div class="form__item  is--switch        ">
-	<div class="form__switch        ">
-		<input class="form__switch-input validate[required]            " id="fsord[agreement]" name="f[Согласие на обработку персональных данных]" type="checkbox"  checked/>
-		<label for="fsord[agreement]" class="form__switch-label              "></label> 
-		<label for="fsord[agreement]" class="form__switch-text              "> 
-			Я согласен на обработку <a href='/agreement.html' target='_blank'>персональных данных</a>
-		</label>
+				<div class="form__item  is--agreement        ">
+	<input type="hidden" name="f[Согласие на обработку персональных данных]" value="Да">
+	<div class="form__text        ">		
+		Нажимая на кнопку «Отправить» вы соглашаетесть с правилами обработки <a href='/agreement.html' target='_blank'>персональных данных</a>
 	</div>	
 </div>	
 			</div>
 			<div class="cols form__cols      is--btn">
-				<button type="submit" class="btn__item    ">Отправить</button>				
+				<button type="submit" class="btn__item    ">
+	<span class="btn__name">Отправить</span>
+</button>				
 			</div>
 		</div>	
 	</div> 
