@@ -21,7 +21,7 @@
 		&.is--center{
 			justify-content: center; 
 		}
-	}
+	} 
 	&item{
 		padding-top: @pagin-gutter + 5px;
 		padding-left: @pagin-gutter;
@@ -30,64 +30,25 @@
 	&link{
 		display: block;
 		position: relative;
+		z-index: 1;
 		color: @pagin-color;
 		text-align: center;
 		position: relative;
 		z-index: 1;
+		border-radius: 50%;
 		padding: 0 8px;
 		font-size: @b-fs;
-		line-height: @b-lh;
+		line-height: @b-lh + 12;
+		width: 36px;
 		&:hover{	
-			color: @pagin-color-h;			
-			//background-color: @pagin-bg;			
-		}
-		&.is--nav{
-			display: block;
-			position: relative;
-			width: 36px;
-			height: 36px;
-			border: 2px solid @blue-light;
-			text-transform: uppercase;
-			margin: 0 4px;
-			padding: 8px 0;
-			color: @b-color-a;
-
-			svg{display: block;}
-			&:hover{
-				background: @blue-light;
-				color: @white;			
-			}
-		}
-		&.is--prev{
-			margin-right: 15px;
-		}
-		&.is--next{			
-			margin-left: 15px;
+			color: @pagin-color-hover;			
+			background-color: @pagin-bg-hover;
 		}
 		.pagination-panel__item.is--active &{
-			color: @pagin-color-hover;		
+			color: @pagin-color-active;	
+			font-weight: 700;	
 			cursor: default;
-			background-color: @pagin-bg;
-		}
-		span{
-			position: relative;
-			z-index: 2;
+			background-color: @pagin-bg-active;
 		}
 	}
-	&icon{
-		width: 20px;
-		height: 20px;
-		position: absolute;
-		top: 50%;
-		right: 0;
-		transform: translateY(-50%);
-		svg{display: block;}
-	}
-	/*&line{
-		max-width: 60px;
-		min-width: 20px;
-		width: 4vw;
-		height: 1px;
-		background-color: @b-color-h;
-	}*/
 }

@@ -317,45 +317,43 @@
 		</div>
 		<div class="content-block__elem    ">
 			<h4 class="content-block__heading">Формы</h4>
-<div style="margin-bottom: 20px; max-width: 1015px;">
-	<div class="form-panel__panel  is--reviews">
-	<div class="form-panel__panel-inner  is--reviews">
-		<div class="page-header__block  is--form-panel  is--reviews">
-	<h3 class="page-header__heading  is--form-panel  is--reviews"><span>Оставьте свой отзыв</span></h3>	
-	<div class="page-header__heading-small  is--form-panel  is--reviews">  </div>		
-</div>
-		<form action="#" class="form__block  is--reviews"  >
+<div style="margin-bottom: 20px; max-width: 275px;">
+	<div class="form-panel__panel    ">
+	<div class="form-panel__panel-inner    ">
+		<form action="#" class="form__block    "  >
 	<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
 	<input type="hidden" name="f[Форма: Оставьте свой отзыв]">
-	<div class="form__inner  is--reviews"  >
-		<div class="row form__row  is--reviews  is--wrap">
-			<div class="cols form__cols  is--reviews  is--name">
-				<div class="form__item  is--reviews  is--name">
-	<input type="text"     class="form__control form-control validate[required, custom[onlyLetterSp]]  is--reviews      is--name" id="fsrev[name]" name="f[Имя]" placeholder="Имя и Фамилия">
+	<div class="form__inner    "  >
+		<div class="row form__row  is--wrap">
+			<div class="cols form__cols      is--name">
+				<div class="form__item      is--name">
+	<input type="text"     class="form__control form-control validate[required, custom[onlyLetterSp]]          is--name" id="fsrev[name]" name="f[Имя]" placeholder="Имя">
 </div>
 			</div>
-			<div class="cols form__cols  is--reviews  is--tel">
-				<div class="form__item  is--reviews  is--tel">
-	<input type="tel"     class="form__control form-control validate[required, custom[phone]]  is--reviews      is--tel" id="fsrev[tel]" name="f[Номер телефона]" placeholder="Номер телефона">
+			<div class="cols form__cols      is--tel">
+				<div class="form__item      is--tel">
+	<input type="tel"     class="form__control form-control validate[required, custom[phone]]          is--tel" id="fsrev[tel]" name="f[Телефон]" placeholder="Телефон">
 </div>
 			</div>
-			<div class="cols form__cols  is--reviews  is--textarea">
-				<div class="form__item  is--reviews  is--textarea">
-	<textarea     class="form__control form-control validate[required]  is--reviews      is--textarea" id="fsrev[comments]" name="f[Сообщение]" placeholder="Сообщение"></textarea>
+			<div class="cols form__cols      is--email">
+				<div class="form__item      is--email">
+	<input type="email"     class="form__control form-control validate[required, custom[email]]          is--email" id="fsrev[email]" name="f[E-mail]" placeholder="E-mail">
 </div>
 			</div>
-			<div class="cols form__cols  is--reviews  is--agreement">
-				<div class="form__item  is--switch  is--reviews    ">
-	<div class="form__switch  is--reviews    ">
-		<input class="form__switch-input validate[required]  is--reviews        " id="fsrev[agreement]" name="f[Согласие на обработку персональных данных]" type="checkbox"  checked/>
-		<label for="fsrev[agreement]" class="form__switch-label    is--reviews        "></label> 
-		<label for="fsrev[agreement]" class="form__switch-text    is--reviews        "> 
-			Я согласен на обработку <a href='/agreement.html' target='_blank'>персональных данных</a>
-		</label>
+			<div class="cols form__cols      is--textarea">
+				<div class="form__item      is--textarea">
+	<textarea     class="form__control form-control validate[required]          is--textarea" id="fsrev[comments]" name="f[Сообщение]" placeholder="Сообщение"></textarea>
+</div>
+			</div>
+			<div class="cols form__cols      is--agreement">
+				<div class="form__item  is--agreement        ">
+	<input type="hidden" name="f[Согласие на обработку персональных данных]" value="Да">
+	<div class="form__text        ">		
+		Нажимая на кнопку «Отправить» вы соглашаетесть с правилами обработки <a href='/agreement.html' target='_blank'>персональных данных</a>
 	</div>	
 </div>	
 			</div>
-			<div class="cols form__cols  is--reviews  is--btn">
+			<div class="cols form__cols      is--btn">
 				<button type="submit" class="btn__item    ">
 	<span class="btn__name">Отправить</span>
 </button>				
@@ -367,16 +365,7 @@
 </div> 
 </div>
 <div style="margin-bottom: 20px; max-width: 315px;">
-	<form action="{{page.search}}" class="form__item  is--search    ">
-	<div class="form__search    ">
-		<input type="text" class="form__search-input    " placeholder="Поиск по названию платья" >
-		<button type="submit" class="form__search-btn    ">
-			<svg class="icon-svg icon-icon-search" role="img">
-	<use xlink:href="/img/svg/sprite.svg#icon-search"></use>
-</svg>
-		</button>
-	</div>
-</form>
+	
 </div> 
 <div style="margin-bottom: 20px">
 	
@@ -420,14 +409,7 @@
 		<div class="content-block__elem    ">
 			<h4 class="content-block__heading">Постраничная навигация</h4>
 <div class="pagination-panel__block">
-	<ol class="pagination-panel__list    ">
-		<li class="pagination-panel__item  is--pagin  is--prev">
-	<a href="##" class="btn-nav__item  is--pagin  is--prev">
-	<span class="btn-nav__icon  is--pagin  is--prev"><svg class="icon-svg icon-icon-prev" role="img">
-	<use xlink:href="/img/svg/sprite.svg#icon-prev"></use>
-</svg></span>
-</a>
-</li>			
+	<ol class="pagination-panel__list    ">		
 		<li class="pagination-panel__item    ">
 	<a href="#" class="pagination-panel__link    "><span>1 </span></a>
 </li>
@@ -445,14 +427,7 @@
 </li>		
 		<li class="pagination-panel__item    ">
 	<a href="#" class="pagination-panel__link    "><span>10</span></a>
-</li>			
-		<li class="pagination-panel__item  is--pagin  is--next">
-	<a href="##" class="btn-nav__item  is--pagin  is--next">
-	<span class="btn-nav__icon  is--pagin  is--next"><svg class="icon-svg icon-icon-next" role="img">
-	<use xlink:href="/img/svg/sprite.svg#icon-next"></use>
-</svg></span>
-</a>
-</li>	
+</li>		
 	</ol>
 </div> 
 		</div>
@@ -972,9 +947,9 @@
 				<div class="form__item  is--agreement  is--calc    ">
 	<input type="hidden" name="f[Согласие на обработку персональных данных]" value="Да">
 	<div class="form__text  is--calc    ">		
-		Нажимая на кнопку «Отправить» вы соглашаетесть с правилами обработки <a href='/agreement.html' target='_blank'>персональных данных</a>
+		Нажимая на кнопку «Отправить», Вы соглашаетесь с правилами обработки <a href='/agreement.html' target='_blank'>персональных данных</a>
 	</div>	
-</div>	
+</div>		
 			</div>
 			<div class="cols form__cols  is--calc  is--btn">
 				<button type="submit" class="btn__item  is--sm">
@@ -1129,9 +1104,9 @@ document.createElement("picture");
 				<div class="form__item  is--agreement        ">
 	<input type="hidden" name="f[Согласие на обработку персональных данных]" value="Да">
 	<div class="form__text        ">		
-		Нажимая на кнопку «Отправить заявку» вы соглашаетесть с правилами обработки <a href='/agreement.html' target='_blank'>персональных данных</a>
+		Нажимая на кнопку «Отправить заявку», Вы соглашаетесь с правилами обработки <a href='/agreement.html' target='_blank'>персональных данных</a>
 	</div>	
-</div>	
+</div>		
 			</div>
 			<div class="cols form__cols      is--btn">
 				<button type="submit" class="btn__item    ">
@@ -1181,9 +1156,9 @@ document.createElement("picture");
 				<div class="form__item  is--agreement        ">
 	<input type="hidden" name="f[Согласие на обработку персональных данных]" value="Да">
 	<div class="form__text        ">		
-		Нажимая на кнопку «Отправить» вы соглашаетесть с правилами обработки <a href='/agreement.html' target='_blank'>персональных данных</a>
+		Нажимая на кнопку «Отправить», Вы соглашаетесь с правилами обработки <a href='/agreement.html' target='_blank'>персональных данных</a>
 	</div>	
-</div>	
+</div>		
 			</div>
 			<div class="cols form__cols      is--btn">
 				<button type="submit" class="btn__item    ">
