@@ -2,7 +2,7 @@
 	<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
 	<input type="hidden" name="f[Форма: {{form_heading}}]">
 	<div class="{{form_prefix}}inner  {{form_mod}}"  >
-		<div class="row {{form_prefix}}row  {{form_mod}}  is--wrap">
+		<div class="row {{form_prefix}}row  is--wrap">
 			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--name">
 				[[azbntple 
 					tpl="/src/block/site/default/form/elem-input-custom.html"
@@ -17,7 +17,8 @@
 					block_required="required"
 					block_required_custom="onlyLetterSp"
 					block_label="Имя"
-					block_placeholder="Имя и Фамилия"
+					block_placeholder="Имя"
+					block_icon="form-name"
 				]]
 			</div>
 			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--tel">
@@ -33,8 +34,43 @@
 					block_attr="  "
 					block_required="required"
 					block_required_custom="phone"
-					block_label="Номер телефона"
-					block_placeholder="Номер телефона"
+					block_label="Телефон"
+					block_placeholder="Телефон"
+					block_icon="form-tel"
+				]]
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--email">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-input-custom.html"
+					form_id="{{form_id}}"
+					block_id="email"
+					block_prefix="{{form_prefix}}"
+					block_mod="{{form_mod}}"
+					block_mod_elem="is--email"
+					block_color="{{form_color}}"
+					block_type="email"
+					block_attr="  "
+					block_required="required"
+					block_required_custom="email"
+					block_label="E-mail"
+					block_placeholder="E-mail"
+					block_icon="form-email"
+				]]
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--textarea">
+				[[azbntple 
+					tpl="/src/block/site/default/form/elem-textarea.html"
+					form_id="{{form_id}}"
+					block_id="comments"
+					block_prefix="{{form_prefix}}"
+					block_mod="{{form_mod}}"
+					block_mod_elem="is--textarea"
+					block_color="{{form_color}}"
+					block_attr="  "
+					block_required="required"
+					block_required_custom="  "
+					block_label="Сообщение"
+					block_placeholder="Сообщение"
 				]]
 			</div>
 			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--agreement">
@@ -44,8 +80,8 @@
 					block_mod="{{form_mod}}"
 					block_mod_elem="  "
 					block_color="{{form_color}}"
-					block_text="Нажимая на кнопку «{{form_btn_name}}», Вы соглашаетесь с правилами обработки <a href='{{page.agreement}}' target='_blank'>персональных данных</a>"
-				]]		
+					block_text="Нажимая на кнопку «{{form_btn_name}}» вы соглашаетесть с правилами обработки <a href='{{page.agreement}}' target='_blank'>персональных данных</a>"
+				]]	
 			</div>
 			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--btn">
 				[[azbntple 

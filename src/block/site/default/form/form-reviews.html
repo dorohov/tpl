@@ -55,17 +55,12 @@
 			</div>
 			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--agreement">
 				[[azbntple 
-					tpl="/src/block/site/default/form/elem-switch.html"
-					form_id="{{form_id}}"
-					block_id="agreement"
+					tpl="/src/block/site/default/form/elem-agreement.html"
 					block_prefix="{{form_prefix}}"
 					block_mod="{{form_mod}}"
 					block_mod_elem="  "
 					block_color="{{form_color}}"
-					block_attr="checked"
-					block_required="required"
-					block_label="Согласие на обработку персональных данных"
-					block_text="Я согласен на обработку <a href='{{page.agreement}}' target='_blank'>персональных данных</a>"
+					block_text="Нажимая на кнопку «{{form_btn_name}}», Вы соглашаетесь с правилами обработки <a href='{{page.agreement}}' target='_blank'>персональных данных</a>"
 				]]	
 			</div>
 			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--btn">
